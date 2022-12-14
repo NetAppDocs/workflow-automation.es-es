@@ -1,0 +1,273 @@
+---
+permalink: help/reference-edit-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, display, select, associated, commands, parameters, blue boxes, columns, arranged, sequential, order, execution, left, right, variables, objects, gray boxes 
+summary: La ventana Workflow <workflow name> muestra el flujo de trabajo seleccionado y sus comandos y parámetros asociados. Los comandos asociados al flujo de trabajo se muestran como cuadros azules en columnas organizadas en orden secuencial de ejecución, de izquierda a derecha. Las variables y los objetos de cada comando se muestran como cuadros grises debajo del comando. 
+---
+= Ventana Workflow <workflow name>
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Workflow <workflow name> muestra el flujo de trabajo seleccionado y sus comandos y parámetros asociados. Los comandos asociados al flujo de trabajo se muestran como cuadros azules en columnas organizadas en orden secuencial de ejecución, de izquierda a derecha. Las variables y los objetos de cada comando se muestran como cuadros grises debajo del comando.
+
+
+
+== Ficha flujo de trabajo
+
+La ficha flujo de trabajo le permite seleccionar y utilizar flujos de trabajo y comandos secundarios, así como personalizar el nombre para mostrar.
+
+* *Pasos disponibles*
++
+Proporciona una lista de los flujos de trabajo secundarios y comandos disponibles que puede agregar al flujo de trabajo.
+
++
+Puede buscar flujos de trabajo o comandos secundarios utilizando el nombre, esquema y versión mínima de software como cadenas de búsqueda en el cuadro de texto.
+
++
+Es posible personalizar la visualización del flujo de trabajo reorganizando el orden de los comandos. Para reorganizar los comandos, puede arrastrar y soltar comandos en el orden que desee. Al hacer doble clic en un comando, éste se mueve al final de la lista. Puede modificar el nombre para mostrar haciendo doble clic en el nombre para mostrar del comando en el cuadro azul. Puede eliminar un comando moviendo el cursor sobre el cuadro azul y, a continuación, haciendo clic en "'X'" en la esquina superior derecha.
+
++
+Puede hacer clic en el número de fila para realizar varias funciones en la fila.
+
++
+** *Insertar una fila*
++
+Inserta una fila nueva por encima o debajo de la fila seleccionada en el flujo de trabajo.
+
+** *Copiar fila*
++
+Copia la fila seleccionada del flujo de trabajo y la guarda en el portapapeles. Los detalles de repetición establecidos para la fila se copian cuando se copia una fila.
+
+** *Repetir fila*
++
+Abre el cuadro de diálogo Detalles de repetición de fila, que permite especificar el tipo de repetición.
+
+** *Agregar condición*
++
+Abre el cuadro de diálogo condición para el <row number> de fila, que permite seleccionar una condición. La condición seleccionada se aplica a todos los comandos de la fila. Todos los comandos de la fila se ejecutarán sólo si se cumple la condición seleccionada.
+
+** *Eliminar fila*
++
+Elimina la fila seleccionada del flujo de trabajo.
+
+
+
+* *Pegar fila*
++
+Pega la fila copiada encima o debajo de la fila seleccionada. Esta opción está disponible después de seleccionar la función Copiar fila.
+
+
+
+
+
+== Ficha Detalles
+
+La pestaña Details permite proporcionar información general sobre el flujo de trabajo.
+
+* *Nombre del flujo de trabajo*
++
+Permite especificar el nombre del flujo de trabajo mediante una cadena alfanumérica.
+
+* *Versión de entidad*
++
+Permite introducir un número de versión para el flujo de trabajo en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Categorías*
++
+Muestra la categoría asociada para el flujo de trabajo. Puede asignar un flujo de trabajo a una categoría desde la ventana Categoría.
+
+* *Descripción del flujo de trabajo*
++
+Permite introducir una descripción del flujo de trabajo. Puede hacer clic en el campo para abrir el cuadro de diálogo Editar descripción.
+
+* *Preparado para la producción*
++
+Permite marcar el flujo de trabajo listo para la producción, lo que permite ejecutar y enumerar el flujo de trabajo en la ventana flujos de trabajo.
+
+* *Considere los elementos reservados*
++
+Permite utilizar la función de reserva para el flujo de trabajo, cuando los recursos seleccionados estén disponibles para el flujo de trabajo hasta el período de caducidad de la reserva que haya configurado. La función de reserva le permite excluir los recursos reservados por otros flujos de trabajo durante la selección de recursos.
+
++
+
+NOTE: No debe activar esta casilla de verificación si necesita que los filtros busquen únicamente el contenido de la caché persistente sin tener en cuenta las reservas establecidas por otros flujos de trabajo.
+
+* *Activar validación de la existencia de elementos*
++
+Le permite validar la existencia de elementos y evitar el fallo de determinadas acciones durante la ejecución de los flujos de trabajo. Por ejemplo, es posible evitar crear un volumen nuevo en una cabina con el mismo nombre que un volumen existente.
+
+* *Versiones mínimas de software*
++
+Especifica las versiones mínimas del software que se necesitan para ejecutar el flujo de trabajo. Por ejemplo, el software puede ser Clustered Data ONTAP 8.2.0 y vCenter 6.0. Las versiones se muestran como valores separados por comas.
+
+
+
+
+
+== Ficha Entradas de usuario
+
+La ficha Entradas de usuario le permite ver y editar los atributos de entrada de usuario que creó cuando definió los objetos de flujo de trabajo y creó las entradas de usuario. Los valores de los atributos de entrada de usuario se rellenan al previsualizar o ejecutar el flujo de trabajo.
+
+Puede hacer doble clic en la entrada de usuario que desea editar, que abre el cuadro de diálogo Editar variable: <user_input>, lo que permite editar la entrada de usuario.
+
+Puede personalizar la visualización de la tabla reorganizando el orden de las columnas. Para reorganizar las columnas, puede arrastrar y soltar columnas en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+
+* *Nombre*
++
+Muestra el nombre del atributo de entrada de usuario.
+
+* *Nombre para mostrar*
++
+Muestra el nombre que se muestra al usuario del flujo de trabajo.
+
+* *Tipo*
++
+Muestra el tipo de entrada de usuario, como cadena, consulta, booleano, table, o contraseña.
+
+* *Valores*
++
+Muestra los valores permitidos para la entrada del usuario, por ejemplo, intervalo para números y expresión regular para cadenas.
+
+* *Valor predeterminado*
++
+Muestra el valor predeterminado de la entrada del usuario.
+
+* *Dependencia de entrada*
++
+Muestra otra entrada de usuario de la lista que proporciona un valor a la entrada de usuario seleccionada.
+
+* *Grupo*
++
+Muestra el nombre del grupo para los atributos de entrada de usuario.
+
+* *Obligatorio*
++
+Muestra el estado de los datos introducidos por el usuario. Si la casilla de verificación se muestra como seleccionada, los atributos de entrada de usuario son obligatorios para la ejecución del flujo de trabajo.
+
+* *Botones de comando*
++
+** *Arriba*
++
+Mueve la entrada seleccionada hacia arriba una fila de la tabla.
+
+** *Abajo*
++
+Mueve la entrada seleccionada hacia abajo una fila de la tabla.
+
+
+
+
+
+
+
+== Constantes
+
+La ficha constantes permite definir el valor de las constantes que se pueden utilizar varias veces en el flujo de trabajo. Puede especificar lo siguiente como el valor de constantes:
+
+* Números
+* Cadenas
+* Expresiones MVEL
+* Empresarial
+* Entradas del usuario
+* Variables
+
+
+Puede personalizar la visualización de la tabla ordenando cada columna, así como reorganizar el orden de las columnas.
+
+* *Nombre*
++
+Muestra el nombre de la constante.
+
+* *Descripción*
++
+Permite especificar una descripción para la constante.
+
+* *Valor*
++
+Permite especificar un valor para la constante.
+
+* *Botones de comando*
++
+** *Agregar*
++
+Agrega una nueva fila en la tabla de constantes.
+
+** *Eliminar*
++
+Elimina la fila seleccionada de la tabla constantes.
+
+
+
++
+También puede hacer clic con el botón secundario del ratón en las constantes para utilizar la funcionalidad de copiar y pegar.
+
+
+
+
+
+== Parámetros de retorno
+
+La ficha parámetros de retorno permite definir y proporcionar una descripción de los parámetros de retorno para el flujo de trabajo que se pueden ver desde la ventana Supervisión o desde los servicios web.
+
+* *Valor de parámetro*
++
+Permite especificar el valor del parámetro.
+
+* *Nombre del parámetro*
++
+Permite especificar el nombre del parámetro.
+
+* *Descripción*
++
+Permite especificar una descripción para el parámetro seleccionado.
+
+* *Botones de comando*
++
+** *Agregar fila*
++
+Agrega una nueva fila en la tabla parámetros de retorno.
+
+** *Eliminar fila*
++
+Elimina la fila seleccionada de la tabla parámetros de retorno.
+
+
+
+
+
+
+
+== Contenido de la ayuda
+
+La ficha Contenido de la Ayuda permite agregar, ver y quitar el contenido de la Ayuda del flujo de trabajo. El contenido de la Ayuda del flujo de trabajo proporciona información sobre el flujo de trabajo para los operadores de almacenamiento.
+
+
+
+== Pestaña Avanzada
+
+La ficha Avanzadas permite configurar una ruta URI personalizada para la ejecución del flujo de trabajo a través de llamadas API. Cada segmento de la ruta URI puede ser una cadena o un nombre válido de la entrada del usuario del flujo de trabajo entre paréntesis.
+
+Por ejemplo, /devops/\{ProjectName}/clone. El flujo de trabajo se puede invocar como una llamada a _https:_//WFA-Server:HTTPS_PORT/REST/devops/Project1/clone/Jobs.
+
+
+
+== Botones de comando
+
+Los botones de comando están disponibles en la parte inferior de la ventana de flujo de trabajo. También se puede acceder a los comandos desde el menú contextual de la ventana.
+
+* *Vista previa*
++
+Abre el cuadro de diálogo flujo de trabajo de vista previa, que permite especificar atributos de entrada de usuario.
+
+* *Guardar como*
++
+Permite guardar el flujo de trabajo con un nuevo nombre.
+
+* *Guardar*
++
+Guarda los ajustes de configuración.
+
+

@@ -1,0 +1,158 @@
+---
+permalink: help/reference-data-source-types-window.html 
+sidebar: sidebar 
+keywords: data, source, types, window, display, available, manage 
+summary: La ventana tipos de origen de datos muestra los tipos de origen de datos disponibles. Puede gestionar los tipos de origen de datos desde esta ventana. 
+---
+= Tipos de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana tipos de origen de datos muestra los tipos de origen de datos disponibles. Puede gestionar los tipos de origen de datos desde esta ventana.
+
+Se utiliza un tipo de origen de datos para definir un origen de datos, que contiene información acerca de dónde se originan los datos de una base de datos específica y el método utilizado para adquirir datos del origen de datos. Por ejemplo, un origen de datos puede ser una base de datos Active IQ Unified Manager que contiene información sobre un entorno de almacenamiento o una base de datos VMware con información sobre un centro de datos.
+
+
+
+== Tabla tipos de origen de datos
+
+En la tabla tipos de origen de datos se enumeran los tipos de origen de datos disponibles. Cada entrada se identifica como una de las siguientes:
+
+* image:../media/community_certification.gif[""] - contenido creado por los usuarios
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenido desarrollado por Servicios profesionales (PS), que está disponible sólo en instalaciones personalizadas realizadas por PS
+* image:../media/community_certification.gif[""] - packs desarrollados por usuarios
+* image:../media/lock_icon_wfa.gif[""] - contenido creado por los usuarios que está bloqueado
+* image:../media/netapp_certified.gif[""] - Contenido certificado por NetApp
+
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla tipos de origen de datos contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si el tipo de origen de datos es creado por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Fuente de datos*
++
+Muestra el nombre del tipo de origen de datos.
+
+* *Esquema*
++
+Muestra el esquema asociado con el tipo de origen de datos. Un esquema representa el modelo de datos de un sistema. Por ejemplo, un esquema de vc contiene datos relevantes para su entorno virtual, como máquinas virtuales, hosts y almacenes de datos.
+
++
+A continuación se muestran los esquemas predeterminados seleccionados de forma predeterminada:
+
++
+** rendimiento_cm
+** almacenamiento_cm
+** rendimiento
+** Reducida
+** vc
+
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Compatibilidad con OS*
++
+Indica si el tipo de origen de datos es compatible con el sistema operativo del host.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó por última vez el tipo de origen de datos.
+
+* *Actualizado por*
++
+Muestra el usuario que actualizó el tipo de origen de datos.
+
+* *Versión de origen de datos*
++
+Muestra la versión del origen de datos asociado al tipo de origen de datos.
+
+* *Controlador de origen de datos*
++
+Muestra el tipo de controlador que se utiliza para adquirir datos del origen de datos.
+
+* *Método*
++
+Muestra el método que se utiliza para adquirir datos del origen de datos, como SQL y script.
+
+* *Idioma de script*
++
+Muestra el lenguaje de secuencias de comandos que utiliza el tipo de origen de datos.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre la ventana Nuevo tipo de origen de datos, que permite crear un nuevo tipo de origen de datos.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre la ventana <EntryName> de tipo de origen de datos para el tipo de origen de datos seleccionado, que permite editar el tipo de origen de datos.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre la ventana Nueva <EntryName> de tipo de origen de datos, que permite crear una copia del tipo de origen de datos seleccionado.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación Bloquear el tipo de origen de datos, que permite bloquear el tipo de datos de origen creado por el usuario seleccionado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear el tipo de origen de datos, que permite desbloquear el tipo de origen de datos seleccionado. Esta opción sólo está habilitada para los tipos de origen de datos bloqueados. Los administradores pueden desbloquear los tipos de origen de datos bloqueados por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar tipo de origen de datos, que permite eliminar el tipo de origen de datos creado por el usuario seleccionado.
+
++
+
+NOTE: No puede eliminar un tipo de origen de datos WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar el tipo de origen de datos creado por el usuario seleccionado.
+
++
+
+NOTE: No puede exportar un tipo de origen de datos WFA o PS.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar al tipo de origen de datos Pack, que permite agregar el tipo de origen de datos y sus entidades fiables a un paquete, que se puede editar.
+
++
+
+NOTE: La función Agregar a paquete sólo está habilitada para los tipos de origen de datos para los que la certificación está establecida en Ninguno.
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar de origen de datos Pack para el tipo de origen de datos seleccionado, que permite eliminar o quitar el tipo de origen de datos del paquete.
+
++
+
+NOTE: La función Eliminar del paquete sólo está habilitada para los tipos de orígenes de datos para los que la certificación está establecida en Ninguno.
+
+

@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-templates.html 
+sidebar: sidebar 
+keywords: can, use, templates, workflows, reference, adhering, usage policies 
+summary: Puede utilizar plantillas de WFA en sus flujos de trabajo como referencia o para adherirse a políticas de uso. 
+---
+= Cómo se utilizan las plantillas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar plantillas de WFA en sus flujos de trabajo como referencia o para adherirse a políticas de uso.
+
+Una plantilla de WFA actúa como guía de la definición de un objeto. Puede definir una plantilla incluyendo las propiedades de un objeto y los valores de las propiedades del objeto. A continuación, puede utilizar la plantilla para rellenar las propiedades de una definición de objeto en los flujos de trabajo.
+
+Cuando utiliza una plantilla, no puede editar los campos que incluyen los valores obtenidos de la plantilla. Por lo tanto, puede utilizar plantillas para configurar políticas de uso y la creación de objetos. Si quita la asociación de una plantilla con el flujo de trabajo después de haber aplicado la plantilla, los valores rellenados de la plantilla se conservan, pero puede editar los campos.

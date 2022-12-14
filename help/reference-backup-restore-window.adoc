@@ -1,0 +1,50 @@
+---
+permalink: help/reference-backup-restore-window.html 
+sidebar: sidebar 
+keywords: backup, restore, window, enable, backup, oncommand, workflow, automation, database, contain, system, configuration, settings, cache, information, core, include, powershell, toolkits, perl toolkits, save, upgrade, reinstall 
+summary: 'La ventana Backup and Restore le permite realizar un backup de la base de datos OnCommand Workflow Automation (WFA), que contiene la configuración del sistema, la información de la caché y los paquetes principales que incluyen kits de herramientas de PowerShell y kits de herramientas Perl. También puede restaurar la base de datos guardada cuando actualiza o vuelve a instalar WFA.' 
+---
+= Ventana copia de seguridad y restauración
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Backup and Restore le permite realizar un backup de la base de datos OnCommand Workflow Automation (WFA), que contiene la configuración del sistema, la información de la caché y los paquetes principales que incluyen kits de herramientas de PowerShell y kits de herramientas Perl. También puede restaurar la base de datos guardada cuando actualiza o vuelve a instalar WFA.
+
+
+
+== Sección de copia de seguridad
+
+Puede acceder a esta ventana seleccionando *Configuración* y en *Mantenimiento* haga clic en *copia de seguridad y restauración*.
+
+* *Backup*
++
+Abre el cuadro de diálogo Descarga de archivos, que permite guardar la base de datos actual como un archivo comprimido en una ubicación especificada.
+
+
+
+
+
+== Sección Restaurar
+
+* *Elegir archivo*
++
+Permite buscar el archivo de la base de datos de backup.
+
+* *Restaurar*
++
+Permite restablecer la configuración y la información de la caché desde el archivo de la base de datos de backup a la configuración actual de WFA, si procede.
+
++
+La versión más reciente de los kits de herramientas y los paquetes de núcleos están disponibles después de una operación de restauración.
+
++
+
+NOTE: Si el backup incluye paquetes más recientes que los paquetes presentes en el sistema, después de restaurar los paquetes más recientes, están disponibles en el backup.
+
++
+Debe detener todos los flujos de trabajo en ejecución antes de importar un paquete de núcleo.
+
+

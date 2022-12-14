@@ -1,0 +1,133 @@
+---
+permalink: rhel-install/task-set-up-a-data-source.html 
+sidebar: sidebar 
+keywords: set up, data source 
+summary: 'Debe configurar una conexión con un origen de datos en OnCommand Workflow Automation (WFA) para adquirir datos del origen de datos.' 
+---
+= Configurar un origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe configurar una conexión con un origen de datos en OnCommand Workflow Automation (WFA) para adquirir datos del origen de datos.
+
+* Para versiones de Active IQ Unified Manager anteriores a 6.0, debe haber ejecutado la versión más reciente de la herramienta ocsetup en el servidor de Unified Manager para habilitar y configurar el acceso remoto de solo lectura a la base de datos.
+* Para Active IQ Unified Manager 6.0 y versiones posteriores, debe haber creado una cuenta de usuario de base de datos en el servidor de Unified Manager.
++
+Consulte la ayuda en línea de _OnCommand Unified Manager_ para obtener más detalles.
+
+* El puerto TCP para conexiones entrantes en el servidor de Unified Manager debe estar abierto.
++
+Consulte la documentación del firewall para obtener más detalles.
+
++
+A continuación, se muestran los números de puerto TCP predeterminados:
+
++
+[cols="3*"]
+|===
+| Número de puerto TCP | La versión del servidor de Unified Manager | Descripción 
+
+
+ a| 
+2638
+ a| 
+5.x.
+ a| 
+Servidor de bases de datos SQL Anywhere de Sybase
+
+
+
+ a| 
+3306
+ a| 
+6.x.
+ a| 
+Servidor de bases de datos MySQL
+
+|===
+* Para Performance Advisor, debe haber creado una cuenta de usuario de Active IQ Unified Manager con una función mínima de GlobalRead.
++
+Consulte la ayuda en línea de _OnCommand Unified Manager_ para obtener más detalles.
+
+* El puerto TCP para conexiones entrantes en VMware vCenter Server debe estar abierto.
++
+El número de puerto TCP predeterminado es 443. Consulte la documentación del firewall para obtener más detalles.
+
+
+
+Puede añadir varias fuentes de datos del servidor de Unified Manager a WFA utilizando este procedimiento. Sin embargo, no debe utilizar este procedimiento si desea emparejar Unified Manager Server 6.3 y versiones posteriores con WFA y utilizar la funcionalidad de protección en el servidor de Unified Manager.
+
+Para obtener más información sobre el emparejamiento de WFA con Unified Manager Server 6.x, consulte la ayuda en línea de _OnCommand Unified Manager_.
+
+[NOTE]
+====
+Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de origen de datos Active IQ Unified Manager 6.0, 6.1 y 6.2 quedan obsoletos en la versión WFA 4.0, por lo que estos tipos de origen de datos no serán compatibles en futuras versiones.
+
+====
+.Pasos
+. Acceda a WFA mediante un navegador web.
+. Haga clic en *Configuración* y en *Configuración* haga clic en *fuentes de datos*.
+. Elija la acción adecuada:
++
+[cols="2*"]
+|===
+| Para... | Realice lo siguiente... 
+
+
+ a| 
+Cree un nuevo origen de datos
+ a| 
+Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+
+
+
+ a| 
+Edite un origen de datos restaurado si ha actualizado WFA
+ a| 
+Seleccione la entrada de origen de datos existente y haga clic en image:../media/edit_wfa_icon.gif["Icono Editar"] en la barra de herramientas.
+
+|===
++
+Si ha añadido una fuente de datos del servidor de Unified Manager a WFA y, a continuación, actualizado la versión del servidor de Unified Manager, WFA no reconocerá la versión actualizada del servidor de Unified Manager. Debe eliminar la versión anterior del servidor de Unified Manager y, a continuación, añadir la versión actualizada del servidor de Unified Manager a WFA.
+
+. En el cuadro de diálogo Nuevo origen de datos, seleccione el tipo de origen de datos necesario y escriba un nombre para el origen de datos y el nombre de host.
++
+Según el tipo de origen de datos seleccionado, los campos de puerto, nombre de usuario, contraseña y tiempo de espera pueden completarse automáticamente con los datos predeterminados, si están disponibles. Puede editar estas entradas según sea necesario.
+
+. Elija una acción adecuada:
++
+[cols="2*"]
+|===
+| Durante... | Realice lo siguiente... 
+
+
+ a| 
+Versiones de Active IQ Unified Manager anteriores a 6.0
+ a| 
+Introduzca el nombre de usuario y la contraseña que utilizó para reemplazar las credenciales predeterminadas mientras ejecuta la herramienta de configuración.
+
+
+
+ a| 
+Active IQ Unified Manager 6.3 y posteriores
+ a| 
+Introduzca las credenciales de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager. Consulte _Ayuda en línea de Unified Manager de OnCommand_ para obtener información detallada sobre la creación de una cuenta de usuario de base de datos.
+
+
+
+ a| 
+Performance Advisor para (versiones de Active IQ Unified Manager anteriores a 6.0)
+ a| 
+Introduzca las credenciales de un usuario de Active IQ Unified Manager con el rol mínimo de GlobalRead.
+
+
+NOTE: No debe proporcionar las credenciales de una cuenta de usuario de base de datos de Active IQ Unified Manager que se creó mediante la interfaz de línea de comandos o la herramienta ocsetup.
+
+|===
+. Haga clic en *Guardar*.
+. En la tabla orígenes de datos, seleccione el origen de datos y haga clic en image:../media/acquire_now_wfa_icon.gif["Icono de adquirir ahora"] en la barra de herramientas.
+. Compruebe el estado del proceso de adquisición de datos.
+

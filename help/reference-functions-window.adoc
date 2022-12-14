@@ -1,0 +1,138 @@
+---
+permalink: help/reference-functions-window.html 
+sidebar: sidebar 
+keywords: functions, window, display, available, oncommand, workflow, automation, enable, manage 
+summary: 'La ventana funciones muestra las funciones disponibles de OnCommand Workflow Automation (WFA) y le permite gestionar estas funciones.' 
+---
+= Funciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana funciones muestra las funciones disponibles de OnCommand Workflow Automation (WFA) y le permite gestionar estas funciones.
+
+Las funciones son herramientas complementarias para realizar operaciones significativas o en caja negra necesarias para planificar ejecuciones de flujo de trabajo. Las funciones se procesan durante la fase de planificación. Las funciones se pueden utilizar para completar tareas repetitivas y complejas, como definir una convención de nomenclatura compleja. Las funciones se ejecutan en su propio entorno de pruebas y pueden utilizar otras funciones durante la ejecución. Las funciones se escriben en MVFLEX Expression Language (MVEL).
+
+
+
+== Tabla de funciones
+
+En la tabla de funciones se enumeran las funciones de WFA disponibles. Cada entrada se identifica como una de las siguientes:
+
+* image:../media/community_certification.gif[""] - contenido creado por los usuarios
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenido desarrollado por Servicios profesionales (PS), que está disponible sólo en instalaciones personalizadas realizadas por PS
+* image:../media/community_certification.gif[""] - packs desarrollados por usuarios
+* image:../media/lock_icon_wfa.gif[""] - contenido creado por los usuarios que está bloqueado
+* image:../media/netapp_certified.gif[""] - Contenido certificado por NetApp
+
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla de funciones contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si la función es creada por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nombre*
++
+Muestra el nombre de la función.
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Muestra la descripción de las funciones.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó la función por última vez.
+
+* *Actualizado por*
++
+Muestra el usuario que actualizó la función.
+
+* *Bloqueado por*
++
+Muestra el usuario que bloqueó la función.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre la ventana Nueva función, que permite crear una nueva función.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre la ventana <EntryName> de función para la función seleccionada, que permite editar la función.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre la ventana Nueva función <EntryName>_Copy, que permite crear una copia de la función seleccionada.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo Bloquear la función de confirmación, que permite bloquear la función seleccionada. Esta opción solo está habilitada para las funciones que se hayan creado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo Desbloquear la confirmación de la función, que permite desbloquear la función seleccionada.
+
++
+Esta opción sólo está activada para las funciones bloqueadas. Los administradores pueden desbloquear funciones bloqueadas por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar función, que permite eliminar la función creada por el usuario seleccionada.
+
++
+
+NOTE: No puede eliminar una función WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar la función creada por el usuario seleccionada.
+
++
+
+NOTE: No puede exportar una función WFA o PS.
+
+* *image:../media/test_wfa_icon.gif["icono de prueba"] (Prueba)*
++
+Abre el cuadro de diálogo Prueba, que permite probar la función seleccionada.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar al paquete funciones, que permite agregar la función y sus entidades fiables a un paquete, que se puede editar.
+
++
+
+NOTE: La función Agregar al paquete está habilitada para funciones con certificación establecida en Ninguno y Bloquear.
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Eliminar de las funciones del paquete para la función seleccionada, que permite eliminar o eliminar la función del paquete.
+
++
+
+NOTE: La función Eliminar del paquete está habilitada para funciones con certificación establecida en Ninguno y Bloquear.
+
+

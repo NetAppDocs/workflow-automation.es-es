@@ -1,0 +1,54 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-functions.html 
+sidebar: sidebar 
+keywords: create, functions, encapsulate, common, complex, logic, name, function, reuse, command, parameter, value, oncommand, workflow, automation 
+summary: 'Puede crear funciones para encapsular la lógica más compleja y utilizada comúnmente en una función llamada y, a continuación, reutilizar la función como valores de parámetros de comandos o valores de parámetros de filtro en OnCommand Workflow Automation (WFA).' 
+---
+= Directrices para las funciones de WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear funciones para encapsular la lógica más compleja y utilizada comúnmente en una función llamada y, a continuación, reutilizar la función como valores de parámetros de comandos o valores de parámetros de filtro en OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Utilice la caja Camel para un nombre de función.
+ a| 
+CalculateVolumeSize
+
+
+
+ a| 
+Los nombres de las variables deben estar en inglés normal y relacionados con la funcionalidad de la función.
+ a| 
+SplitByDelimiter
+
+
+
+ a| 
+No utilice abreviaturas.
+ a| 
+CalculateVolumeSize, _not_ calcVolSize
+
+
+
+ a| 
+Las funciones se definen mediante MVFLEX Expression Language (MVEL).
+ a| 
+Ninguno
+
+
+
+ a| 
+La definición de la función debe especificarse de acuerdo con las directrices oficiales del lenguaje de programación Java.
+ a| 
+Ninguno
+
+|===

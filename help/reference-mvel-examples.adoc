@@ -1,0 +1,141 @@
+---
+permalink: help/reference-mvel-examples.html 
+sidebar: sidebar 
+keywords: expression, language, syntax, several, oncommand, workflows, automation, sample, review, learn, use 
+summary: 'Los sINVFLEX Expression Language (MVEL) se utilizan en varios flujos de trabajo de ejemplo de OnCommand Workflow Automation (WFA). Debe revisar algunos de los impuestos de sincronización de MVEL de muestra para saber cómo utilizar MVEL en WFA.' 
+---
+= Ejemplos de sintaxis MVEL
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los sINVFLEX Expression Language (MVEL) se utilizan en varios flujos de trabajo de ejemplo de OnCommand Workflow Automation (WFA). Debe revisar algunos de los impuestos de sincronización de MVEL de muestra para saber cómo utilizar MVEL en WFA.
+
+En las siguientes secciones se ofrecen algunos ejemplos de las sintaxis de MVEL utilizadas en WFA.
+
+
+
+== Ejecución condicional
+
+La siguiente expresión MVEL se utiliza para la ejecución condicional de un comando cuando el número de volúmenes encontrados es menor que 4:
+
+[listing]
+----
+$NoOfVolumes < 4
+----
+
+
+== Nomenclatura incremental
+
+La siguiente expresión MVEL se utiliza para la nomenclatura incremental de un objeto:
+
+[listing]
+----
+last_volume.name+last_volume.state
+----
+Esta expresión MVEL usa el último nombre del volumen creado y el estado del último volumen creado para el nombre.
+
+
+
+== Representación de cadena en comandos
+
+La siguiente sintaxis de MVEL se utiliza como una representación de cadena:
+
+[listing]
+----
+DestinationCluster + ":" + DestinationVserver + "/" + DestinationVolume
+----
+
+
+== Plantillas
+
+La siguiente sintaxis de MVEL se utiliza en una plantilla:
+
+[listing]
+----
+calculateSnapReserveSize(calculateVolumeSizeFromDataSize((int)($fs_size*1.01),$snap_space),$snap_space)
+----
+Esta sintaxis MVEL se utiliza para calcular el porcentaje de capacidad de volumen que se debe reservar para las copias Snapshot.
+
+
+
+== Detalles del comando
+
+La siguiente función MVEL se utiliza en la sección atributos de un parámetro:
+
+[listing]
+----
+actualVolumeSize($VolumeSizeInGB * 1024, volume.snapshot_reserved_percent)
+----
+La siguiente sintaxis de MVEL se utiliza en la sección atributos de un parámetro:
+
+[listing]
+----
+$VolumeName+'test001'
+----
+
+
+== Constantes de flujo de trabajo
+
+Las siguientes sintaxis de MVEL se utilizan para constantes en los flujos de trabajo:
+
+[listing]
+----
+convertNullToZero(infinite_volume.max_namespace_constituent_size_mb)
+----
+[listing]
+----
+$Size_TB*1048576L
+----
+
+
+== Parámetros de retorno
+
+La siguiente sintaxis de MVEL se utiliza para validar si se puede asignar el tamaño solicitado:
+
+[listing]
+----
+size_remaining == 0 ? '' : throwException('Not sufficient space in capacity_class_aggregate or data constituent of size less than 1 TB can not be created: Total size requested='+$Size_TB+'TB'+' ,Size remaining='+size_remaining/TB_TO_MB+'TB'+', Infinite volume name='+infinite_volume.name+', Storage class='+CAPACITY_CLASS_LABEL)
+----
+
+
+== Definición de función
+
+La siguiente sintaxis MVEL se utiliza en una definición de función, que se utiliza para convertir null a cero:
+
+[listing]
+----
+def convertNullToZero (data)
+{
+  if(data == null)
+  {
+    return 0;
+  }
+  else
+  {
+    return data;
+  }
+}
+----
+
+
+== Repetición de una fila específica
+
+La siguiente expresión MVEL utiliza una entrada de usuario para indicar el número de veces que se debe repetir una fila para crear LUN:
+
+[listing]
+----
+$NumberOfLunsToBeCreated
+----
+
+
+== Expresiones condicionales para una fila
+
+La siguiente expresión MVEL utiliza una entrada de usuario para indicar si se ejecutará la fila:
+
+[listing]
+----
+$SetupSnapMirror
+----

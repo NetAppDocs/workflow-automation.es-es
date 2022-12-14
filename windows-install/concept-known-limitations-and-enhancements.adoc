@@ -1,0 +1,23 @@
+---
+permalink: windows-install/concept-known-limitations-and-enhancements.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations, enhancements 
+summary: 'OnCommand Workflow Automation (WFA) 5.1 incluye algunas limitaciones y funciones no compatibles que debe tener en cuenta antes de instalar y configurar WFA.' 
+---
+= Limitaciones y mejoras conocidas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) 5.1 incluye algunas limitaciones y funciones no compatibles que debe tener en cuenta antes de instalar y configurar WFA.
+
+* *Creando nombres de categoría*
++
+** Cuando se utiliza un guión (-) en un nombre de categoría, se reemplaza por un espacio una vez guardada la categoría. Por ejemplo, si se proporciona el nombre de categoría "abc-xyz", el nombre de categoría se guarda como "abc xyz", con el guión eliminado. Para evitar este problema, no use guiones en los nombres de categorías.
+** Cuando se utilizan dos puntos (:) en un nombre de categoría, la cadena de texto antes de los dos puntos se omite una vez guardada la categoría. Por ejemplo, si se proporciona el nombre de categoría "abc : xyz", el nombre de categoría se guarda como "xyz", con la cadena "abc" eliminada. Para evitar este problema, no utilice dos puntos en los nombres de categoría.
+** No hay verificación para evitar que dos categorías tengan el mismo nombre. Sin embargo, esto provoca un problema al seleccionar estas categorías en el panel de navegación. Para evitar este problema, asegúrese de que cada nombre de categoría es único.
+
+
+

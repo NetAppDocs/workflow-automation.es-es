@@ -1,0 +1,45 @@
+---
+permalink: workflows/reference-guidelines-for-data-source-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, data, source, type, use, define, custom, oncommand, workflow, automation 
+summary: 'Debe tener en cuenta las directrices para crear los tipos de origen de datos que se utilizan para definir orígenes de datos personalizados para OnCommand Workflow Automation (WFA).' 
+---
+= Directrices para crear tipos de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe tener en cuenta las directrices para crear los tipos de origen de datos que se utilizan para definir orígenes de datos personalizados para OnCommand Workflow Automation (WFA).
+
+Puede definir un tipo de origen de datos mediante uno de los siguientes métodos:
+
+* SQL: Puede utilizar las directrices de WFA SQL para definir consultas seleccionadas de orígenes de datos basadas en una base de datos externa.
+* SCRIPT: Puede escribir una secuencia de comandos de PowerShell que proporcione los datos de un esquema específico de entradas del diccionario.
+
+
+Las directrices para crear tipos de origen de datos son las siguientes:
+
+* Se debe utilizar el idioma de PowerShell para crear un script.
+* El script de PowerShell debe proporcionar la salida de cada entrada de diccionario en su directorio de trabajo actual.
+* Se debe dar nombre a los archivos de datos `dictionary_entry.csv,` donde el nombre de la entrada del diccionario debe tener caracteres en minúsculas.
++
+El tipo de origen de datos predefinido que recopila información de Performance Advisor utiliza un tipo de origen de datos basado en SCRIPTS. Se denomina a los archivos de salida `array_performance.csv` y.. `aggregate_performance.csv.`
+
+* La `.csv` el archivo debe incluir el contenido en el orden exacto de los atributos de entrada del diccionario.
++
+Una entrada de diccionario incluye atributos en el siguiente orden: Array_ip, date, day, hour, cpu_busy, total_ops_por_seg, disk_throughput_per_s.
+
++
+El script de PowerShell añade datos al `.csv` archivar en el mismo orden.
+
++
+[listing]
+----
+$values = get-Array-CounterValueString ([REF]$data)
+Add-Content $arrayFile ([byte[]][char[]] "\N t$arrayIP't$date't$day't$hour't$values'n")
+----
+* Debe utilizar codificación para asegurarse de que la salida de datos del script se carga en la caché de WFA de forma precisa.
+* Debe utilizar \N al introducir un valor Null en `.csv` archivo.
+

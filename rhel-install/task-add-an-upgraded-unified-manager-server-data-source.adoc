@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html 
+sidebar: sidebar 
+keywords: add, upgraded, unified manager, server, data source 
+summary: 'Si el servidor de Unified Manager (5.x o 6.x) se añade como origen de datos a WFA y, a continuación, se actualiza el servidor de Unified Manager, Debe añadir el servidor actualizado de Unified Manager como origen de datos porque los datos asociados con la versión actualizada no se rellenan en WFA, a menos que se añadan manualmente como un origen de datos.' 
+---
+= Añada un servidor de Unified Manager actualizado como origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si el servidor de Unified Manager (5.x o 6.x) se añade como origen de datos a WFA y, a continuación, se actualiza el servidor de Unified Manager, Debe añadir el servidor actualizado de Unified Manager como origen de datos porque los datos asociados con la versión actualizada no se rellenan en WFA, a menos que se añadan manualmente como un origen de datos.
+
+.Pasos
+. Inicie sesión en la GUI web de WFA como administrador.
+. Haga clic en *Configuración* y en *Configuración*, haga clic en *fuentes de datos*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En el cuadro de diálogo Nuevo origen de datos, seleccione el tipo de origen de datos necesario y, a continuación, escriba un nombre para el origen de datos y el nombre de host.
++
+Según el tipo de origen de datos seleccionado, los campos de puerto, nombre de usuario, contraseña y tiempo de espera pueden completarse automáticamente con los datos predeterminados, si están disponibles. Puede editar estas entradas según sea necesario.
+
+. Haga clic en *Guardar*.
+. Seleccione la versión anterior del servidor de Unified Manager y haga clic en image:../media/delete_wfa_icon.gif["Icono de eliminar"] en la barra de herramientas.
+. En el cuadro de diálogo de confirmación Eliminar tipo de origen de datos, haga clic en *Sí*.
+. En la tabla orígenes de datos, seleccione el origen de datos y, a continuación, haga clic en image:../media/acquire_now_wfa_icon.gif["Icono de adquirir ahora"] en la barra de herramientas.
+. Compruebe el estado de la adquisición de datos en la tabla Historial.
+

@@ -1,0 +1,31 @@
+---
+permalink: windows-install/task-repair-the-activeperl-installation.html 
+sidebar: sidebar 
+keywords: repair, activeperl, installation 
+summary: 'ActiveState ActivePerl se instala en su servidor OnCommand Workflow Automation (WFA) al instalar WFA. Se requiere ActivePerl para la ejecución de comandos Perl. Si desinstala de forma accidental ActivePerl desde el servidor WFA o si la instalación de ActivePerl está dañada, puede reparar manualmente la instalación de ActivePerl.' 
+---
+= Repare la instalación de ActivePerl
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ActiveState ActivePerl se instala en su servidor OnCommand Workflow Automation (WFA) al instalar WFA. Se requiere ActivePerl para la ejecución de comandos Perl. Si desinstala de forma accidental ActivePerl desde el servidor WFA o si la instalación de ActivePerl está dañada, puede reparar manualmente la instalación de ActivePerl.
+
+.Pasos
+. Realice una copia de seguridad de la base de datos de WFA usando una de las siguientes opciones:
++
+** Portal web WFA
+** Script de PowerShell
+
+
+. Desinstale WFA.
+. Instale la versión de WFA que desinstaló.
++
+ActivePerl se instala cuando instala WFA.
+
+. Restaurar la base de datos de WFA.
+
+
+Puede revisar el contenido restaurado para comprobar que está completo en la funcionalidad, por ejemplo, el funcionamiento de los flujos de trabajo personalizados.

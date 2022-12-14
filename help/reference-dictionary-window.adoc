@@ -1,0 +1,168 @@
+---
+permalink: help/reference-dictionary-window.html 
+sidebar: sidebar 
+keywords: dictionary, window, display, available, entry, alphabetical order 
+summary: La ventana Diccionario muestra las entradas del diccionario disponibles en orden alfabético. 
+---
+= Diccionario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Diccionario muestra las entradas del diccionario disponibles en orden alfabético.
+
+Una entrada de diccionario es la definición de un tipo de objeto compatible con OnCommand Workflow Automation (WFA). Cada entrada del diccionario representa un tipo de objeto y sus relaciones en los entornos de almacenamiento y relacionados con el almacenamiento. Las entradas de diccionario se convierten en tablas de las bases de datos.
+
+
+NOTE: En función de sus privilegios de rol y cuenta, es posible que esta ventana no se muestre.
+
+
+
+== Tabla de diccionario
+
+La tabla Diccionario muestra las entradas del diccionario disponibles. Cada entrada se identifica como una de las siguientes:
+
+* image:../media/community_certification.gif[""] - contenido creado por los usuarios
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenido desarrollado por Servicios profesionales (PS), que está disponible sólo en instalaciones personalizadas realizadas por PS
+* image:../media/community_certification.gif[""] - packs desarrollados por usuarios
+* image:../media/lock_icon_wfa.gif[""] - contenido creado por los usuarios que está bloqueado
+* image:../media/netapp_certified.gif[""] - Contenido certificado por NetApp
+
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla Dictionary contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si la entrada del diccionario es creada por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nombre*
++
+Muestra el nombre de la entrada del diccionario.
+
+* *Esquema*
++
+Muestra el esquema asociado con las entradas del diccionario. Un esquema es un conjunto de entradas de diccionario que contienen datos relevantes para su entorno. (Por ejemplo, un esquema vc contiene datos relevantes para su entorno virtual, como máquinas virtuales, hosts y almacenes de datos.)
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Muestra la descripción de la entrada del diccionario.
+
+* *Adquisición activada*
++
+Muestra una Marca de verificación para las entradas del diccionario que están habilitadas para la adquisición de datos.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó por última vez la entrada del diccionario.
+
+* *Actualizado por*
++
+Muestra el nombre del usuario que actualizó la entrada del diccionario.
+
+* *Bloqueado por*
++
+Muestra el nombre del usuario que bloqueó la entrada del diccionario.
+
+* * Llaves naturales*
++
+Muestra las claves naturales asociadas a las entradas del diccionario.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre la ventana Nueva entrada de diccionario, que permite crear una nueva entrada de diccionario.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre la ventana <EntryName> de entrada de diccionario para la entrada de diccionario seleccionada, que permite editar la entrada de diccionario.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre la ventana Nueva entrada de diccionario <EntryName>_copy, que permite crear una copia de la entrada de diccionario seleccionada.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación Bloquear entrada de diccionario, que permite bloquear la entrada de diccionario seleccionada.
+
++
+Esta opción sólo está habilitada para las entradas de diccionario que ha creado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear entrada de diccionario, que permite desbloquear la entrada de diccionario seleccionada.
+
++
+Esta opción sólo está habilitada para las entradas de diccionario que haya bloqueado. Los administradores pueden desbloquear entradas del diccionario bloqueadas por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar entrada de diccionario, que permite eliminar la entrada de diccionario creada por el usuario seleccionado.
+
++
+
+NOTE: No puede eliminar una entrada del diccionario WFA ni una entrada del diccionario PS.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar la entrada de diccionario creada por el usuario seleccionado.
+
++
+
+NOTE: No puede exportar una entrada del diccionario WFA ni una entrada del diccionario PS.
+
+* *image:../media/enable_acquisition_wfa_icon.gif["Icono de activación de adquisición"] (Activar adquisición)*
++
+Proporciona la opción de activar la adquisición de caché para la entrada de diccionario seleccionada.
+
+* *image:../media/disable_acquisition_wfa_icon.gif["Desactivar el icono de adquisición"] (Desactivar adquisición)*
++
+Permite desactivar la adquisición de caché para la entrada de diccionario seleccionada.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icono Restablecer esquema"] (Restablecer esquema)*
++
+Permite restablecer el esquema asociado con la entrada del diccionario seleccionado.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar a diccionario de paquetes, que permite agregar la entrada de diccionario y sus entidades fiables a un paquete, que se puede editar.
+
++
+
+NOTE: La función Agregar al paquete sólo está habilitada para las entradas del diccionario para las que la certificación está establecida en *Ninguno.*
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar del diccionario del paquete para la entrada del diccionario seleccionado, que permite eliminar o quitar la entrada del diccionario del paquete.
+
++
+
+NOTE: La función Eliminar del paquete sólo está habilitada para las entradas del diccionario para las que la certificación está establecida en *Ninguno.*
+
+* *image:../media/inventory.png[""] (Inventario)*
++
+Abre el cuadro de diálogo Inventario de la entrada de diccionario seleccionada, que permite ver los datos de la tabla.
+
+

@@ -1,0 +1,62 @@
+---
+permalink: help/reference-edit-category-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, category, dialog box, enable, workflow 
+summary: El cuadro de diálogo Editar categoría permite editar una categoría de flujo de trabajo. 
+---
+= Cuadro de diálogo Editar categoría
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar categoría permite editar una categoría de flujo de trabajo.
+
+* *Nombre*
++
+Permite editar el nombre de la categoría.
+
+* *Descripción*
++
+Permite editar la descripción de la categoría.
+
+* *Flujos de trabajo disponibles*
++
+Muestra todos los flujos de trabajo disponibles que no se han movido al cuadro flujos de trabajo seleccionados.
+
+* *Flujos de trabajo seleccionados*
++
+Muestra todos los flujos de trabajo seleccionados para la categoría.
+
+* *Categoría utilizada para la autorización de flujo de trabajo*
++
+Permite otorgar acceso a usuarios con función de operador para ejecutar la categoría. La casilla de comprobación no está activada de forma predeterminada.
+
+* *Operadores disponibles*
++
+Muestra todos los usuarios con función de operador que no tienen acceso a la categoría.
+
+* *Operadores seleccionados*
++
+Muestra los usuarios a los que se concede acceso a la categoría.
+
+
+
+
+
+== Botones de comando
+
+* *Botones de selección*
++
+Mueve la entrada seleccionada de un cuadro a otro.
+
+* *Guardar*
++
+Guarda la categoría y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda la categoría y cierra el cuadro de diálogo.
+
+

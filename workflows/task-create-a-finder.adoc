@@ -1,0 +1,40 @@
+---
+permalink: workflows/task-create-a-finder.html 
+sidebar: sidebar 
+keywords: create, wfa, finder, search, resources, predefined, suitable, required 
+summary: Puede crear un buscador de WFA que pueda buscar recursos si no hay ningún localizador predefinido WFA que sea adecuado para buscar los recursos necesarios. 
+---
+= Crear un buscador
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear un buscador de WFA que pueda buscar recursos si no hay ningún localizador predefinido WFA que sea adecuado para buscar los recursos necesarios.
+
+.Lo que necesitará
+Debe haber creado los filtros requeridos que se usan en el buscador.
+
+.Pasos
+. Haga clic en *Diseño de flujo de trabajo* > *Finders*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En la ficha *Propiedades* del cuadro de diálogo *Nuevo Finder*, introduzca o seleccione los detalles necesarios en los campos *Nombre*, *Tipo* y *Descripción*.
+. En la ficha *Filtros*, seleccione los filtros necesarios en la lista *Filtros disponibles* y haga clic en image:../media/right_arrow_button.gif["Botón de flecha derecha"].
++
+Puede añadir o eliminar filtros según sus necesidades.
+
+. En la ficha atributos devueltos, seleccione los atributos necesarios para el filtro en la lista *disponible* y haga clic en image:../media/right_arrow_button.gif["Botón de flecha derecha"].
+. *Opcional:* haga clic en *Prueba* para probar el buscador.
++
+.. En el cuadro de diálogo *<FinderName>* del Buscador de pruebas, introduzca los parámetros de prueba necesarios.
+.. Desactive la casilla de verificación *usar datos de reserva en prueba* si no desea utilizar los datos de reserva para probar el buscador.
+.. Haga clic en *Prueba*.
++
+Se muestra el resultado de la prueba.
+
+.. Cierre el cuadro de diálogo.
+
+
+. Haga clic en *Guardar*.
+

@@ -1,0 +1,114 @@
+---
+permalink: workflows/reference-guidelines-for-logging.html 
+sidebar: sidebar 
+keywords: aware, guidelines, logging, writing, powershell, perl, script, oncommand, workflow, automation 
+summary: 'Debe conocer las directrices para iniciar sesión al escribir un script PowerShell o Perl para OnCommand Workflow Automation (WFA).' 
+---
+= Directrices para el registro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe conocer las directrices para iniciar sesión al escribir un script PowerShell o Perl para OnCommand Workflow Automation (WFA).
+
+
+
+== Registro de PowerShell
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Utilice el cmdlet Get-WFALogger para el registro.
+ a| 
+[listing]
+----
+Get-WFALogger -Info -message “Creating volume”
+----
+
+
+ a| 
+Registre todas las acciones que requieran interacción con paquetes internos como Data ONTAP, VMware y PowerCLI.todos los mensajes de registro están disponibles en registros de ejecución en el historial de estado de ejecución de flujos de trabajo.
+ a| 
+Ninguno
+
+
+
+ a| 
+Registre todos los argumentos relevantes que se pasan a paquetes internos.
+ a| 
+Ninguno
+
+
+
+ a| 
+Utilice los niveles de registro adecuados cuando utilice el cmdlet Get-WFALogger, en función del contexto de uso. -Info, -error, -warn y -Debug son los distintos niveles de registro disponibles. Si no se especifica un nivel de registro, el nivel de registro predeterminado es Debug.
+ a| 
+Ninguno
+
+|===
+
+
+== Registro Perl
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Utilice WFAUtil SendLog para el registro.
+ a| 
+[listing]
+----
+my wfa_util = WFAUtil->new();
+eval {
+$wfa_util->sendLog('INFO', "Connecting to the
+cluster: $DestinationCluster");
+}
+----
+
+
+ a| 
+Registrar cada acción que requiere la interacción con cualquier elemento externo al comando, como Data ONTAP, VMware y WFA. Todos los mensajes de registro que cree con la rutina WFAUtil SendLog se almacenan en la base de datos WFA. Estos mensajes de registro están disponibles para el flujo de trabajo y el comando ejecutados.
+ a| 
+Ninguno
+
+
+
+ a| 
+Registre cada argumento relevante pasado a la rutina que se llamó.
+ a| 
+Ninguno
+
+
+
+ a| 
+Use los niveles de registro adecuados.-Info, -error, -warn y -Debug son los distintos niveles de registro disponibles.
+ a| 
+Ninguno
+
+
+
+ a| 
+Cuando inicie sesión en el nivel -Info, sea preciso y conciso. No especifique detalles de implementación como el nombre de clase y el nombre de función en los mensajes de registro. Describa el paso exacto o el error exacto en inglés normal.
+ a| 
+El siguiente fragmento de código muestra un ejemplo de un mensaje correcto y un mensaje erróneo:
+
+[listing]
+----
+$wfa_util->sendLog('WARN', "Removing volume:
+'.$VolumeName);
+# Good Message
+----
+[listing]
+----
+$wfa_util->sendLog('WARN', 'Invoking volume-
+destroy ZAPI: '.$VolumeName);
+# Bad message
+----
+|===

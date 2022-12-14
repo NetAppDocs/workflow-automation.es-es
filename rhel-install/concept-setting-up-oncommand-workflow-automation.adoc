@@ -1,0 +1,14 @@
+---
+permalink: rhel-install/concept-setting-up-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: set up, oncommand, workflow, automation 
+summary: 'Después de completar la instalación de OnCommand Workflow Automation (WFA), debe completar varias opciones de configuración. Tiene que acceder a WFA, configurar usuarios, configurar orígenes de datos, configurar credenciales y configurar WFA.' 
+---
+= Configurar OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Después de completar la instalación de OnCommand Workflow Automation (WFA), debe completar varias opciones de configuración. Tiene que acceder a WFA, configurar usuarios, configurar orígenes de datos, configurar credenciales y configurar WFA.

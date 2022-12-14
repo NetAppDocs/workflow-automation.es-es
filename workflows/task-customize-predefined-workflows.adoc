@@ -1,0 +1,40 @@
+---
+permalink: workflows/task-customize-predefined-workflows.html 
+sidebar: sidebar 
+keywords: customize, predefined, workflow, automation, suitable, requirement 
+summary: 'Puede personalizar un flujo de trabajo predefinido de Workflow Automation (WFA) si no hay ningún flujo de trabajo predefinido que sea adecuado para sus necesidades.' 
+---
+= Personalizar flujos de trabajo predefinidos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar un flujo de trabajo predefinido de Workflow Automation (WFA) si no hay ningún flujo de trabajo predefinido que sea adecuado para sus necesidades.
+
+.Lo que necesitará
+Debe haber identificado las modificaciones necesarias para el flujo de trabajo predefinido.
+
+.Acerca de esta tarea
+Las preguntas y la solicitud de soporte de los siguientes deben dirigirse a la comunidad de WFA:
+
+* Cualquier contenido descargado desde la comunidad de WFA
+* Contenido personalizado de WFA que ha creado
+* WFA contenido que ha modificado
+
+
+.Pasos
+. Haga clic en *Diseño de flujo de trabajo* > *flujos de trabajo*.
+. Seleccione el flujo de trabajo predefinido que se ajuste a sus necesidades y, a continuación, haga clic en image:../media/clone_wfa_icon.gif["El icono de clon"] en la barra de herramientas.
+. En el diseñador de flujos de trabajo, realice los cambios necesarios en las fichas correspondientes, como editar la descripción, agregar o eliminar un comando, modificar los detalles del comando y modificar los datos introducidos por el usuario.
+. Haga clic en *Vista previa*, introduzca las entradas de usuario necesarias para obtener una vista previa de la ejecución del flujo de trabajo y, a continuación, haga clic en *Vista previa* para ver los detalles de planificación del flujo de trabajo.
+. Haga clic en *Aceptar* para cerrar la ventana de vista previa.
+. Haga clic en *Guardar*.
+
+
+
+
+== Después de terminar
+
+Puede probar el flujo de trabajo que modificó en su entorno de prueba y marcar el flujo de trabajo como listo para producción.

@@ -1,0 +1,74 @@
+---
+permalink: help/reference-edit-user-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, user, dialog box, enable, view, modify, account, settings 
+summary: El cuadro de diálogo Editar usuario permite ver y modificar la configuración de la cuenta de usuario. 
+---
+= Cuadro de diálogo Edit User
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar usuario permite ver y modificar la configuración de la cuenta de usuario.
+
+En función de los privilegios y funciones de su cuenta, puede que no tenga acceso a la ventana usuarios. Sin embargo, puede editar la configuración de su cuenta seleccionando *Configuración* y en *Administración* haga clic en *Configuración de cuenta*.
+
+
+NOTE: Los campos disponibles para su edición dependen de los privilegios de la función y la cuenta asignados.
+
+* *Nombre*
++
+Muestra el nombre de usuario de la cuenta de usuario.
+
+* *Rol*
++
+Muestra el rol asignado para la cuenta de usuario.
+
+* *Correo electrónico*
++
+Especifica el correo electrónico de la cuenta de usuario a la que se envían las notificaciones si se selecciona una opción notificar.
+
+* *Cambiar contraseña*
++
+Permite cambiar la contraseña actual de la cuenta de usuario. Cuando esta casilla de verificación está seleccionada, se requieren los siguientes campos:
+
++
+** *Nueva contraseña*--especifica la nueva contraseña.
+** *Confirmar*--especifica de nuevo la nueva contraseña.
+
+
+* *Notificar el*
++
+Permite seleccionar cuándo se debe notificar por correo electrónico al usuario de la cuenta durante la ejecución del flujo de trabajo. Cuando esta casilla de verificación está activada, puede seleccionar cualquier combinación de las siguientes opciones:
+
++
+** Ejecución del flujo de trabajo iniciada: Notifica al usuario cuando comienza la ejecución del flujo de trabajo.
+** La ejecución del flujo de trabajo ha fallado o se ha realizado correctamente: Notifica al usuario si la ejecución del flujo de trabajo falla o si el flujo de trabajo se ha ejecutado correctamente incluso si uno o más pasos han fallado.
++
+La ejecución se completa porque los pasos fallidos se han configurado de forma que la ejecución del flujo de trabajo continúa incluso cuando el paso ha fallado.
+
+** La ejecución del flujo de trabajo se ha completado correctamente: Notifica al usuario cuando la ejecución del flujo de trabajo se ha completado correctamente.
+** Ejecución del flujo de trabajo en espera de aprobación: Notifica al usuario si la ejecución del flujo de trabajo está a la espera de aprobación de un usuario operador o arquitecto, en función del valor de configuración de WFA.
+** Fallo de adquisición: Notifica al usuario cuando falla la adquisición de datos para orígenes de datos.
++
+Esta opción está habilitada solo para usuarios de administrador y de arquitecto.
+
+
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

@@ -1,0 +1,40 @@
+---
+permalink: help/concept-how-you-define-constants.html 
+sidebar: sidebar 
+keywords: create, use, constants, define, value, single, workflow, level 
+summary: Puede crear y utilizar constantes para definir un valor, que se puede utilizar en un único flujo de trabajo. Las constantes se definen a nivel de flujo de trabajo. 
+---
+= Cómo se definen las constantes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear y utilizar constantes para definir un valor, que se puede utilizar en un único flujo de trabajo. Las constantes se definen a nivel de flujo de trabajo.
+
+Las constantes utilizadas en el flujo de trabajo y su valor se muestran en la ventana de supervisión del flujo de trabajo durante la planificación y la ejecución. Debe utilizar nombres únicos para las constantes.
+
+Puede utilizar las siguientes convenciones de nomenclatura para definir constantes:
+
+* En mayúsculas para la primera letra de cada palabra, sin guiones bajos ni espacios entre palabras
++
+Todos los términos y abreviaturas deben utilizar mayúsculas, por ejemplo, `ActualVolumeSizeInMB`.
+
+* En mayúsculas para todas las letras
++
+Puede utilizar guiones bajos para separar palabras, por ejemplo, `AGGREGATE_USED_SPACE_THRESHOLD`.
+
+
+
+Puede incluir los siguientes valores como valores para las constantes de flujo de trabajo:
+
+* Números
+* Cadenas
+* Expresiones MVEL
++
+Las expresiones se evalúan durante las fases de planificación y ejecución de los flujos de trabajo. En las expresiones, no debe hacer referencia a las variables definidas en un bucle.
+
+* Entradas del usuario
+* Variables
+

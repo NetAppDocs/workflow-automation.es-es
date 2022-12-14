@@ -1,0 +1,74 @@
+---
+permalink: workflows/concept-what-return-parameters-are.html 
+sidebar: sidebar 
+keywords: return, parameters, available, after, planning, phase, workflow, values, useful, debugging, workflow, work, debug 
+summary: Los parámetros return son parámetros que están disponibles después de la fase de planificación de un flujo de trabajo. Los valores devueltos por estos parámetros son útiles para depurar un flujo de trabajo. Debe comprender cómo funcionan los parámetros return y qué parámetros se pueden utilizar como parámetros return para depurar flujos de trabajo. 
+---
+= Cómo funcionan los parámetros de retorno
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los parámetros return son parámetros que están disponibles después de la fase de planificación de un flujo de trabajo. Los valores devueltos por estos parámetros son útiles para depurar un flujo de trabajo. Debe comprender cómo funcionan los parámetros return y qué parámetros se pueden utilizar como parámetros return para depurar flujos de trabajo.
+
+Puede designar un conjunto de parámetros, como atributos de variables, expresiones y valores de entrada de usuario, en un flujo de trabajo como parámetros de retorno. Durante la ejecución del flujo de trabajo, los valores de los parámetros designados se completan en la fase de planificación y se inicia la ejecución del flujo de trabajo. A continuación, los valores de estos parámetros se devuelven de la forma en que se calcularon en esa ejecución específica del flujo de trabajo. Para depurar el flujo de trabajo, puede hacer referencia a los valores que devolvieron los parámetros.
+
+Puede especificar los parámetros de retorno necesarios en un flujo de trabajo cuando desee ver cuáles son los valores calculados o seleccionados para esos parámetros. Por ejemplo, al utilizar la lógica de selección de recursos para seleccionar un agregado en un flujo de trabajo, puede especificar agregado como el parámetro return para ver qué agregado se seleccionó durante la planificación del flujo de trabajo.
+
+Antes de hacer referencia a los valores de los parámetros de retorno para depurar el flujo de trabajo, debe confirmar que se ha completado la ejecución del flujo de trabajo. Los valores del parámetro return se establecen para cada ejecución del flujo de trabajo. Si agregó un parámetro return después de varias ejecuciones de un flujo de trabajo, el valor de ese parámetro solo está disponible para las ejecuciones después de agregar el parámetro.
+
+
+
+== Parámetros que se pueden utilizar como parámetros de retorno
+
+[cols="2*"]
+|===
+| Parámetros de retorno | Ejemplo 
+
+
+ a| 
+Atributos de variables que son escalares
+ a| 
+`volume1.name,` que es un atributo de la variable "'nombre del volumen'"
+
+
+
+ a| 
+Constantes
+ a| 
+MAX_VOLUME_SIZE
+
+
+
+ a| 
+Entradas del usuario
+ a| 
+$clustername
+
+
+
+ a| 
+Expresiones MVEL que implican atributos variables, constantes e entradas de usuario
+ a| 
+volume1.name+'-'+$clusterName
+
+
+
+ a| 
+El parámetro return que agrega un comando durante la ejecución
+ a| 
+La `$volumeUUID` El parámetro se añade como un parámetro return cuando se utiliza la siguiente línea en un comando de PowerShell: `Add-WfaWorkflowParameter -Name "VolumeUUID" -Value "`12345`" -AddAsReturnParameter $true.`
+
+|===
+
+
+== Ejemplos de parámetros de retorno en flujos de trabajo predefinidos
+
+Si desea comprender cómo se especifican los parámetros return, puede abrir los siguientes flujos de trabajo predefinidos en el Diseñador y revisar los parámetros return especificados:
+
+* Cree un volumen NFS en un vFiler
+* Cree un recurso compartido CIFS de Qtree en un vFiler
+* Cree un recurso compartido CIFS para volúmenes de Clustered Data ONTAP
+

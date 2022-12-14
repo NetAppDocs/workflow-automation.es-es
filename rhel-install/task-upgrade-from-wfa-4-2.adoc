@@ -1,0 +1,60 @@
+---
+permalink: rhel-install/task-upgrade-from-wfa-4-2.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, later 
+summary: 'Puede realizar una actualización in situ desde OnCommand Workflow Automation (WFA) 3.1 o posterior a la última versión disponible de WFA para utilizar las nuevas funciones y mejoras.' 
+---
+= Actualice desde OnCommand Workflow Automation 3.1 o posterior
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una actualización in situ desde OnCommand Workflow Automation (WFA) 3.1 o posterior a la última versión disponible de WFA para utilizar las nuevas funciones y mejoras.
+
+Debe haber descargado el archivo binario .bin del sitio de soporte de NetApp al equipo host de WFA.
+
+Puede restaurar a WFA 5.1 solo desde WFA 5.0 o 4.2. Un backup de base de datos de WFA solo se puede restaurar en un sistema que ejecuta la misma versión o una versión posterior de WFA.
+
+La conexión a clúster WFA 5.1 debe aceptar el certificado SSL. Cuando actualice de una versión anterior de WFA a WFA 5.1, necesitará certificar la conexión al clúster. Guarde los detalles de conexión del clúster para la certificación del clúster después de la actualización sin movimiento.
+
+No puede instalar MYSQL por su cuenta cuando actualice desde versiones anteriores de WFA. Puede instalar MySQL por su cuenta:
+
+* Cuando actualice de WFA 4.2 a versiones posteriores de WFA.
+* Actualice desde WFA 3.1 o una versión posterior eligiendo uno de los siguientes métodos:
++
+** Instalación interactiva
++
+... Desplácese hasta el archivo binario .bin en el equipo host WFA y ejecute el archivo.
+... Siga las instrucciones que aparecen en pantalla para completar la actualización.
+
+
+** Instalación silenciosa
++
+En el intérprete de comandos:
+
++
+`./WFA-version_number-build_number.bin [-y] [-u admin_user_name] [-p admin_user_password]`
+
++
+*Ejemplo:*
+
++
+`./WFA-3.1-Z3234343435.bin -y -u admin -p Company*234`
+
++
+Durante la actualización silenciosa, debe incluir valores para todas las siguientes opciones de comando:
+
++
+*** `-y` omite la confirmación de la instalación.
+*** `-u` especifica el nombre de usuario administrador.
+*** `-p` especifica la contraseña del usuario administrador.
++
+Si no ha proporcionado la contraseña de usuario administrador, debe introducir la contraseña cuando se le solicite.
+
+
+
+
+
+

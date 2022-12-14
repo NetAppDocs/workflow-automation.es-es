@@ -1,0 +1,19 @@
+---
+permalink: windows-install/task-set-up-wfa-in-mscs.html 
+sidebar: sidebar 
+keywords: set up, workflow, automation, mscs, high availability 
+summary: 'Puede instalar y configurar Workflow Automation (WFA) en un entorno de Microsoft Cluster Service (MSCS) para configurar la alta disponibilidad y proporcionar conmutación al nodo de respaldo. Antes de instalar WFA, debe verificar que todos los componentes necesarios están configurados correctamente.' 
+---
+= Configuración de la automatización de flujos de trabajo en MSCS para obtener una alta disponibilidad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede instalar y configurar Workflow Automation (WFA) en un entorno de Microsoft Cluster Service (MSCS) para configurar la alta disponibilidad y proporcionar conmutación al nodo de respaldo. Antes de instalar WFA, debe verificar que todos los componentes necesarios están configurados correctamente.
+
+Una configuración de alta disponibilidad ofrece soporte constante para las operaciones de aplicaciones. Si uno de los componentes falla, el componente reflejado de la configuración toma el control de la operación y proporciona recursos de red ininterrumpidas.
+
+
+NOTE: MSCS es la única solución de clustering compatible con WFA en Windows.

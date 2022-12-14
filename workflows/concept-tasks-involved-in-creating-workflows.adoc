@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-tasks-involved-in-creating-workflows.html 
+sidebar: sidebar 
+keywords: create, storage, automation, workflows, define, steps, perform, building blocks, commands, finders, filters, dictionary, entries 
+summary: 'La creación de flujos de trabajo de automatización del almacenamiento en OnCommand Workflow Automation (WFA) incluye definir los pasos que debe realizar un flujo de trabajo y crear el flujo de trabajo mediante los elementos básicos de WFA, como comandos, buscadores, filtros y entradas del diccionario.' 
+---
+= Tareas relacionadas con la creación de flujos de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La creación de flujos de trabajo de automatización del almacenamiento en OnCommand Workflow Automation (WFA) incluye definir los pasos que debe realizar un flujo de trabajo y crear el flujo de trabajo mediante los elementos básicos de WFA, como comandos, buscadores, filtros y entradas del diccionario.
+
+El siguiente diagrama de flujo ilustra el proceso de creación del flujo de trabajo:
+
+image::../media/designing_wfa_workflows_flowchart.gif[diagrama de flujo para diseñar flujos de trabajo de wfa]

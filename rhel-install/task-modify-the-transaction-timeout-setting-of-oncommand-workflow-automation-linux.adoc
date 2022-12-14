@@ -1,0 +1,29 @@
+---
+permalink: rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: modify, transaction, timeout, setting, oncommand, workflow, automation 
+summary: 'De forma predeterminada, la transacción de la base de datos OnCommand Workflow Automation (WFA) se agota en 300 segundos. Puede aumentar la duración del tiempo de espera predeterminado al restaurar una base de datos WFA de gran tamaño desde un backup para evitar un posible fallo de la restauración de la base de datos.' 
+---
+= Modifique la configuración de tiempo de espera de transacción de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+De forma predeterminada, la transacción de la base de datos OnCommand Workflow Automation (WFA) se agota en 300 segundos. Puede aumentar la duración del tiempo de espera predeterminado al restaurar una base de datos WFA de gran tamaño desde un backup para evitar un posible fallo de la restauración de la base de datos.
+
+Debe haber iniciado sesión en el sistema host de WFA como usuario raíz.
+
+La ruta de instalación predeterminada de WFA se utiliza en este procedimiento. Si ha cambiado la ubicación predeterminada durante la instalación, debe utilizar la ruta de instalación de WFA cambiada.
+
+.Pasos
+. En la confirmación del shell, desplácese hasta el siguiente directorio del servidor de WFA: WFA_install_location/wfa/bin/
+. Introduzca el siguiente comando:
++
+`./wfa --txn-timeout[=TIMEOUT] --restart=WFA`
+
++
+`./wfa --txn-timeout=1000 --restart=WFA`
+
+

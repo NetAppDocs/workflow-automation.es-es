@@ -1,0 +1,36 @@
+---
+permalink: workflows/reference-guidelines-for-creating-a-validation-script-for-remote-system-type.html 
+sidebar: sidebar 
+keywords: aware, guidelines, create, validation, scripts, use, test, remote, system, define, oncommand, workflow, automation 
+summary: 'Debe tener en cuenta las directrices para crear scripts de validación que se utilicen para probar los tipos de sistema remoto que defina en OnCommand Workflow Automation (WFA).' 
+---
+= Directrices para crear scripts de validación para tipos de sistema remoto
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe tener en cuenta las directrices para crear scripts de validación que se utilicen para probar los tipos de sistema remoto que defina en OnCommand Workflow Automation (WFA).
+
+* El script Perl que cree debe ser similar al script de ejemplo que se proporciona en la ventana Script de validación.
+* El resultado del script de validación debe ser similar al del script de muestra.
+
+
+
+
+== Ejemplo de script de validación
+
+[listing]
+----
+# Check connectivity.
+# Return 1 on success.
+# Return 0 on failure and set $message
+sub checkCredentials {
+my ($host, $user, $passwd, $protocol, $port, $timeout) = @_;
+#
+# Please add the code to check connectivity to $host using $protocol here.
+#
+return 1;
+}
+----

@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: related, documentation, oncommand, workflow, automation 
+summary: 'Hay documentos y herramientas adicionales que le ayudarán a aprender a realizar una configuración más avanzada de su servidor OnCommand Workflow Automation (WFA).' 
+---
+= Documentación relacionada para OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Hay documentos y herramientas adicionales que le ayudarán a aprender a realizar una configuración más avanzada de su servidor OnCommand Workflow Automation (WFA).
+
+
+
+== Otras referencias
+
+El espacio de Workflow Automation dentro de la comunidad de NetApp proporciona recursos de aprendizaje adicionales, incluidos los siguientes:
+
+* *Comunidad de NetApp*
++
+http://community.netapp.com/t5/OnCommand-Storage-Management-Software-Articles-and-Resources/tkb-p/oncommand-storage-management-software-articles-and-resources/label-name/workflow%20automation%20%28wfa%29?labels=workflow+automation+%28wfa%29["Comunidad de NetApp: Automatización de flujos de trabajo (WFA)"^]
+
+
+
+
+
+== Referencias de herramientas
+
+* *Matriz de interoperabilidad*
++
+Enumera las combinaciones compatibles de componentes de hardware y versiones de software.
+
++
+http://mysupport.netapp.com/matrix/["Matriz de interoperabilidad"^]
+
+

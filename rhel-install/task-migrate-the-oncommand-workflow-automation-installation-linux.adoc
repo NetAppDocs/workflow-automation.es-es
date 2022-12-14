@@ -1,0 +1,45 @@
+---
+permalink: rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html 
+sidebar: sidebar 
+keywords: migrate, oncommand, workflow, automation, installation 
+summary: 'Puede migrar una instalación de OnCommand Workflow Automation (WFA) para mantener la clave de base de datos WFA única que se instala durante la instalación de WFA.' 
+---
+= Migre la instalación de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede migrar una instalación de OnCommand Workflow Automation (WFA) para mantener la clave de base de datos WFA única que se instala durante la instalación de WFA.
+
+* Debe realizar este procedimiento solo cuando desee migrar una instalación de WFA que incluya la clave de base de datos WFA a un servidor diferente.
+* Una restauración de base de datos de WFA no migra la clave WFA.
+* Al migrar una instalación de WFA no se migran los certificados SSL.
+* La ruta de instalación predeterminada de WFA se utiliza en este procedimiento.
++
+Si ha cambiado la ubicación predeterminada durante la instalación, debe utilizar la ruta de instalación de WFA cambiada.
+
+
+
+.Pasos
+. Acceda a la WFA mediante un navegador web como administrador.
+. Realice un backup de la base de datos WFA.
+. Abra un indicador de comandos de shell en el servidor de WFA y cambie los directorios a la siguiente ubicación: WFA_install_location/wfa/bin/
+. Introduzca lo siguiente en el intérprete de comandos para obtener la clave de base de datos:
++
+`./wfa -key`
+
+. Observe la clave de la base de datos que se muestra.
+. Desinstale WFA.
+. Instale WFA en el sistema necesario.
+. Abra un indicador de comandos de shell en el servidor de WFA y cambie los directorios a la siguiente ubicación: WFA_install_location/wfa/bin/
+. En el símbolo del sistema del shell, instale la clave de la base de datos introduciendo el siguiente comando:
++
+`./wfa -key=yourdatabasekey`
+
++
+Subasedatosatkey es la clave que anotó de la instalación anterior de WFA.
+
+. Restaure la base de datos de WFA desde el backup que ha creado.
+

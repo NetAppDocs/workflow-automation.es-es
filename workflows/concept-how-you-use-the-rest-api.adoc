@@ -1,0 +1,36 @@
+---
+permalink: workflows/concept-how-you-use-the-rest-api.html 
+sidebar: sidebar 
+keywords: use, provided, rest api, workflow, automation, invoke, workflows, external, portals, data center, orchestration, software, support, xml, json, content types 
+summary: 'Puede utilizar las API DE REST que proporciona Workflow Automation (WFA) para iniciar flujos de trabajo desde portales externos y el software de orquestación del centro de datos. WFA admite tipos de contenido XML y JSON para todas las API REST.' 
+---
+= Cómo se utilizan las API DE REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede utilizar las API DE REST que proporciona Workflow Automation (WFA) para iniciar flujos de trabajo desde portales externos y el software de orquestación del centro de datos. WFA admite tipos de contenido XML y JSON para todas las API REST.
+
+WFA permite que los servicios externos accedan a diversas colecciones de recursos, como flujos de trabajo, usuarios, filtros e buscadores, A través de rutas de URI. Los servicios externos pueden utilizar métodos HTTP como GET, PUT, POST y DELETE. En estos URI para realizar operaciones CRUD en los recursos.
+
+Puede realizar varias acciones a través de las API REST de WFA, incluidas las siguientes:
+
+* Acceder a definiciones y metadatos de flujos de trabajo.
+* Ejecutar flujos de trabajo y supervisar su ejecución.
+* Ver usuarios y roles, y cambiar contraseñas.
+* Ejecutar y probar filtros de selección de recursos.
+* Ejecutar y probar buscadores de recursos.
+* Administrar credenciales de almacenamiento u otros objetos de centros de datos.
+* Ver orígenes de datos y tipos de orígenes de datos.
+
+
+_REST Documentage_ tiene más información sobre las API DE REST:
+
+_https_://wfa_server_ip:port/rest/docs
+
+`wfa_server_ip` Es la dirección IP del servidor y el puerto de WFA es el número de puerto TCP que ha utilizado para el servidor WFA durante la instalación.
+
+
+NOTE: WFA comprueba los tokens de falsificación de solicitudes entre sitios (CSRF) para las solicitudes que proceden de la interfaz de usuario web. Sin embargo, WFA no comprueba los tokens CSRF si existen solicitudes REST entrantes que provienen de clientes REST o de software de orquestación.

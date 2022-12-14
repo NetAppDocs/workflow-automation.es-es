@@ -1,0 +1,14 @@
+---
+permalink: windows-install/reference-configuring-a-database-user-on-datafabric-manager.html 
+sidebar: sidebar 
+keywords: configure, database, user, datafabric manager 
+summary: Debe crear un usuario de base de datos en DataFabric Manager 5.x para configurar el acceso de solo lectura de la base de datos de DataFabric Manager 5.x a OnCommand Workflow Automation. 
+---
+= Configuración de un usuario de base de datos en DataFabric Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe crear un usuario de base de datos en DataFabric Manager 5.x para configurar el acceso de solo lectura de la base de datos de DataFabric Manager 5.x a OnCommand Workflow Automation.

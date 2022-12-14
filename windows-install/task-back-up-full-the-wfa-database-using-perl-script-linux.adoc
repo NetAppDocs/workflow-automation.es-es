@@ -1,0 +1,41 @@
+---
+permalink: windows-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, cli 
+summary: 'Puede realizar un backup completo de la base de datos OnCommand Workflow Automation (WFA) mediante la interfaz de línea de comandos (CLI) de WFA. En un backup completo, se realiza un backup de la base de datos de WFA, la configuración de WFA y las claves.' 
+---
+= Realice un backup (completo) de la base de datos de WFA mediante la CLI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar un backup completo de la base de datos OnCommand Workflow Automation (WFA) mediante la interfaz de línea de comandos (CLI) de WFA. En un backup completo, se realiza un backup de la base de datos de WFA, la configuración de WFA y las claves.
+
+Debe tener credenciales de usuario administrador o credenciales de arquitecto.
+
+En un entorno de alta disponibilidad, debe crear backups programados con las API DE REST. No puede crear backups utilizando la CLI cuando WFA está en modo a prueba de fallos.
+
+Para más información, consulte la documentación DE REST.
+
+.Pasos
+. En el símbolo del sistema del shell, desplácese hasta el siguiente directorio en el servidor de WFA: `WFA_install_location\WFA\bin.`
++
+WFA_install_Location es el directorio de instalación de WFA.
+
+. Realice un backup de la base de datos de WFA:
++
+`.\wfa --backup --user=USER [--password=PASS] [--location=PATH] [--full]`
+
++
+** user es el nombre de usuario del usuario de copia de seguridad.
+** password es la contraseña del usuario de copia de seguridad.
++
+Si no ha proporcionado la contraseña, debe introducir la contraseña cuando se le solicite.
+
+** path es la ruta completa del directorio al archivo de copia de seguridad.
+
+
+. Compruebe que el archivo de copia de seguridad se ha creado en la ubicación especificada.
+

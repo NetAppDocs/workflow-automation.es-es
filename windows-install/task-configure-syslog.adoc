@@ -1,0 +1,24 @@
+---
+permalink: windows-install/task-configure-syslog.html 
+sidebar: sidebar 
+keywords: configure, syslog 
+summary: 'Puede configurar OnCommand Workflow Automation (WFA) para que envíe datos del registro a un servidor de syslog específico con fines como el registro de eventos y el análisis de información de registros.' 
+---
+= Configurar syslog
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar OnCommand Workflow Automation (WFA) para que envíe datos del registro a un servidor de syslog específico con fines como el registro de eventos y el análisis de información de registros.
+
+Debe haber configurado el servidor de syslog para aceptar datos del servidor de WFA.
+
+.Pasos
+. Inicie sesión en WFA a través de un navegador web como administrador.
+. Haga clic en *Configuración* y en *Mantenimiento* haga clic en *Syslog*.
+. Active la casilla de verificación *Activar Syslog*.
+. Introduzca el nombre de host de syslog y seleccione el nivel de registro de syslog.
+. Haga clic en *Guardar*.
+

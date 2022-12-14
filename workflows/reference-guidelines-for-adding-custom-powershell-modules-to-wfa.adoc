@@ -1,0 +1,24 @@
+---
+permalink: workflows/reference-guidelines-for-adding-custom-powershell-modules-to-wfa.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, adding, custom, powershell, perl, modules, oncommand, workflow, automation, enable, commands, create 
+summary: 'Debe tener en cuenta diferentes consideraciones antes de agregar PowerShell personalizado y módulos Perl a OnCommand Workflow Automation (WFA). Los módulos Perl y PowerShell personalizados permiten usar comandos personalizados para crear flujos de trabajo.' 
+---
+= Consideraciones sobre la adición de PowerShell y módulos Perl personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe tener en cuenta diferentes consideraciones antes de agregar PowerShell personalizado y módulos Perl a OnCommand Workflow Automation (WFA). Los módulos Perl y PowerShell personalizados permiten usar comandos personalizados para crear flujos de trabajo.
+
+* Durante la ejecución de comandos de WFA, todos los módulos personalizados de PowerShell se añaden al directorio de instalación de WFA `/Posh/modules` se importan automáticamente.
+* Todos los módulos Perl personalizados se han añadido al `WFA/perl` el directorio se incluye en la biblioteca _@INC_.
+* No se realiza un backup de los módulos Perl y PowerShell personalizados como parte de la operación de backup de WFA.
+* Los módulos Perl y PowerShell personalizados no se restauran como parte de la operación de restauración de WFA.
+
+
+Debe realizar manualmente la copia de seguridad de los módulos de PowerShell y Perl personalizados para copiarlos en una nueva instalación de WFA.
+
+El nombre de la carpeta del directorio de módulos debe ser el mismo que el del nombre del módulo.

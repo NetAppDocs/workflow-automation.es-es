@@ -1,0 +1,23 @@
+---
+permalink: rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: configure, oncommand, workflow, automation 
+summary: 'OnCommand Workflow Automation (WFA) le permite configurar varios ajustes, como AutoSupport y notificaciones.' 
+---
+= Configurando OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) le permite configurar diversos ajustes, por ejemplo, AutoSupport y notificaciones.
+
+Al configurar WFA, puede configurar una o varias de las siguientes opciones, según sea necesario:
+
+* AutoSupport para enviar mensajes de AutoSupport al soporte técnico
+* Servidor de Microsoft Active Directory Lightweight Directory Access Protocol (LDAP) para la autenticación y autorización de LDAP para usuarios de WFA
+* Envíe por correo electrónico notificaciones sobre operaciones de flujo de trabajo y mensajes de AutoSupport
+* Protocolo simple de gestión de red (SNMP) para recibir notificaciones sobre operaciones de flujos de trabajo
+* Syslog para registro remoto de datos
+

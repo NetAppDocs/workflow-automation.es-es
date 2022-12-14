@@ -1,0 +1,46 @@
+---
+permalink: help/reference-new-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: new, pack, dialog box, enable, create 
+summary: El cuadro de diálogo Nuevo paquete permite crear un nuevo paquete. 
+---
+= Cuadro de diálogo New Pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nuevo paquete permite crear un nuevo paquete.
+
+* *Nombre*
++
+Permite introducir un nombre y guardar el paquete.
+
+* *Versión*
++
+Permite introducir una versión y guardar el paquete.
+
+* *Autor*
++
+Permite introducir el nombre del autor y guardar el paquete.
+
+* *Descripción*
++
+Permite introducir una descripción y guardar el paquete.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda el paquete y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo sin guardar.
+
+

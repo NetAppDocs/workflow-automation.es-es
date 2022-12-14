@@ -1,0 +1,49 @@
+---
+permalink: reference-legal-notices.html 
+sidebar: sidebar 
+keywords: legal, notices, copyright, trademarks, patents 
+summary: Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más. 
+---
+= Avisos legales
+:allow-uri-read: 
+
+
+Los avisos legales proporcionan acceso a las declaraciones de copyright, marcas comerciales, patentes y mucho más.
+
+
+
+== Derechos de autor
+
+http://www.netapp.com/us/legal/copyright.aspx[]
+
+
+
+== Marcas comerciales
+
+NETAPP, el logotipo de NETAPP y las marcas enumeradas en la página de marcas comerciales de NetApp son marcas comerciales de NetApp, Inc. Los demás nombres de empresas y productos son marcas comerciales de sus respectivos propietarios.
+
+http://www.netapp.com/us/legal/netapptmlist.aspx[]
+
+
+
+== Estadounidenses
+
+Puede encontrar una lista actual de las patentes propiedad de NetApp en:
+
+https://www.netapp.com/us/media/patents-page.pdf[]
+
+
+
+== Política de privacidad
+
+https://www.netapp.com/us/legal/privacypolicy/index.aspx[]
+
+
+
+== Aviso
+
+Los archivos de notificación proporcionan información sobre los derechos de autor y las licencias de terceros que se utilizan en software de NetApp.
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2875136["Aviso sobre Workflow Automation 5.1.1"^]
+
+link:https://library.netapp.com/ecm/ecm_download_file/ECMLP2861741["Aviso sobre Workflow Automation 5.1"^]

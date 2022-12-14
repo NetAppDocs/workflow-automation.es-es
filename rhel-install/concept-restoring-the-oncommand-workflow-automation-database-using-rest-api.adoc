@@ -1,0 +1,20 @@
+---
+permalink: rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, database, rest, apis 
+summary: 'Puede restaurar la base de datos de OnCommand Workflow Automation (WFA) mediante las API REST. No puede usar la interfaz de línea de comandos (CLI) para restaurar la base de datos de WFA durante una conmutación al respaldo.' 
+---
+= Restaurar la base de datos de WFA con API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede restaurar la base de datos de OnCommand Workflow Automation (WFA) mediante las API REST. No puede usar la interfaz de línea de comandos (CLI) para restaurar la base de datos de WFA durante una conmutación al respaldo.
+
+A continuación, se indican los dos tipos de restauraciones:
+
+* Restauración completa
+* Restauración regular
+

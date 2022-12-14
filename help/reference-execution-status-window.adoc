@@ -1,0 +1,237 @@
+---
+permalink: help/reference-execution-status-window.html 
+sidebar: sidebar 
+keywords: execution, window, display, status, process, workflow, submitted, enable, view, details, process, control, access, select 
+summary: La ventana ejecuciones muestra el estado del proceso de ejecución de cada flujo de trabajo que se ha enviado para su ejecución. La ventana le permite ver detalles del proceso de ejecución y controlar la ejecución de un flujo de trabajo. Puede acceder a esta ventana seleccionando ejecución > ejecuciones. 
+---
+= Ejecuciones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana ejecuciones muestra el estado del proceso de ejecución de cada flujo de trabajo que se ha enviado para su ejecución. La ventana le permite ver detalles del proceso de ejecución y controlar la ejecución de un flujo de trabajo. Puede acceder a esta ventana seleccionando *ejecución* > *ejecuciones*.
+
+* Tabla de flujo de trabajo
+* Barra de herramientas
+
+
+
+
+== Tabla de flujo de trabajo
+
+La tabla flujo de trabajo muestra los flujos de trabajo enviados para su ejecución. Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+En la siguiente tabla se describen los operadores admitidos para las columnas alfabéticas y numéricas de la tabla flujo de trabajo, disponibles en el cuadro de texto de filtro *Buscar*.
+
+[cols="2*"]
+|===
+| Alfabética | Numérico 
+
+
+ a| 
+* Contiene
+* No contiene
+* Comienza con
+* Termina con
+* Es igual a
+* No es igual
+* Restablecer
+
+ a| 
+* Es igual a
+* No es igual
+* Menor que
+* Mayor que
+* Menor o igual que
+* Mayor o igual que
+* Entre
+* Restablecer
+
+
+|===
+La tabla flujo de trabajo contiene las siguientes columnas:
+
+* *Trabajo #*
++
+Muestra el número de identificación del trabajo.
+
++
+El número de identificación del trabajo es único y el servidor lo asigna cuando inicia el trabajo.
+
+* *Nombre*
++
+Muestra el nombre del flujo de trabajo.
+
+* *Hora de inicio*
++
+Muestra la fecha y la hora en que se inició el flujo de trabajo.
+
++
+Haga clic en el icono de calendario del cuadro de texto filtro de búsqueda para buscar flujos de trabajo con una fecha de inicio específica.
+
+* *Hora final*
++
+Muestra la fecha y la hora en que finalizó el flujo de trabajo.
+
++
+Haga clic en el icono de calendario del cuadro de texto filtro de búsqueda para buscar flujos de trabajo con una fecha de finalización específica.
+
+* *Estado*
++
+Muestra el estado de ejecución del trabajo. El estado puede ser uno de los siguientes:
+
++
+** Error
++
+Indica que el flujo de trabajo falló durante la ejecución. En función del tiempo transcurrido desde la ejecución del flujo de trabajo, puede reanudar el flujo de trabajo desde el comando failed.
+
+** Ejecutando
++
+Indica que el flujo de trabajo se está ejecutando. El flujo de trabajo ejecuta el plan que se creó en la fase de planificación, que precede a cualquier otra ejecución.
+
+** Exitoso
++
+Indica que el flujo de trabajo se ha ejecutado correctamente.
+
+** Cancelada
++
+Indica que un usuario ha cancelado el flujo de trabajo.
+
+** Esperando aprobación
++
+Indica que un punto de aprobación forma parte del flujo de trabajo. El flujo de trabajo permanece en este estado hasta que el usuario especificado aprueba la ejecución del flujo de trabajo.
+
+** Programado
++
+Indica que la planificación del flujo de trabajo se ha completado y que el flujo de trabajo está programado para su ejecución.
+
+** Anulando
++
+Indica que el flujo de trabajo se está anulando. Un flujo de trabajo cancelado no continúa con la ejecución; cualquier parte del flujo de trabajo completada previamente permanece completada.
+
+** Obsoleto
++
+Indica que el flujo de trabajo programado no se ha ejecutado en el tiempo especificado de acuerdo con la programación.
+
+** Planificación
++
+Indica la resolución del diseño del flujo de trabajo, la ubicación de todos los recursos, la verificación de la viabilidad del diseño y la formulación del plan de ejecución. La planificación puede ser una acción independiente, parte de la verificación del diseño o parte de la ejecución porque cada ejecución comienza con una planificación nueva.
+
+** Pendiente
++
+Indica que el flujo de trabajo está en la cola de planificación. Este es un estado interno. El flujo de trabajo se recupera para planificar a partir de este estado.
+
+** Éxito parcial
++
+Indica que aunque el flujo de trabajo se ha ejecutado correctamente, hay uno o varios pasos que han fallado. La ejecución se completa porque los pasos fallidos se han configurado de forma que la ejecución del flujo de trabajo continúa incluso cuando el paso ha fallado.
+
+
+
+* *Completado*
++
+Muestra el número de pasos que se han completado del número total de pasos para el flujo de trabajo seleccionado.
+
+* *Enviado por*
++
+Muestra el nombre de usuario del usuario que envió el flujo de trabajo.
+
+* *Enviado a*
++
+Muestra la fecha y la hora en que se envió el flujo de trabajo.
+
++
+Haga clic en el icono de calendario del cuadro de texto filtro de búsqueda para buscar flujos de trabajo con una fecha de envío específica.
+
+* *Comentario de ejecución*
++
+Muestra el comentario especificado para la ejecución del flujo de trabajo.
+
+* *Programado para*
++
+Muestra la fecha y hora programadas para la ejecución del flujo de trabajo.
+
++
+Haga clic en el icono de calendario del cuadro de texto filtro de búsqueda para buscar flujos de trabajo con una fecha programada específica.cuando se aplique un filtro para ver los trabajos en una fecha posterior en la columna, pueden aparecer los trabajos con "'Job # cero'". Esto indica que el trabajo aún no se ha creado y que se creará a la hora programada.
+
+* *ID recurrente*
++
+Muestra el identificador de la programación recurrente.
+
+* *Nombre del programa*
++
+Muestra el nombre de la programación.
+
+* *Último cambio de estado*
++
+Muestra la hora a la que se cambió el estado.
+
++
+Haga clic en el icono de calendario del cuadro de texto filtro de búsqueda para buscar flujos de trabajo con una fecha de último cambio de estado específica.
+
+* *Comentario del punto de aprobación*
++
+Indica el mensaje que se muestra al usuario en el último punto de aprobación, si procede, durante la ejecución del flujo de trabajo.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/details_wfa_icon.gif["Icono Detalles"] (Detalles)*
++
+Abre la ventana Supervisión del flujo de trabajo seleccionado, que contiene las siguientes fichas para obtener información detallada sobre el flujo de trabajo:
+
++
+** Flujo
+** Plan de ejecución
+** Entradas del usuario
+** Parámetros de retorno
+** Historia
+
+
+
+
+También puede hacer doble clic en una entrada de la tabla para abrir la ventana Supervisión para ver información detallada.
+
+* *image:../media/abort_wfa_icon.gif["Icono de cancelación"] (Anular)*
++
+Impide que continúe el proceso de ejecución. Esta opción está activada para flujos de trabajo que se encuentran en modo de ejecución.
+
+* *image:../media/reschedule_wfa_icon.gif["Icono Reschecule"] (Reprogramar)*
++
+Abre un cuadro de diálogo reprogramar flujo de trabajo, que permite cambiar la hora de ejecución del flujo de trabajo. La opción está habilitada para los flujos de trabajo que están en el estado programado.
+
+* *image:../media/resume_wfa_icon.gif["Icono de reanudar"] (Reanudar)*
++
+Abre un cuadro de diálogo Reanudar flujo de trabajo, que permite reanudar la ejecución del flujo de trabajo después de modificar los problemas de entorno (por ejemplo, credenciales incorrectas en una matriz, licencias que faltan o matriz inactiva). La opción está habilitada para los flujos de trabajo que estén en la `Failed` estado.
+
+* *image:../media/approve_resume_wfa_icon.gif["Icono aprobar y reanudar"] (Aprobar y reanudar)*
++
+Permite aprobar la ejecución del flujo de trabajo y continuar con el proceso de ejecución. Esta opción está habilitada para los flujos de trabajo que se encuentran en la `Waiting For Approval state`.
+
+* *image:../media/reject_abort_wfa_icon.gif["Icono rechazar y cancelar"] (Rechazar y anular)*
++
+Permite rechazar la ejecución del flujo de trabajo y detener el proceso de ejecución. Esta opción está habilitada para los flujos de trabajo que se encuentran en la `Waiting For Approval state`.
+
+* *image:../media/clean_reservation_wfa_icon.gif["Icono de limpieza de reservas"] (Reserva limpia)*
++
+Permite limpiar la reserva de recursos realizada para un flujo de trabajo de la caché local. La reserva limpia solo está disponible para flujos de trabajo programados, fallidos y parcialmente correctos. No puede reanudar la reserva después de limpiarla.
+
+* *image:../media/refresh_wfa_icon.gif["Icono de reposición"] (Actualizar)*
++
+Actualiza la lista de flujos de trabajo. La vista se actualiza automáticamente. Para activar y desactivar la actualización automática, haga clic en image:../media/refresh_icon_wfa.gif[""] en la barra de estado.
+
+

@@ -1,0 +1,85 @@
+---
+permalink: workflows/concept-what-a-playground-database-is.html 
+sidebar: sidebar 
+keywords: playground, database, mysql, include, Workflow, automation, server, installation, add, tables, information, filters, queries, user, input 
+summary: 'La base de datos de juegos infantil es una base de datos de MySQL, que está incluida en la instalación del servidor de Workflow Automation (WFA). Puede agregar tablas a la base de datos de juegos para incluir información, que puede ser utilizada por filtros y consultas SQL para entradas de usuario.' 
+---
+= Qué base de datos de juegos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La base de datos de juegos infantil es una base de datos de MySQL, que está incluida en la instalación del servidor de Workflow Automation (WFA). Puede agregar tablas a la base de datos de juegos para incluir información, que puede ser utilizada por filtros y consultas SQL para entradas de usuario.
+
+La base de datos de juegos es un esquema al que no se puede acceder a través del portal web de WFA. Puede usar un cliente MySQL, como SQLyog, Toad para MySQL, y MySQL Workbench o una interfaz de línea de comandos (CLI), para acceder a la base de datos.
+
+Debe utilizar las siguientes credenciales para acceder a la base de datos de juegos:
+
+* Nombre de usuario: wfa
+* Contraseña: Wfa123
+
+
+Las credenciales proporcionan acceso completo a la base de datos de juegos y acceso de solo lectura a otros esquemas definidos en la base de datos MySQL de WFA. Puede crear las tablas necesarias en la base de datos de juegos.
+
+Puede agregar las etiquetas o metadatos que utiliza para objetos de almacenamiento del entorno a una tabla de la base de datos de juegos. A continuación, las etiquetas o los metadatos se pueden usar junto con la información de otras tablas de caché de WFA mediante filtros de WFA y consultas de entrada de usuario.
+
+Por ejemplo, puede utilizar la base de datos de juegos para los siguientes casos de uso:
+
+* Etiquetado de agregados con el nombre de unidad de negocio (unidad de negocio) y asignación de volúmenes al bus en función de estas etiquetas
+* Etiquetado de unidades vFiler con nombres de unidades de negocio
+* Adición de detalles geográficos o de ubicación a objetos de almacenamiento
+* Definición del acceso de administradores de bases de datos a bases de datos
+
+
+Por ejemplo, si utiliza el nombre de la unidad de negocio como etiqueta para los objetos de almacenamiento, como agregados y unidades vFiler, puede crear una tabla en la base de datos de juegos que incluya el nombre de la unidad de negocio. A continuación, el nombre de la unidad de negocio puede ser utilizado por filtros y consultas de entrada de usuario para sus flujos de trabajo.
+
+A continuación se muestra un ejemplo de tabla de base de datos de playground (playground.volume_bu):
+
+[cols="3*"]
+|===
+| array_ip | volume_name | RES 
+
+
+ a| 
+10.225.126.23
+ a| 
+data_11
+ a| 
+Marketing
+
+
+
+ a| 
+10.225.126.28
+ a| 
+arch_11
+ a| 
+RR. HH
+
+|===
+A continuación se muestra un ejemplo de consulta SQL que se puede utilizar para filtrar volúmenes por unidad de negocio:
+
+[listing]
+----
+SELECT
+    vol.name,
+    array.ip AS 'array.ip'
+FROM
+    storage.volume AS vol,
+    storage.array AS array,
+    playground.volume_bu AS vol_bu
+WHERE
+    vol.array_id = array.id
+    AND array.ip = vol_bu.array_ip
+    AND vol.name = vol_bu.volume_name
+    AND vol_bu.bu = '{$bu}'
+----
+*Información relacionada*
+
+https://www.webyog.com/["SQLyog"^]
+
+http://www.mysql.com/products/workbench/["MySQL Workbench"^]
+
+http://www.quest.com/toad-for-mysql/["Toad para MySQL"^]

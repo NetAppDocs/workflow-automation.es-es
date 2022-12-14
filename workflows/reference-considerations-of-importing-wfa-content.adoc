@@ -1,0 +1,44 @@
+---
+permalink: workflows/reference-considerations-of-importing-wfa-content.html 
+sidebar: sidebar 
+keywords: aware, certain, considerations, import, user-created, content, exported, oncommand, workflow, automation, installation, content, downloaded, storage, store, community 
+summary: 'Debe tener en cuenta determinados aspectos que debe tener en cuenta al importar contenido creado por el usuario, contenido exportado desde otra instalación de OnCommand Workflow Automation (WFA), o contenido que se descarga desde el almacén de automatización del almacenamiento o la comunidad de WFA.' 
+---
+= Consideraciones que tener en cuenta al importar el contenido de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe tener en cuenta determinados aspectos que debe tener en cuenta al importar contenido creado por el usuario, contenido exportado desde otra instalación de OnCommand Workflow Automation (WFA), o contenido que se descarga desde el almacén de automatización del almacenamiento o la comunidad de WFA.
+
+* WFA el contenido se guarda como un `.dar` file y puede incluir todo el contenido creado por el usuario desde otro sistema o elementos específicos como flujos de trabajo, buscadores, comandos y términos de diccionario.
+* Cuando se importa una categoría existente desde una `.dar` archivo, el contenido importado se combina con el contenido existente de la categoría.
++
+Por ejemplo, tenga en cuenta que existen dos flujos de trabajo WF1 y WF2 en la categoría A del servidor WFA. Si los flujos de trabajo WF3 y WF4 de la categoría A se importan al servidor WFA, la categoría A contendrá flujos de trabajo WF1, WF2, WF3 y WF4 después de la importación.
+
+* Si la `.dar` el archivo contiene entradas del diccionario y las tablas de caché correspondientes a las entradas del diccionario se actualizan automáticamente.
++
+Si las tablas de caché no se actualizan automáticamente, se registra un mensaje de error en el `wfa.log` archivo.
+
+* Al importar un `.dar` Archivo que tiene una dependencia de un paquete que no está presente en el servidor WFA, WFA intenta identificar si se cumplen todas las dependencias de las entidades.
++
+** Si faltan una o más entidades o si se encuentra una versión inferior de una entidad, la importación falla y se muestra un mensaje de error.
++
+El mensaje de error proporciona detalles de los paquetes que se deben instalar para cumplir con las dependencias.
+
+** Si se encuentra una versión superior de una entidad o si la certificación ha cambiado, se muestra un cuadro de diálogo genérico acerca de la discrepancia de versión y se completa la importación.
++
+Los detalles de discrepancia de versiones se registran en un `wfa.log` archivo.
+
+
+
+* Las preguntas y las solicitudes de soporte relativas a lo siguiente deben dirigirse a la comunidad de WFA:
++
+** Cualquier contenido descargado desde la comunidad de WFA
+** Contenido personalizado de WFA que ha creado
+** WFA contenido que ha modificado
+
+
+

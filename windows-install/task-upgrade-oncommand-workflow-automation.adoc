@@ -1,0 +1,47 @@
+---
+permalink: windows-install/task-upgrade-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: upgrade, oncommand, workflow, automation 
+summary: 'Si ha instalado una versión anterior de OnCommand Workflow Automation (WFA), puede actualizar a la versión más reciente de WFA para utilizar las nuevas funciones y mejoras.' 
+---
+= Actualice OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si ha instalado una versión anterior de OnCommand Workflow Automation (WFA), puede actualizar a la versión más reciente de WFA para utilizar las nuevas funciones y mejoras.
+
+* Puede actualizar a WFA 5.1 solo desde WFA 5.0 o 4.2.
++
+Si actualmente ejecuta WFA 4.1 o versiones anteriores de WFA, primero debe actualizar a WFA 5.0 o 4.2 y, a continuación, actualizar a WFA 5.1.
+
+* Puede restaurar un backup realizado en WFA 5.0 o 4.2 en WFA 5.1. Un backup de base de datos de WFA solo se puede restaurar en un sistema que ejecuta la misma versión o una versión posterior de WFA.
++
+Por ejemplo, si creó un backup en un sistema que ejecuta WFA 4.2, el backup solo puede restaurarse a sistemas que ejecutan WFA 4.2 o posterior.
+
+* No puede instalar MySQL por su cuenta cuando actualice desde versiones anteriores a WFA 4.2.
++
+Sin embargo, puede instalar MySQL por su cuenta:
+
++
+** Durante una instalación nueva de WFA 4.2 y posterior o.
+** Cuando actualice de WFA 4.2 a versiones posteriores de WFA.
++
+... Realice una copia de seguridad de la base de datos de WFA usando una de las siguientes opciones:
+
+
+** Portal web WFA
+** Script de PowerShell Si desea revertir a la misma versión de WFA, puede utilizar el backup que ha creado para restaurar su base de datos WFA.
++
+... Desinstale la versión existente de WFA.
+... Instale la versión más reciente de WFA.
+... Restaurar la base de datos de WFA.
+
+
+
+
+
+
+Puede revisar el contenido restaurado para comprobar que está completo en la funcionalidad; por ejemplo, puede comprobar el funcionamiento de los flujos de trabajo personalizados.

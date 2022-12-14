@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-variable-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, variable, dialog box, enable, user, input, attributes, workflow 
+summary: 'El cuadro de diálogo Editar variable: <UserInputName> permite editar los atributos de entrada de usuario de un flujo de trabajo.' 
+---
+= Cuadro de diálogo Editar variable
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar variable: <UserInputName> permite editar los atributos de entrada de usuario de un flujo de trabajo.
+
+
+
+== Propiedades
+
+* *Nombre variable*
++
+Permite editar el nombre de la entrada del usuario. Al cambiar el nombre de las entradas del usuario se actualizan todas las referencias a las entradas del usuario en el flujo de trabajo.
+
+* *Nombre para mostrar*
++
+Permite especificar o editar el nombre para mostrar de los datos introducidos por el usuario. Puede especificar un nombre para mostrar único si ha creado atributos de entrada de usuario con un nombre similar.
+
+* *Descripción*
++
+Permite especificar o editar una descripción para la entrada del usuario. La descripción aparece como una información rápida al ejecutar o obtener una vista previa del flujo de trabajo.
+
+* *Tipo*
++
+Permite seleccionar el tipo de entrada de usuario. Los campos o un vínculo a un cuadro de diálogo se muestran en función de las opciones seleccionadas. Entre las opciones disponibles se incluyen las siguientes:
+
++
+** String: Permite introducir una expresión regular para valores válidos en el campo RegEx (por ejemplo, a*).
+** Número: Permite introducir un rango numérico en el campo rango (por ejemplo, de 1 a 15).
+** Enumeración: Permite introducir una lista cerrada de valores en el campo valores de Enum.
+** Consulta: Permite introducir una consulta SQL sencilla para obtener el resultado.
++
+Los usuarios sólo pueden seleccionar los valores de la primera columna del resultado.
+
+** Consulta (selección múltiple): Permite introducir una consulta SQL que obtenga una lista de valores.
++
+Los usuarios pueden seleccionar un único valor o varios valores mientras ejecutan el flujo de trabajo; por ejemplo, puede seleccionar un único volumen, varios volúmenes o volúmenes con sus recursos compartidos y exportaciones.
+
++
+Puede seleccionar valores de cualquier columna que se muestre en el resultado. Al seleccionar una fila, se seleccionan los valores de todas las columnas de la fila seleccionada.
+
+** Boolean: Permite mostrar una casilla de verificación en el cuadro de diálogo Entradas de usuario.
+** Tabla: Permite especificar los encabezados de columna de la tabla que se pueden utilizar para introducir varios valores durante la ejecución del flujo de trabajo, por ejemplo, una tabla que se puede utilizar para especificar una lista de nombres de nodo y nombres de puerto.
++
+También puede configurar el tipo de entrada de usuario de columna y las propiedades asociadas a la entrada de usuario de columna. Se muestra un cuadro de diálogo basado en el tipo de entrada de usuario seleccionado. Entre las opciones disponibles se incluyen las siguientes:
+
++
+*** String: Permite introducir una expresión regular para valores válidos en el campo RegEx (por ejemplo, a*).
+*** Número: Permite introducir un rango numérico en el campo rango (por ejemplo, de 1 a 15).
+*** Enumeración: Permite introducir una lista cerrada de valores en el campo valores de Enum.
+*** Consulta: Permite introducir una consulta SQL sencilla para obtener el resultado.
++
+Los usuarios sólo pueden seleccionar los valores de la primera columna del resultado. Una consulta dentro de la columna de la entrada de usuario de la tabla no puede hacer referencia a otras entradas de usuario dentro de la consulta.
+
+*** Boolean: Permite seleccionar "'true'" o "'false'" como valor booleano de la lista desplegable.
+
+
+** Contraseña: Permite cifrar una contraseña que el usuario proporciona como entrada.
++
+Cuando se cifra, la contraseña se muestra como una secuencia de caracteres con asterisco en la aplicación WFA y en los archivos de registro.
+
+** Diccionario: Permite agregar los datos de la tabla para la entrada del diccionario seleccionado.
++
+El atributo de entrada del diccionario selecciona el atributo que se va a devolver. Puede seleccionar un único valor o varios mientras ejecuta el flujo de trabajo. Por ejemplo, puede seleccionar un único volumen, varios volúmenes o volúmenes con sus recursos compartidos y exportaciones. De forma predeterminada, se seleccionan valores únicos. También puede seleccionar Reglas para el filtrado. Una regla consta de un atributo de entrada de diccionario, un operador y un valor. El atributo también puede incluir atributos de sus referencias. Por ejemplo, puede especificar una regla para los agregados enumerando todos los agregados con nombre comenzando por la cadena «'aggr'» y teniendo un tamaño disponible superior a 5 GB. La primera regla del grupo es el atributo `name`, con el operador `starts-with`, y el valor kaggr. La segunda regla para el mismo grupo es el atributo `available_size_mb`, con el operador `>` y el valor 5000.
+
+
+
+* *Valores de bloqueo*
++
+Permite especificar si el usuario puede introducir un valor distinto de los valores devueltos por consulta. La activación de la casilla de verificación no permite al usuario proporcionar un valor; sólo se pueden seleccionar los valores devueltos por la consulta. Esta opción se utiliza con las opciones de tipo Enum y Query.
+
+* *Valor predeterminado*
++
+Permite establecer el valor predeterminado de la entrada del usuario.
+
+* *Obligatorio*
++
+Permite especificar si la entrada del usuario es obligatoria para la ejecución del flujo de trabajo.
+
+
+
+
+
+== Grupo
+
+* *Nombre del grupo*
++
+Permite agrupar los atributos de entrada de usuario relacionados. Los atributos de entrada de usuario se muestran en grupos definidos al previsualizar o ejecutar el flujo de trabajo. Por ejemplo, puede agrupar los atributos de entrada de usuario relacionados con los detalles del volumen.
+
+* *Expandir grupo por defecto*
++
+Permite mostrar todos los atributos de entrada de usuario especificados en un grupo como una lista ampliada. Si la casilla de verificación no está seleccionada, el grupo de entrada de usuario aparece contraído.
+
+
+
+
+
+== Dependencia
+
+Permite habilitar una entrada de usuario en función del valor introducido para otra entrada de usuario. Por ejemplo, en un flujo de trabajo que configura el protocolo NAS, puede especificar la entrada de usuario necesaria para el protocolo como «'NFS»» para permitir la entrada de usuario «Listas de host read-write» o «'CIFS» para activar «'Configuración de ACL CIFS».
+
+* *Seleccione la entrada del usuario para depender de*
++
+Permite seleccionar la entrada de usuario necesaria para activar la entrada de usuario que se muestra en el campo Nombre de variable.
+
+* *Valores aplicables (separados por comas)*
++
+Permite especificar el valor de la entrada de usuario condicional que permite que la entrada de usuario se muestre en el campo Nombre de variable.
+
+

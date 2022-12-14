@@ -1,0 +1,52 @@
+---
+permalink: help/reference-new-schedule-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, schedule, dialog box, create, workflow, execute, specified, frequency, monday 
+summary: Puede usar el cuadro de diálogo Nueva programación para crear una nueva programación para cualquier flujo de trabajo de modo que el flujo de trabajo se ejecute en una frecuencia específica. Por ejemplo, puede programar la ejecución de un flujo de trabajo cada lunes. 
+---
+= Cuadro de diálogo New Schedule
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar el cuadro de diálogo Nueva programación para crear una nueva programación para cualquier flujo de trabajo de modo que el flujo de trabajo se ejecute en una frecuencia específica. Por ejemplo, puede programar la ejecución de un flujo de trabajo cada lunes.
+
+
+
+== Nuevas propiedades de configuración de planificación
+
+* *Nombre*
++
+Permite especificar un nombre para la programación.
+
+* *Descripción*
++
+Permite introducir una descripción para la programación.
+
+* *Frecuencia*
++
+Permite especificar la frecuencia con la que se debe ejecutar el flujo de trabajo asociado a la programación. La opción Hourly está seleccionada de forma predeterminada. La frecuencia puede ser Hourly, Daily, Weekly o Monthly.
+
++
+Por ejemplo, si desea que se ejecute un flujo de trabajo todos los martes a las 9 HORAS, debe seleccionar la opción semanal e introducir la hora como `9:00` y día como `Tuesday.` Los dos puntos se deben usar al especificar la hora.
+
++
+Se admite el formato de hora de 24 horas. Los datos introducidos se basarán en la hora del servidor.
+
+
+
+
+
+== Botones de comando
+
+* *OK*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

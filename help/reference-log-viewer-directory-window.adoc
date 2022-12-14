@@ -1,0 +1,19 @@
+---
+permalink: help/reference-log-viewer-directory-window.html 
+sidebar: sidebar 
+keywords: log, viewer, window, list, available, oncommand, workflow, automation, access, select, maintenance, click, log viewer 
+summary: La ventana Visor de registros enumera todos los registros disponibles en OnCommand Workflow Automation. Para acceder a esta ventana, seleccione Configuración y, en Mantenimiento, haga clic en Visor de registros. 
+---
+= Ventana Visor de registros
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Visor de registros enumera todos los registros disponibles en OnCommand Workflow Automation. Puede acceder a esta ventana seleccionando *Configuración* y en *Mantenimiento* haga clic en *Visor de registros*.
+
+La ventana Visor de registros enumera los archivos de registro (en orden alfabético) e incluye el tamaño y la fecha del archivo cuando se generó cada archivo.
+
+
+NOTE: Esta característica no es compatible con Microsoft Windows Server 2003.

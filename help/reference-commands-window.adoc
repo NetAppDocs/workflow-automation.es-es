@@ -1,0 +1,161 @@
+---
+permalink: help/reference-commands-window.html 
+sidebar: sidebar 
+keywords: commands, window, display, available, alphabetical order, access, select, workflow, design 
+summary: La ventana comandos muestra los comandos disponibles en orden alfabético. Puede acceder a esta ventana seleccionando comandos Diseño de flujo de trabajo. 
+---
+= Ventana comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana comandos muestra los comandos disponibles en orden alfabético. Puede acceder a esta ventana seleccionando *Diseño de flujo de trabajo* > *comandos*.
+
+
+NOTE: En función de sus privilegios de rol y cuenta, es posible que esta ventana no se muestre.
+
+Un comando se define como una acción realizada como parte de un flujo de trabajo.
+
+* Tabla de comandos
+* Barra de herramientas
+
+
+
+
+== Tabla de comandos
+
+En la tabla de comandos, se enumeran los comandos disponibles.
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla comandos contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si el comando es creado por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nombre*
++
+Muestra el nombre del comando.
+
+* *Esquema*
++
+Muestra el esquema asociado con los comandos. Un esquema representa el modelo de datos de un sistema. Por ejemplo, un esquema de vc contiene datos relevantes para su entorno virtual, como máquinas virtuales, hosts y almacenes de datos.
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Muestra la descripción del comando.
+
++
+Puede buscar comandos introduciendo la descripción en el cuadro de texto de filtro *Buscar*.
+
+* *Compatibilidad con OS*
++
+Indica si el comando es compatible con el sistema operativo del host.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó el comando por última vez.
+
+* *Actualizado por*
++
+Muestra el usuario que actualizó el comando.
+
+* *Bloqueado por*
++
+Muestra el usuario que bloqueó el comando.
+
++
+Puede buscar comandos introduciendo el nombre de usuario en el cuadro de texto filtro *Buscar*.
+
+* *Idioma de comandos*
++
+Muestra el lenguaje de programación en el que se escribe el comando (Perl o PowerShell).
+
+* *Mín. Versiones de software*
++
+Especifica las versiones mínimas del software que se necesitan para ejecutar el flujo de trabajo. Por ejemplo, el software puede ser Clustered Data ONTAP 8.2.0 y vCenter 6.0. Las versiones se muestran como valores separados por comas.
+
+* *Parámetros obligatorios*
++
+Muestra los parámetros seleccionados como obligatorios para el comando.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre la ventana Nueva definición de comandos, que permite crear un comando.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre la ventana Editar definición de comandos para el comando seleccionado, que permite editar el comando. También puede hacer doble clic en el comando para abrir la ventana Editar definición de comandos.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre la ventana Editar <command_name> de definición de comandos - copia, que permite crear un clon o una copia del comando seleccionado.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación Bloquear comando, que permite bloquear el comando seleccionado. Esta opción está habilitada solo para los comandos que haya creado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear comandos, que permite desbloquear el comando seleccionado. Esta opción sólo está habilitada para los comandos bloqueados por usted. Sin embargo, los administradores pueden desbloquear comandos bloqueados por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Delete Command, que permite eliminar el comando creado por el usuario seleccionado.
+
++
+
+NOTE: No puede eliminar un comando WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar el comando creado por el usuario seleccionado.
+
++
+
+NOTE: No puede exportar un comando WFA o PS.
+
+* *image:../media/test_wfa_icon.gif["icono de prueba"] (Prueba)*
++
+Abre el cuadro de diálogo Test Command <CommandName> en <ScriptLanguage>, que permite probar el comando seleccionado.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar al comando Pack , que permite agregar el comando y sus entidades fiables a un paquete, que es editable.
+
++
+
+NOTE: La función Agregar a paquete sólo está habilitada para comandos para los que la certificación está establecida en *Ninguno.*
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar del comando Pack para el comando seleccionado, que permite eliminar o quitar el comando del paquete.
+
++
+
+NOTE: La función Eliminar del paquete sólo está habilitada para los comandos para los que la certificación está establecida en *Ninguno.*
+
+

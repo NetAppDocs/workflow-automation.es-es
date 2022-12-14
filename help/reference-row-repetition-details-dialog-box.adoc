@@ -1,0 +1,104 @@
+---
+permalink: help/reference-row-repetition-details-dialog-box.html 
+sidebar: sidebar 
+keywords: row, repetition, details, dialog box, enable, specify, parameters, row, repeated 
+summary: El cuadro de diálogo Detalles de repetición de fila le permite especificar cómo deben repetirse los parámetros de la fila. 
+---
+= Detalles de repetición de fila, cuadro de diálogo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Detalles de repetición de fila le permite especificar cómo deben repetirse los parámetros de la fila.
+
+
+
+== Repeticiones
+
+Permite seleccionar el tipo de opción de repetición requerido. La opción *número de veces* está seleccionada de forma predeterminada.
+
+* *Número de veces*
++
+Permite especificar lo siguiente:
+
++
+** El número de veces que se debe ejecutar la fila específica
+** Variable de índice
+** Variables
+** *Número de veces*
++
+Permite especificar un número para el número de veces que se debe ejecutar la fila específica.
+
+** *Variable de índice*
++
+Permite especificar el nombre de la variable de índice para la repetición de filas.
+
+** *Variables*
++
+Permite incluir variables adicionales que deben utilizarse durante la repetición de filas.
+
++
+*** *Agregar*
++
+Agrega una nueva fila en la tabla variables.
+
+*** *Eliminar*
++
+Quita la fila seleccionada de la tabla variables.
+
+
+
+
+
+* *Por cada recurso de un grupo*
++
+Permite especificar lo siguiente:
+
++
+** Tipo de recurso
+** Criterios de búsqueda de recursos
+** Variable de recurso
+** Variable de índice
+** Variable de tamaño de grupo
+** Variables
+** *Tipo de recurso*
++
+Permite seleccionar el tipo de recurso.
+
+** *Criterios de búsqueda de recursos*
++
+Abre el cuadro de diálogo selección de recursos, que permite especificar los criterios para buscar recursos del tipo de recurso seleccionado. El bucle se ejecuta para cada recurso buscado en función de los criterios especificados.
+
+** *Variable de recurso*
++
+Permite introducir un nombre para la variable de recurso.
+
+** *Variable de índice*
++
+Permite especificar el índice para la repetición de filas.
+
+** *Variable de tamaño de grupo*
++
+Permite introducir un nombre para la variable de tamaño del grupo.
+
+** *Variables*
++
+Permite incluir variables adicionales que deben utilizarse durante la repetición de filas.
+
+
+
+* *Botones de comando*
++
+** *OK*
++
+Guarda la configuración y cierra el cuadro de diálogo.
+
+** *Cancelar*
++
+No guarda ningún cambio, si lo hay, y cierra el cuadro de diálogo.
+
+
+
+

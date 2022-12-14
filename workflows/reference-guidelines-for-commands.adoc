@@ -1,0 +1,152 @@
+---
+permalink: workflows/reference-guidelines-for-commands.html 
+sidebar: sidebar 
+keywords: must, aware, guidelines, create, commands, oncommand, workflow, automation 
+summary: 'Debe tener en cuenta las directrices para crear comandos en OnCommand Workflow Automation (WFA).' 
+---
+= Directrices para comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe tener en cuenta las directrices para crear comandos en OnCommand Workflow Automation (WFA).
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Utilice un nombre fácilmente identificable para los comandos.
+ a| 
+`Create Qtree`
+
+
+
+ a| 
+Utilice espacios para delimitar palabras y cada palabra debe comenzar con un carácter en mayúscula.
+ a| 
+`Create Volume`
+
+
+
+ a| 
+Proporcione una descripción para explicar la funcionalidad del comando, incluido el resultado esperado de los parámetros opcionales.
+ a| 
+Ninguno
+
+
+
+ a| 
+De manera predeterminada, el tiempo de espera para los comandos estándar es de 600 segundos. El tiempo de espera predeterminado se configura al crear el comando. Cambie el valor predeterminado solo si el comando puede tardar más tiempo en completarse.
+ a| 
+`Create Volume` comando
+
+
+
+ a| 
+En caso de operaciones de ejecución prolongada, cree dos comandos, uno para invocar la operación de ejecución prolongada y otro para informar periódicamente sobre el progreso de la operación. El primer comando debería ser un `Standard Execution` el tipo de comando y el segundo debería ser `Wait for Condition` tipo de comando.
+ a| 
+`Create VSM` y.. `Wait for VSM` comandos
+
+
+
+ a| 
+Anteponga el `Wait for condition` Nombres de comandos con "'wait'" para facilitar la identificación.
+ a| 
+`Wait for CM Volume Move`
+
+
+
+ a| 
+Utilizar un intervalo de espera adecuado para los comandos "'wait for condition'". El valor especificado rige el intervalo en el que se ejecuta el comando Polling para comprobar si la operación de ejecución prolongada ha finalizado.
+ a| 
+60 intervalo de muestreo para `Wait for VSM` comando
+
+
+
+ a| 
+Para la `Wait for condition` comandos, utilice un tiempo de espera apropiado según el tiempo esperado para completar la operación de ejecución prolongada. El tiempo esperado podría ser considerablemente mayor si la operación implica transferencia de datos a través de una red.
+ a| 
+Una transferencia de base VSM puede tardar varios días en completarse. Por lo tanto, el tiempo de espera especificado es de 6 días.
+
+|===
+
+
+== Representación de cadena
+
+La representación de cadena de un comando muestra los detalles de un comando en un diseño de flujo de trabajo durante la planificación y ejecución. Sólo se pueden utilizar los parámetros de comando en la representación de cadena de un comando.
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Evite utilizar atributos que no tengan ningún valor. Un atributo sin valor se muestra como NA.
+ a| 
+VolName 10.68.66.212[NA]aggr1/testVol7
+
+
+
+ a| 
+Separar diferentes entradas en la representación de cadena usando los siguientes delimitadores: [ ] , / :
+ a| 
+`_ArrayName[ArrayIp]_`
+
+
+
+ a| 
+Proporcione etiquetas significativas a todos los valores de la representación de cadenas.
+ a| 
+`_Volume name=VolumeName_`
+
+|===
+
+
+== Lenguaje de definición de comandos
+
+Los comandos se pueden escribir utilizando los siguientes lenguajes de secuencias de comandos compatibles:
+
+* PowerShell
+* Perl
+
+
+
+
+== Definición de parámetros de comando
+
+Los parámetros de comando se describen por Nombre, Descripción, Tipo, valor predeterminado del parámetro y si el parámetro es obligatorio. El tipo de parámetro puede ser String, Boolean, Integer, Long, Double, Enumeración, DateTime, capacidad, matriz, Hashtable, Una contraseña o un XmlDocument. Aunque los valores para la mayoría de los tipos son intuitivos, los valores para Array y Hashtable deben tener un formato determinado tal como se describe en la siguiente tabla:
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Asegúrese de que el valor de un tipo de entrada Array es una lista de valores, separados por comas.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Months in which the schedule executes.")]
+[array]$CronMonths
+----
+La entrada se pasa como sigue: 0,3,6,9
+
+
+
+ a| 
+Asegúrese de que el valor de un tipo de entrada Hashtable es una lista de pares clave=valor, separados por punto y coma.
+ a| 
+[listing]
+----
+[parameter(Mandatory=$false,
+HelpMessage="Volume names and size (in MB)")]
+[hashtable]$VolumeNamesAndSize
+----
+La entrada se pasa como sigue: Volume1=100;Volume2=250;Volume3=50
+
+|===

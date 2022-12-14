@@ -1,0 +1,12 @@
+---
+permalink: rhel-install/index.html 
+sidebar: sidebar 
+keywords: installation, setup, linux 
+summary: Instalación y configuración para Linux 
+---
+= Instalación y configuración para Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+

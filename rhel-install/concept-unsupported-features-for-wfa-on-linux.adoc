@@ -1,0 +1,48 @@
+---
+permalink: rhel-install/concept-unsupported-features-for-wfa-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, limitations 
+summary: 'OnCommand Workflow Automation (WFA) 5.1 incluye algunas limitaciones y funciones no compatibles que debe tener en cuenta antes de instalar y configurar WFA.' 
+---
+= Limitaciones conocidas de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) 5.1 incluye algunas limitaciones y funciones no compatibles que debe tener en cuenta antes de instalar y configurar WFA.
+
+* *Autenticación LDAP*
++
+** Solo puede usar el servidor de protocolo ligero de acceso a directorios (LDAP) de Microsoft Active Directory para la autenticación LDAP.
+** Debe ser miembro de un grupo LDAP para utilizar la autenticación LDAP.
+** No debe utilizar un nombre de usuario LDAP que forme parte de una estructura jerárquica de varios dominios para autenticación o notificación.
+
+
+
+
+[NOTE]
+====
+No se admite Microsoft Active Directory Lightweight Directory Services (AD LDS).
+
+====
+* *Tipos de fuentes de datos de WFA*
++
+Los tipos de origen de datos de OnCommand Unified Manager 6.0, 6.1 y 6.2 quedan obsoletos en la versión WFA 4.1, por lo que estos tipos de origen de datos no se admitirán en futuras versiones.
+
+* *WFA instalado en Linux*
++
+** Actualmente, el contenido certificado de Data ONTAP que funciona en 7-Mode no está disponible.
+** Los comandos que incluyen solo el código PowerShell no son compatibles con Linux.
+** Los comandos certificados for7-Mode y VMware no se encuentran actualmente en Perl y por lo tanto no son compatibles con Linux.
+
+
+* *Creando nombres de categoría*
++
+** Cuando se utiliza un guión (-) en un nombre de categoría, se reemplaza por un espacio una vez guardada la categoría. Por ejemplo, si se proporciona el nombre de categoría "abc-xyz", el nombre de categoría se guarda como "abc xyz", con el guión eliminado. Para evitar este problema, no use guiones en los nombres de categorías.
+** Cuando se utilizan dos puntos (:) en un nombre de categoría, la cadena de texto antes de los dos puntos se omite una vez guardada la categoría. Por ejemplo, si se proporciona el nombre de categoría "abc : xyz", el nombre de categoría se guarda como "xyz", con la cadena "abc" eliminada. Para evitar este problema, no utilice dos puntos en los nombres de categoría.
+** No hay verificación para evitar que dos categorías tengan el mismo nombre. Sin embargo, esto provoca un problema al seleccionar estas categorías en el panel de navegación. Para evitar este problema, asegúrese de que cada nombre de categoría es único.
+
+
+

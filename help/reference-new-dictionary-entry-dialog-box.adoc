@@ -1,0 +1,94 @@
+---
+permalink: help/reference-new-dictionary-entry-dialog-box.html 
+sidebar: sidebar 
+keywords: new, dictionary, entry, dialog box, enable, create, object, specify, definition 
+summary: El cuadro de diálogo Nueva entrada de diccionario permite crear un nuevo objeto de diccionario y especificar una definición para el objeto. 
+---
+= Nuevo cuadro de diálogo Entrada de diccionario
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nueva entrada de diccionario permite crear un nuevo objeto de diccionario y especificar una definición para el objeto.
+
+* *Nombre del tipo de objeto*
++
+Permite especificar un nombre para el objeto de diccionario.
+
+* *Descripción*
++
+Permite proporcionar una descripción del objeto de diccionario.
+
+* *Esquema*
++
+Permite seleccionar un esquema que debe estar asociado con el objeto. Puede agregar entradas de diccionario personalizadas a los esquemas certificados.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión para la entrada de diccionario en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+
+
+
+
+== Tabla de atributos
+
+Permite especificar una lista de atributos que definen el objeto de diccionario.
+
+* *Nombre*
++
+Permite introducir un nombre para el atributo.
+
+* *Tipo*
++
+Permite seleccionar el tipo del atributo (por ejemplo, cadena, booleano e entero) para la comprobación de tipos. También puede hacer referencia a una entrada de diccionario desde el esquema seleccionado.
+
+* *Longitud de cadena*
++
+Permite especificar la longitud de la cadena en números, si el tipo de cadena está seleccionado para el atributo.
+
+* *Valores*
++
+Permite especificar una lista de valores separados por comas si se selecciona el tipo de enumeración para el atributo.
+
+* * Llave natural*
++
+Permite especificar si el atributo de diccionario forma parte de la clave natural del objeto de diccionario.
+
++
+Una clave natural es el identificador único de un objeto de diccionario. Por ejemplo, los qtrees se identifican mediante el nombre del qtree, el nombre del volumen y la dirección IP de la cabina.
+
+* *A ser escalfado*
++
+Permite especificar si el atributo se debe almacenar en caché.
+
++
+Una entrada de diccionario puede incluir tanto atributos almacenados en caché como atributos que no se almacenan en caché. Se crea una tabla de caché y se llena con los atributos marcados para almacenar en caché durante la adquisición de caché del esquema. Se crea una tabla de caché para un objeto de diccionario cuando se selecciona al menos un atributo para almacenarse en caché.
+
+* *Puede ser Nulo*
++
+Permite especificar si el valor del atributo puede ser nulo. Esta configuración sólo es válida para los atributos seleccionados que se van a almacenar en caché.
+
+* *Descripción*
++
+Permite especificar una descripción para el atributo.
+
+* *Los valores de las columnas de clave naturales distinguen entre mayúsculas y minúsculas*
++
+Permite especificar que las claves naturales distinguen entre mayúsculas y minúsculas.
+
+* *Botones de comando*
++
+** *Añadir fila*
++
+Permite agregar una fila a la tabla que se utiliza para especificar un atributo.
+
+** *Eliminar fila*
++
+Permite eliminar la fila seleccionada.
+
+
+
+

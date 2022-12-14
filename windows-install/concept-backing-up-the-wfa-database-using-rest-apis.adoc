@@ -1,0 +1,20 @@
+---
+permalink: windows-install/concept-backing-up-the-wfa-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, rest apis 
+summary: 'Puede realizar un backup de la base de datos OnCommand Workflow Automation (WFA) mediante las API REST. Si WFA se encuentra en modo de conmutación al nodo de respaldo en un entorno de alta disponibilidad, puede utilizar las API REST para crear backups programados. No puede usar la interfaz de línea de comandos (CLI) para crear backups durante una conmutación por error.' 
+---
+= Realizar backups de la base de datos de WFA usando API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar un backup de la base de datos OnCommand Workflow Automation (WFA) mediante las API REST. Si WFA se encuentra en modo de conmutación al nodo de respaldo en un entorno de alta disponibilidad, puede utilizar las API REST para crear backups programados. No puede usar la interfaz de línea de comandos (CLI) para crear backups durante una conmutación por error.
+
+A continuación, se indican los dos tipos de backup:
+
+* Backup completo
+* Copia de seguridad regular
+

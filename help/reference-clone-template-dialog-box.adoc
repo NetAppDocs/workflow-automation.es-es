@@ -1,0 +1,50 @@
+---
+permalink: help/reference-clone-template-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, template, dialog box, enable, create, copy, template, edit 
+summary: El cuadro de diálogo Clonar plantilla permite crear una copia de la plantilla y editarla. 
+---
+= Clonar plantilla
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Clonar plantilla permite crear una copia de la plantilla y editarla.
+
+* *Nombre*
++
+Permite editar el nombre de la plantilla.
+
+* *Tipo*
++
+Permite seleccionar un objeto de diccionario de la lista. El nombre de la plantilla que ha seleccionado para clonar se utiliza como nombre del clon y se adjunta con - copy de forma predeterminada.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión de la plantilla en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite editar la descripción de la plantilla.
+
+* *Atributos*
++
+Muestra los atributos del objeto de diccionario seleccionado y permite introducir un valor para cada atributo, como enumeración y función.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda la plantilla y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda la plantilla y cierra el cuadro de diálogo.
+
+

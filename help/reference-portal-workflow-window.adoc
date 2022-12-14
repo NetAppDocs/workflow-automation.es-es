@@ -1,0 +1,36 @@
+---
+permalink: help/reference-portal-workflow-window.html 
+sidebar: sidebar 
+keywords: workflow, window, displays, ready, production, edit, execute, authorization, access, clicking 
+summary: La ventana flujos de trabajo muestra los flujos de trabajo marcados como listos para producción. Puede editar o ejecutar los flujos de trabajo para los que tiene autorización. Puede acceder a esta ventana haciendo clic en la ficha flujos de trabajo. 
+---
+= Ventana flujos de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana flujos de trabajo muestra los flujos de trabajo marcados como listos para producción. Puede editar o ejecutar los flujos de trabajo para los que tiene autorización. Puede acceder a esta ventana haciendo clic en la ficha flujos de trabajo.
+
+
+
+== Panel Categoría
+
+El panel de categorías permite buscar flujos de trabajo por categorías. Un flujo de trabajo que no esté asignado a ninguna categoría se enumera en la sección «"no categoría"». A la derecha del encabezado de categoría, se muestra el número total de flujos de trabajo dentro de esa categoría. Este número incluye los flujos de trabajo marcados como listos para producción. Por ejemplo, "Protección data (7)" indica que siete flujos de trabajo están listos para su producción en la categoría "Protección data".
+
+
+
+== Esquemas
+
+El menú combinaciones le permite seleccionar los esquemas.
+
+Los esquemas que se muestran se basan en la selección realizada por el administrador en la opción Mostrar contenido para esquemas en *Configuración* > *Configuración* > *Configuración de flujo de trabajo*. Puede seleccionar los esquemas que desea mostrar activando o desactivando las casillas de verificación. Esta selección sólo es válida para la sesión actual.
+
+
+
+== Panel de flujo de trabajo
+
+Los flujos de trabajo marcados como listos para producción se muestran como cuadros grises en el panel flujo de trabajo. Los cuadros de flujo de trabajo incluyen el nombre del flujo de trabajo y un icono para indicar que el flujo de trabajo admite el modo. Puede ejecutar un flujo de trabajo haciendo clic en el cuadro de flujo de trabajo.
+
+Si es administrador o arquitecto, puede editar un flujo de trabajo haciendo clic en image:../media/portal_edit_object_wfa_icon.gif[""] . La image:../media/info_icon_execute_wfa.gif[""] icono proporciona más información sobre el flujo de trabajo.

@@ -1,0 +1,30 @@
+---
+permalink: windows-install/task-configure-mail.html 
+sidebar: sidebar 
+keywords: configure, email, notifications 
+summary: 'Puede configurar OnCommand Workflow Automation (WFA) para que le envíe notificaciones por correo electrónico acerca de las operaciones del flujo de trabajo; por ejemplo, se inició el flujo de trabajo o se produjo un error en el flujo de trabajo.' 
+---
+= Configure las notificaciones por correo electrónico
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar OnCommand Workflow Automation (WFA) para que le envíe notificaciones por correo electrónico acerca de las operaciones del flujo de trabajo, por ejemplo, el flujo de trabajo iniciado o el flujo de trabajo con errores.
+
+Debe haber configurado un host de correo en el entorno.
+
+.Pasos
+. Inicie sesión en WFA a través de un navegador web como administrador.
+. Haga clic en *Configuración* y en *Configuración* haga clic en *correo*.
+. Introduzca la información obligatoria en los campos.
+. Pruebe la configuración de correo realizando los siguientes pasos:
++
+.. Haga clic en *Enviar correo de prueba*.
+.. En el cuadro de diálogo probar conexión, introduzca la dirección de correo electrónico a la que desea enviar el correo electrónico.
+.. Haga clic en *Prueba*.
+
+
+. Haga clic en *Guardar*.
+

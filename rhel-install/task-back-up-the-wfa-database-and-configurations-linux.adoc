@@ -1,0 +1,39 @@
+---
+permalink: rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html 
+sidebar: sidebar 
+keywords: back up, restore, oncommand, workflow, automation, database, configurations, linux 
+summary: 'Puede realizar un backup y restaurar la base de datos de OnCommand Workflow Automation (WFA) y las configuraciones compatibles para que pueda recuperar los datos en caso de desastre. Las configuraciones compatibles incluyen acceso a datos, tiempo de espera HTTP y certificados SSL.' 
+---
+= Realizar backups y restaurar las configuraciones y bases de datos de OnCommand Workflow Automation en Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar un backup y restaurar la base de datos de OnCommand Workflow Automation (WFA) y las configuraciones compatibles para que pueda recuperar los datos en caso de desastre. Las configuraciones compatibles incluyen acceso a datos, tiempo de espera HTTP y certificados SSL.
+
+Debe tener privilegios de administrador o credenciales de arquitecto.
+
+Debe crear el backup en una ubicación segura porque mediante la restauración del backup se proporcionará acceso a todos los sistemas de almacenamiento a los que accede con WFA.
+
+[NOTE]
+====
+* Se requiere un backup completo de las bases de datos y las configuraciones de WFA durante la recuperación ante desastres y se puede utilizar tanto en entornos independientes como de alta disponibilidad.
+* Solo pueden utilizarse los comandos de la CLI o las API DE REST para realizar operaciones completas de backup y restauración durante la recuperación ante desastres.
++
+No puede usar la interfaz de usuario web para realizar un backup o restaurar la base de datos de WFA durante la recuperación ante desastres.
+
+
+
+====
+.Pasos
+. Realice un backup de la base de datos de OnCommand Workflow Automation.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["Realizar un backup de la base de datos de OnCommand Workflow Automation"]
+
+. Restaurar un backup anterior de la base de datos de OnCommand Workflow Automation.
++
+link:concept-restoring-the-wfa-database.html["Restaurar la base de datos OnCommand Workflow Automation"]
+
+

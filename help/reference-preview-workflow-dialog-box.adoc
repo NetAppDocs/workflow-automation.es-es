@@ -1,0 +1,34 @@
+---
+permalink: help/reference-preview-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: preview, workflow, dialog box, enable, specify, value, user input, associated 
+summary: El cuadro de diálogo flujo de trabajo de vista previa le permite especificar valores para las entradas de usuario asociadas a un flujo de trabajo y, a continuación, obtener una vista previa de la ejecución de dicho flujo de trabajo con los valores especificados. 
+---
+= Cuadro de diálogo Vista previa del flujo de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo flujo de trabajo de vista previa le permite especificar valores para las entradas de usuario asociadas a un flujo de trabajo y, a continuación, obtener una vista previa de la ejecución de dicho flujo de trabajo con los valores especificados.
+
+
+
+== Valores de entrada de usuario
+
+El cuadro de diálogo flujo de trabajo de vista previa muestra las entradas de usuario asociadas al flujo de trabajo seleccionado y permite establecer los valores para las entradas de usuario.
+
+
+
+== Botones de comando
+
+* *Vista previa*
++
+Abre la ventana Supervisión del flujo de trabajo asociado.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo.
+
+

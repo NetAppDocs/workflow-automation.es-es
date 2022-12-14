@@ -1,0 +1,50 @@
+---
+permalink: workflows/task-remove-entities-from-a-pack.html 
+sidebar: sidebar 
+keywords: remove, pack, entities, oncommand, workflow, automation, check, updated, source, control, management, server 
+summary: 'Puede quitar un paquete de las entidades de OnCommand Workflow Automation (WFA) y realizar el check-in del paquete actualizado en el servidor de gestión de control de origen (SCM).' 
+---
+= Quite los paquetes de flujo de trabajo de WFA de las entidades
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede quitar un paquete de las entidades de OnCommand Workflow Automation (WFA) y realizar el check-in del paquete actualizado en el servidor de gestión de control de origen (SCM).
+
+.Lo que necesitará
+El SCM debe estar configurado y debe tener credenciales de administrador o de arquitecto.
+
+.Acerca de esta tarea
+Puede quitar un paquete de las siguientes entidades:
+
+* Flujo de trabajo
+* Buscadores
+* Filtros
+* Comandos
+* Empresarial
+* Plantillas
+* Esquemas
+* Diccionario
+* Tipos de orígenes de datos
+* Tipos de sistemas remotos
+* Consultas en caché
+* Categorías
+
+
+.Pasos
+. Inicie sesión en la ventana *WFA* a través de un navegador web.
+. En el portal de diseño de *flujo de trabajo,* desplácese hasta la entidad que desee quitar y haga clic en *<Entity>*.
+. Haga clic en el icono *Quitar del paquete*.
+. En el cuadro de diálogo *Quitar del paquete <Entity>*, seleccione el paquete que desea eliminar de esa entidad.
+. Haga clic en *Aceptar*.
+. Haga clic en la ficha *Paquetes*.
+. Haga clic en el icono *Exportar al servidor*.
+. En el cuadro de diálogo *Exportar a carpeta del servidor*, en el campo *ubicación de carpeta en el sistema del servidor*, introduzca la ubicación de la carpeta del servidor donde se guarda el paquete en el servidor.
++
+De esta forma, exporta el paquete en forma explosionada en el sistema de archivos donde se crea el cliente SCM.
+
+. En la ubicación del cliente SCM, compruebe el contenido del paquete en el servidor SCM.
+. Utilice las herramientas Diff proporcionadas por SCM para verificar los cambios con respecto a la versión SCM del paquete.
+

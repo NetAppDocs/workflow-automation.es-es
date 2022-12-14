@@ -1,0 +1,62 @@
+---
+permalink: help/task-configure-autosupport.html 
+sidebar: sidebar 
+keywords: configure, several, autosupport, settings, schedule, content, messages, proxy, server, weekly, logs, select, technical, support, archiving, issue, analysis 
+summary: Puede configurar varias opciones de AutoSupport, como la programación, el contenido de los mensajes de AutoSupport y el servidor proxy. AutoSupport envía registros semanales del contenido seleccionado al soporte técnico para archivado y análisis de problemas. 
+---
+= Configure AutoSupport
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar varias opciones de AutoSupport, como la programación, el contenido de los mensajes de AutoSupport y el servidor proxy. AutoSupport envía registros semanales del contenido seleccionado al soporte técnico para archivado y análisis de problemas.
+
+.Pasos
+. Inicie sesión en WFA a través de un navegador web como administrador.
+. Haga clic en *Configuración* y en *Configuración* haga clic en *AutoSupport*.
+. Asegúrese de que la casilla *Activar AutoSupport* está seleccionada.
+. Especifique la información obligatoria.
+. Seleccione una de las siguientes opciones en la lista *Contenido*:
++
+[cols="2*"]
+|===
+| Si desea incluir... | Elija esta opción... 
+
+
+ a| 
+Solo detalles de configuración como usuarios, flujos de trabajo y comandos de la instalación de WFA
+ a| 
+enviar sólo datos de configuración
+
+
+
+ a| 
+Detalles de configuración DE WFA y datos en tablas de caché de WFA como el esquema
+ a| 
+envío de datos de configuración y caché (predeterminado)
+
+
+
+ a| 
+Detalles de configuración DE WFA, datos en tablas de caché de WFA y datos en el directorio de instalación
+ a| 
+envío de datos ampliados de configuración y caché
+
+|===
++
+[NOTE]
+====
+La contraseña de cualquier usuario de WFA se _no_ incluye en los datos de AutoSupport.
+
+====
+. *Opcional:* Compruebe que puede descargar un mensaje de AutoSupport:
++
+.. Haga clic en *Descargar*.
+.. En el cuadro de diálogo que se abre, seleccione la ubicación en la que desea guardar `.7z` archivo.
+
+
+. *Opcional:* Pruebe el envío de un mensaje AutoSupport al destino especificado haciendo clic en *Enviar ahora*.
+. Haga clic en *Guardar*.
+

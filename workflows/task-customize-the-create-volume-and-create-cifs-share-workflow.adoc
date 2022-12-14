@@ -1,0 +1,36 @@
+---
+permalink: workflows/task-customize-the-create-volume-and-create-cifs-share-workflow.html 
+sidebar: sidebar 
+keywords: customize, workflows, requirements, example, modify, predefined, create, volume, share, include, deduplication, compression 
+summary: Puede personalizar sus flujos de trabajo en función de sus requisitos. Por ejemplo, puede modificar el flujo de trabajo predefinido Create a Volume y CIFS Share para incluir la deduplicación y la compresión. 
+---
+= Personalizar el flujo de trabajo de creación de un volumen y recurso compartido CIFS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede personalizar sus flujos de trabajo en función de sus requisitos. Por ejemplo, puede modificar el flujo de trabajo predefinido _Create a Volume y un flujo de trabajo CIFS Share_ para incluir la deduplicación y la compresión.
+
+.Acerca de esta tarea
+La personalización e ilustraciones de esta tarea son ejemplos. Puede modificar los flujos de trabajo de WFA en función de sus requisitos.
+
+.Pasos
+. Haga clic en *Diseño de flujo de trabajo* > *flujos de trabajo*.
+. Seleccione el flujo de trabajo *Crear un volumen y un recurso compartido CIFS* y, a continuación, haga clic en image:../media/clone_wfa_icon.gif["El icono de clon"] en la barra de herramientas.
+. Haga clic en la ficha *Detalles* y edite la descripción del flujo de trabajo en el campo *Nombre del flujo de trabajo*.
+. Haga clic en la ficha *flujo de trabajo*, expanda el esquema *almacenamiento* y, a continuación, arrastre y suelte el comando *Configurar deduplicación y compresión* entre los comandos *Crear volumen* y *Crear recurso compartido CIFS*.
+. Coloque el cursor del ratón debajo del comando * Setup deduplication and compression* en la primera fila y, a continuación, haga clic en image:../media/add_object_wfa_icon.gif[""].
+. En la ficha *volumen* del cuadro de diálogo *parámetros para la deduplicación y compresión*, seleccione la opción *utilizando un volumen* definido previamente y, a continuación, seleccione la opción *share_volume* en el campo *define Volume*, que es la variable de objeto Volume creada por el comando *Create Volume* del flujo de trabajo.
+. Haga clic en la ficha *otros parámetros* y realice los siguientes pasos:
++
+.. Seleccione *true* en el campo *StartNow*.
+.. Seleccione *Inline* en el campo *compresión*.
+.. Introduzca `'sun-sat@1'` Expresión en el campo * Schedule*, que programa la deduplicación y la compresión en todos los días de la semana a la 1 a.m.
+
+
+. Haga clic en *Aceptar*.
+. Haga clic en *Vista previa* para asegurarse de que la planificación del flujo de trabajo se ha completado correctamente y, a continuación, haga clic en *Aceptar*.
+. Haga clic en *Guardar*.
+

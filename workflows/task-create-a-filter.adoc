@@ -1,0 +1,53 @@
+---
+permalink: workflows/task-create-a-filter.html 
+sidebar: sidebar 
+keywords: create, wfa, filter, search, resources, predefined, suitable, task 
+summary: Puede crear un filtro de WFA que pueda buscar recursos si no hay ningún filtro WFA predefinido adecuado para la tarea. 
+---
+= Crear un filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear un filtro de WFA que pueda buscar recursos si no hay ningún filtro WFA predefinido adecuado para la tarea.
+
+.Lo que necesitará
+Debe conocer las sintaxis SQL adecuadas para crear el filtro.
+
+.Pasos
+. Haga clic en *Diseño de flujo de trabajo* > *Filtros*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En la ficha *Propiedades* del cuadro de diálogo *filtro nuevo*, introduzca o seleccione los detalles necesarios en los campos *Nombre*, *Tipo de diccionario* y *Descripción*.
+. En la ficha *Consulta*, introduzca la consulta SQL adecuada para el filtro.
++
+Debe introducir una única consulta SQL y, opcionalmente, utilizar parámetros de entrada. Debe utilizar la siguiente sintaxis para utilizar un parámetro de entrada: `+${ParameterName}+`.
+
++
+[listing]
+----
+SELECT
+	array.ip
+FROM
+	storage.array
+WHERE
+	array.name = '${ArrayName}'
+----
+. Haga clic en *Actualizar* para rellenar la tabla *parámetros de entrada* y la lista *atributos devueltos*.
++
+Esta información se obtiene de la consulta SQL que ha introducido. Por ejemplo, si utiliza el ejemplo de consulta SQL del paso anterior, la ip se muestra en atributos devueltos y ArrayName se muestra en parámetros de entrada. Puede editar las entradas en las columnas *Label* y *Description*.
+
+. *Opcional:* haga clic en *Prueba* para probar el filtro.
++
+.. En el cuadro de diálogo *<FilterName> de filtro de prueba*, introduzca los parámetros de prueba necesarios.
+.. Desactive la casilla de verificación *usar datos de reserva en prueba* si no desea utilizar los datos de reserva para probar el filtro.
+.. Haga clic en *Prueba*.
++
+Se muestra el resultado de la prueba.
+
+.. Cierre los cuadros de diálogo.
+
+
+. Haga clic en *Guardar*.
+

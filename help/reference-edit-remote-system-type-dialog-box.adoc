@@ -1,0 +1,76 @@
+---
+permalink: help/reference-edit-remote-system-type-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, remote, system, type, dialog box, enable, modify, name, description, version, protocol, default port, timeout, existing, certified 
+summary: El cuadro de diálogo Editar tipo de sistema remoto le permite modificar el nombre, la descripción, la versión, el protocolo, el puerto predeterminado, y el tiempo de espera predeterminado de un tipo de sistema remoto existente. No es posible modificar un tipo de sistema remoto certificado por NetApp. 
+---
+= Cuadro de diálogo Edit Remote System Type
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar tipo de sistema remoto le permite modificar el nombre, la descripción, la versión, el protocolo, el puerto predeterminado, y el tiempo de espera predeterminado de un tipo de sistema remoto existente. No es posible modificar un tipo de sistema remoto certificado por NetApp.
+
+* Ficha Detalles
+* Pestaña Validation Script
+
+
+
+
+== Ficha Detalles
+
+Permite editar los detalles del tipo de sistema remoto, como el nombre, la descripción, la versión y el protocolo de conexión.
+
+* *Nombre*
++
+Permite editar el nombre del tipo de sistema remoto.
+
+* *Descripción*
++
+Permite modificar la descripción del tipo de sistema remoto.
+
+* *Versión*
++
+Permite editar el número de versión del tipo de sistema remoto `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Protocolo de conexión*
++
+Le permite seleccionar uno de los siguientes protocolos que debe utilizar OnCommand Workflow Automation (WFA) al conectarse al sistema remoto:
+
++
+** HTTPS con conmutación alternativa a HTTP
++
+La conexión utiliza principalmente HTTPS. Si la conexión mediante HTTPS falla, se utiliza HTTP. Si la conexión a través de HTTP también falla, el intento de conexión se descarta.
+
+** Solo HTTPS
+** Solo HTTP
+** Personalizado
+
+
+
+
+Al seleccionar un protocolo de conexión, los campos de protocolo, puerto predeterminado y tiempo de espera predeterminado (seg) se rellenan con datos.
+
+
+
+== Pestaña Validation Script
+
+Permite proporcionar un script de validación para probar la conectividad del sistema remoto. El script de validación debe estar escrito en Perl y debe incluir la siguiente función: CheckCredentials `($host, $user, $password, $protocol, $port, $timeout).` Durante la validación, WFA llama a la función checkCredentials con los valores que están configurados para el tipo de sistema remoto y el protocolo de conexión. La función devuelve el valor «'1'» de la validación correcta de la conectividad o «'0'» de la falla de la validación de la conexión.
+
+Puede hacer clic en *probar script Perl* para ejecutar la secuencia de comandos para probar la conectividad.
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración modificados del tipo de sistema remoto y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

@@ -1,0 +1,33 @@
+---
+permalink: rhel-install/concept-restoring-the-wfa-database.html 
+sidebar: sidebar 
+keywords: restore, oncommand, workflow, automation, database 
+summary: 'La restauración de la base de datos de OnCommand Workflow Automation (WFA) incluye restaurar las opciones de configuración del sistema y la información de caché, incluida la base de datos de juegos.' 
+---
+= Restaurar la base de datos OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La restauración de la base de datos de OnCommand Workflow Automation (WFA) incluye restaurar las opciones de configuración del sistema y la información de caché, incluida la base de datos de juegos.
+
+* Al restaurar una base de datos de WFA, se borra la base de datos WFA actual.
+* Puede restaurar un backup de base de datos de WFA solo en un sistema que ejecute la misma versión o una versión posterior de WFA.
++
+Por ejemplo, si creó un backup en un sistema que ejecuta WFA 4.2, el backup solo puede restaurarse a sistemas que ejecutan WFA 4.2 o posterior.
+
+* Una vez completada la operación de restauración, el certificado SSL de WFA se reemplaza por el certificado SSL en el archivo de backup.
+
+
+[NOTE]
+====
+* Se requiere una operación de restauración completa de las bases de datos y las configuraciones de WFA durante la recuperación ante desastres y se puede utilizar tanto en entornos independientes como de alta disponibilidad.
+* No se puede crear un backup completo mediante la interfaz de usuario web de.
++
+Solo puede utilizar los comandos de la CLI o las API DE REST para realizar un backup y restaurar la base de datos de WFA completamente durante la recuperación ante desastres.
+
+
+
+====

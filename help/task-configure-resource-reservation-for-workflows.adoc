@@ -1,0 +1,34 @@
+---
+permalink: help/task-configure-resource-reservation-for-workflows.html 
+sidebar: sidebar 
+keywords: configure, resource, reservation, capability, oncommand, workflow, automation, ensure, required, available, successful, execution 
+summary: 'Puede configurar la funcionalidad de reserva de recursos para los flujos de trabajo de OnCommand Workflow Automation (WFA) con el fin de garantizar que los recursos necesarios estén disponibles para que los flujos de trabajo se ejecuten correctamente.' 
+---
+= Configurar la reserva de recursos para los flujos de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar la funcionalidad de reserva de recursos para los flujos de trabajo de OnCommand Workflow Automation (WFA) con el fin de garantizar que los recursos necesarios estén disponibles para que los flujos de trabajo se ejecuten correctamente.
+
+.Pasos
+. Inicie sesión en WFA mediante un navegador web como administrador.
+. Haga clic en *Configuración* y en *Configuración* haga clic en *Configuración de flujo de trabajo*.
+. Asegúrese de que la casilla de verificación *Activar reserva para comandos* está activada.
+. En el campo *caducidad de reserva (H)*, introduzca el valor requerido.
++
+El valor predeterminado es 4.
+
+. Haga clic en *Guardar*.
+. Habilite la reserva de recursos en cada flujo de trabajo necesario:
++
+.. Haga clic en *flujo de trabajo* > *Detalles* del flujo de trabajo requerido.
++
+`Workflow` es el flujo de trabajo que requiere reserva de recursos.
+
+.. Seleccione *considerar elementos reservados*.
+
+
+

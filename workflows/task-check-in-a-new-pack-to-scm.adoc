@@ -1,0 +1,35 @@
+---
+permalink: workflows/task-check-in-a-new-pack-to-scm.html 
+sidebar: sidebar 
+keywords: create, new, workflow, pack, oncommand, automation, check, source, control, management 
+summary: 'Puede crear un nuevo paquete de flujos de trabajo con OnCommand Workflow Automation (WFA) y check-in en Source Control Management (SCM).' 
+---
+= Registrar un nuevo paquete de flujo de trabajo en SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear un nuevo paquete de flujos de trabajo con OnCommand Workflow Automation (WFA) y check-in en Source Control Management (SCM).
+
+.Lo que necesitará
+SCM debe estar configurado y debe tener credenciales de administrador o de arquitecto.
+
+.Pasos
+. Inicie sesión en la ventana *WFA* a través de un navegador web.
+. Cree un nuevo paquete de flujo de trabajo.
++
+xref:task-create-a-workflow-automation-pack.adoc[Cree un paquete de automatización de flujos de trabajo]
+
+. Agregue entidades al paquete creado.
++
+xref:task-add-entity-to-a-workflow-automation-pack.adoc[Agregue entidades a un paquete OnCommand Workflow Automation]
+
+. Haga clic en el icono *Exportar al servidor*.
+. En el cuadro de diálogo Exportar a carpeta del servidor, en el campo ubicación de carpeta en el sistema del servidor*, introduzca la ubicación del sistema de archivos donde se guardará el paquete en el servidor que contiene el cliente SCM.
++
+Para editar o volver a exportar el paquete o el contenido, haga clic en el icono *Desbloquear*.
+
+. En la ubicación del cliente SCM, compruebe el contenido del paquete en el servidor SCM.
+

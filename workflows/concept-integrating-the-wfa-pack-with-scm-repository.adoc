@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-integrating-the-wfa-pack-with-scm-repository.html 
+sidebar: sidebar 
+keywords: integrate, oncommand, workflow, automation, pack, source control, management, repository 
+summary: 'Puede integrar el paquete OnCommand Workflow Automation (WFA) con el repositorio Gestión de control de origen (SCM).' 
+---
+= Integre los paquetes de flujo de trabajo de WFA con el repositorio SCM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede integrar el paquete OnCommand Workflow Automation (WFA) con el repositorio Gestión de control de origen (SCM).
+
+Debe tener credenciales de administrador o de arquitecto.
+
+Las herramientas SCM como GitHub, Perforce y SVN requieren que asigne un directorio local para extraer el código del servidor de repositorio de SCM. Esta asignación de directorio local se denomina ubicación de cliente _SCM._ debe configurar el cliente SCM con una ubicación de sistema de archivos como área de cliente.
+
+Puede configurar el cliente SCM en un sistema de servidor WFA. Debe tener acceso al sistema del servidor WFA para las operaciones SCM

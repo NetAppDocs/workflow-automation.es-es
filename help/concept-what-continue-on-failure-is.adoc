@@ -1,0 +1,25 @@
+---
+permalink: help/concept-what-continue-on-failure-is.html 
+sidebar: sidebar 
+keywords: continue, failure, feature, help, configure, step, workflow, execution, address, resolve, issue, cause, access, file, icon 
+summary: La función continuar con el fallo ayuda a configurar un paso en un flujo de trabajo para que la ejecución del flujo de trabajo pueda continuar incluso si el paso falla. Puede abordar los pasos con errores y resolver el problema que provocó un error en el paso accediendo al archivo wfa.log o haciendo clic en el icono. 
+---
+= ¿Cómo funciona continuar con el fallo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La función continuar con el fallo ayuda a configurar un paso en un flujo de trabajo para que la ejecución del flujo de trabajo pueda continuar incluso si el paso falla. Puede abordar los pasos con errores y resolver el problema que provocó el error al acceder al `wfa.log` o haciendo clic en image:../media/info_icon_execute_wfa.gif[""] .
+
+Un flujo de trabajo con uno o más de estos pasos fallidos se encuentra en el estado parcialmente correcto después de que se completa la ejecución. Puede configurar un paso para que la ejecución del flujo de trabajo continúe aunque el paso falle seleccionando la opción necesaria en la ficha Avanzadas del cuadro de diálogo parámetros para <command_name>.
+
+Si un paso no está configurado para continuar en caso de fallo, la ejecución del flujo de trabajo se cancelará si el paso falla.
+
+Si un paso configurado para continuar en caso de fallo falla, puede establecer el flujo de trabajo para que se ejecute utilizando una de las siguientes opciones:
+
+* Cancelar la ejecución del flujo de trabajo (opción predeterminada)
+* Continúe la ejecución desde el siguiente paso
+* Continúe la ejecución desde la fila siguiente
+

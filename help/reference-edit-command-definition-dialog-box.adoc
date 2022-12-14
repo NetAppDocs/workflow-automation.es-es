@@ -1,0 +1,187 @@
+---
+permalink: help/reference-edit-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, command, definition, dialog box, enable, select 
+summary: El cuadro de diálogo Editar definición de comandos permite editar el comando seleccionado. 
+---
+= Cuadro de diálogo Edit Command Definition
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo *Editar definición de comandos* permite editar el comando seleccionado.
+
+* Propiedades
+* Ficha Código
+* Definición de parámetros
+* Pestaña asignación de parámetros
+* Pestaña reservation
+* Pestaña verificación
+
+
+
+
+== Propiedades
+
+La ficha Propiedades permite editar las propiedades del comando, como el nombre, la descripción y el lenguaje de secuencias de comandos.
+
+* *Nombre*
++
+Permite editar el nombre del comando. Debe introducir un nombre para guardar el comando.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión del comando en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite editar la descripción del comando.
+
+* *Representación de cadena*
++
+Permite especificar una representación de cadena para el comando mediante la sintaxis MVEL. Debe especificar la representación de cadena para guardar el comando.
+
+* *Tiempo de espera (s)*
++
+Permite especificar el valor de tiempo de espera (en segundos) para el comando. El valor predeterminado es 600 segundos.
+
+* *Tipo de comando*
++
+Permite especificar el tipo de ejecución del comando.
+
++
+** *Ejecución estándar*
++
+Permite ejecutar el comando sin ningún período de espera. La ejecución estándar está seleccionada de forma predeterminada.
+
+** *Espere por condición*
++
+Permite especificar el tiempo (en segundos) que el comando debe esperar antes de la ejecución. El valor predeterminado es 60 segundos.
+
+
+
+* *Versiones mínimas de software*
++
+Especifica las versiones mínimas del software necesarias para que funcione el comando. Por ejemplo, el software puede ser Clustered Data ONTAP 8.2.0 y vCenter 6.0. Las versiones se muestran como valores separados por comas.
+
+
+
+
+
+== Ficha Código
+
+Esta pestaña le permite editar el código del comando en Perl, PowerShell o ambos. Puede agregar un nuevo lenguaje de secuencias de comandos haciendo clic en image:../media/add_lang_icon.gif[""] Y, a continuación, seleccionar el idioma requerido en la lista desplegable Idioma de script.
+
+* *Prueba*
++
+Se abre el cuadro de diálogo Verification, con el que es posible probar los parámetros para el script de verificación especificado.
+
+* *Parámetros de descubrimiento*
++
+Copia los parámetros definidos en el código de PowerShell en la tabla Definición de parámetros y la tabla asignación de parámetros. El botón Discover Parameters está deshabilitado para los códigos Perl.
+
+
+
+
+
+== Definición de parámetros
+
+Esta pestaña muestra los parámetros definidos en el código que ha introducido en la ficha Código.
+
+* *Nombre*
++
+Muestra el nombre del parámetro.
+
+* *Descripción*
++
+Muestra la descripción del parámetro.
+
+* *Obligatorio*
++
+Muestra una casilla de verificación seleccionada para los parámetros obligatorios.
+
+* *Tipo*
++
+Muestra el tipo del parámetro, como string y enum.
+
+* *Valores*
++
+Muestra el valor establecido para el parámetro.
+
+* *Agregar parámetro*
++
+Permite agregar un parámetro al comando si el lenguaje de scripting seleccionado es Perl.
+
+* *Eliminar parámetro*
++
+Permite eliminar un parámetro del comando si el lenguaje de secuencias de comandos seleccionado es Perl.
+
+
+
+
+
+== Pestaña asignación de parámetros
+
+Esta ficha permite asignar los parámetros a objetos de diccionario y especificar el atributo y el nombre del objeto.
+
+* *Nombre*
++
+Muestra el nombre del parámetro.
+
+* *Tipo*
++
+Permite seleccionar el objeto de diccionario del parámetro.
+
+* *Atributo*
++
+Permite especificar el atributo requerido. Puede seleccionar el atributo, si está disponible, o introducir el atributo.
+
+* *Nombre del objeto*
++
+Permite introducir un nombre para el objeto.
+
+
+
+
+
+== Pestaña reservation
+
+Esta pestaña le permite reservar recursos que el comando requiere. Para obtener más información acerca de las reservas, consulte la _Guía del desarrollador de flujos de trabajo de OnCommand Workflow Automation_.
+
+* *Guión de reserva*
++
+Le permite introducir una consulta SQL para reservar recursos requeridos por el comando. Esto garantiza que los recursos estén disponibles durante la ejecución programada del flujo de trabajo.
+
+* *Representación de reservas*
++
+Permite especificar una representación de cadena para la reserva mediante la sintaxis MVEL. La representación de cadena se utiliza para mostrar los detalles de la reserva en la ventana Reservas.
+
+
+
+
+
+== Pestaña verificación
+
+Esta pestaña permite verificar una reserva y eliminar la reserva después de completar la ejecución del comando. Para obtener más información acerca de cómo verificar reservas, consulte la _Guía del desarrollador de flujos de trabajo de OnCommand Workflow Automation_.
+
+* *Secuencia de comandos de verificación*
++
+Permite introducir una consulta SQL para verificar el uso de los recursos que se reservaron en el script de reserva. También verifica si la caché de WFA se actualiza y elimina la reserva después de la adquisición de la caché.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los cambios y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

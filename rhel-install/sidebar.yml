@@ -1,0 +1,204 @@
+---
+section: rhel-install
+title: Instalación y configuración para Linux
+entries:
+- title: Descripción general de OnCommand Workflow Automation
+  pdf-filename: Descripción general de OnCommand Workflow Automation Linux
+  url: "/rhel-install/concept-overview-of-oncommand-workflow-automation.html"
+  entries:
+  - title: Arquitectura de puesta en marcha de OnCommand Workflow Automation
+    url: "/rhel-install/concept-oncommand-workflow-automation-deployment-architecture.html"
+  - title: Información general de la instalación y configuración de OnCommand Workflow
+      Automation
+    url: "/rhel-install/concept-oncommand-workflow-automation-installation-and-configuration-instructions.html"
+  - title: Limitaciones conocidas de OnCommand Workflow Automation
+    url: "/rhel-install/concept-unsupported-features-for-wfa-on-linux.html"
+- title: Requisitos del sistema para instalar OnCommand Workflow Automation
+  pdf-filename: Requisitos del sistema para instalar OnCommand Workflow Automation
+    Linux
+  url: "/rhel-install/reference-system-requirements-for-oncommand-workflow-automation-linux.html"
+  entries:
+  - title: Puertos necesarios para Workflow Automation
+    url: "/rhel-install/reference-ports-required-for-oncommand-workflow-automation.html"
+- title: Requisitos previos para instalar Workflow Automation
+  url: "/rhel-install/reference-prerequisites-for-installing-workflow-automation.html"
+  entries:
+  - title: Instalar módulos Perl en CentOS y RHEL
+    url: "/rhel-install/task-install-perl-module-on-centos-and-rhel.html"
+- title: Gestión de la alta disponibilidad
+  pdf-filename: Gestión de Linux de alta disponibilidad
+  url: "/rhel-install/concept-managing-high-availability.html"
+  entries:
+  - title: Configuración de Workflow Automation en VCS para una alta disponibilidad
+    url: "/rhel-install/task-set-up-wfa-in-vcs.html"
+    entries:
+    - title: Configurar VCS para instalar OnCommand Workflow Automation
+      url: "/rhel-install/task-configure-vcs-to-install-wfa.html"
+    - title: Instale OnCommand Workflow Automation en Linux
+      url: "/rhel-install/task-install-oncommand-workflow-automation.html"
+    - title: Configuración de Workflow Automation en VCS
+      url: "/rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html"
+  - title: Configurar una versión anterior de OnCommand Workflow Automation para alta
+      disponibilidad
+    url: "/rhel-install/task-configure-an-earlier-version-of-wfa-to-high-availability.html"
+  - title: Desinstalación de Workflow Automation en un entorno de VCS
+    url: "/rhel-install/task-uninstall-wfa-in-a-vcs-environment.html"
+  - title: Realizar backups y restaurar la base de datos y las configuraciones de
+      OnCommand Workflow Automation en Linux
+    url: "/rhel-install/task-back-up-the-wfa-database-and-configurations-linux.html"
+- title: Configurar OnCommand Workflow Automation
+  pdf-filename: Configurar OnCommand Workflow Automation Linux
+  url: "/rhel-install/concept-setting-up-oncommand-workflow-automation.html"
+  entries:
+  - title: Acceda a OnCommand Workflow Automation
+    url: "/rhel-install/task-access-oncommand-workflow-automation.html"
+  - title: Orígenes de datos de OnCommand Workflow Automation
+    pdf-filename: Orígenes de datos de OnCommand Workflow Automation en Linux
+    url: "/rhel-install/concept-wfa-data-sources.html"
+    entries:
+    - title: Configuración de un usuario de base de datos en DataFabric Manager
+      pdf-filename: Configuración de un usuario de base de datos en DataFabric Manager
+        Linux
+      url: "/rhel-install/reference-configuring-a-database-user-on-datafabric-manager.html"
+      entries:
+      - title: Configure un usuario de base de datos ejecutando ocsetup en Windows
+        url: "/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-windows.html"
+      - title: Configurar un usuario de base de datos ejecutando ocsetup en Linux
+        url: "/rhel-install/task-configure-a-database-user-by-running-ocsetup-on-linux.html"
+    - title: Configurar un origen de datos
+      url: "/rhel-install/task-set-up-a-data-source.html"
+    - title: Añada un servidor de Unified Manager actualizado como origen de datos
+      url: "/rhel-install/task-add-an-upgraded-unified-manager-server-data-source.html"
+  - title: Crear usuarios locales
+    url: "/rhel-install/task-create-local-users.html"
+  - title: Configure las credenciales de un sistema de destino
+    url: "/rhel-install/task-configure-the-credentials-of-a-target-system.html"
+  - title: Configurando OnCommand Workflow Automation
+    pdf-filename: Configurando OnCommand Workflow Automation Linux
+    url: "/rhel-install/concept-advanced-configuring-oncommand-workflow-automation.html"
+    entries:
+    - title: Configure AutoSupport
+      url: "/rhel-install/task-configure-autosupport.html"
+    - title: Configure las opciones de autenticación
+      url: "/rhel-install/task-configure-authentication-settings.html"
+    - title: Agregar grupos de Active Directory
+      url: "/rhel-install/task-add-active-directory-group-names.html"
+    - title: Configure las notificaciones por correo electrónico
+      url: "/rhel-install/task-configure-mail.html"
+    - title: Configure SNMP
+      pdf-filename: Configure SNMP Linux
+      url: "/rhel-install/task-configure-snmp.html"
+    - title: Configurar syslog
+      url: "/rhel-install/task-configure-syslog.html"
+    - title: Configurar protocolos para conectarse a sistemas remotos
+      url: "/rhel-install/task-configure-protocols-for-connecting-to-remote-systems.html"
+  - title: Desactive la directiva de contraseñas predeterminada
+    url: "/rhel-install/task-disable-the-default-password-policy-linux.html"
+  - title: Modifique la política de contraseñas predeterminada
+    url: "/rhel-install/task-modify-the-default-password-policy-linux.html"
+  - title: Habilite o deshabilite el acceso remoto a la base de datos de OnCommand
+      Workflow Automation
+    url: "/rhel-install/task-enable-remote-access-to-the-oncommand-workflow-automation-database-linux.html"
+  - title: Modifique la configuración de tiempo de espera de transacción de OnCommand
+      Workflow Automation
+    url: "/rhel-install/task-modify-the-transaction-timeout-setting-of-oncommand-workflow-automation-linux.html"
+  - title: Configure el valor del tiempo de espera para Workflow Automation
+    url: "/rhel-install/task-configure-the-timeout-value-for-linux.html"
+  - title: Habilitar cifrados y añadir nuevos cifrados
+    url: "/rhel-install/concept-enabling-ciphers-and-adding-new-ciphers.html"
+- title: Actualice desde OnCommand Workflow Automation 3.1 o posterior
+  url: "/rhel-install/task-upgrade-from-wfa-4-2.html"
+  entries:
+  - title: Identificación del paquete durante la actualización
+    url: "/rhel-install/reference-pack-identification-during-upgrade.html"
+- title: Actualizar productos de terceros
+  pdf-filename: Actualización de productos de terceros Linux
+  url: "/rhel-install/concept-upgrading-third-party-products-in-linux.html"
+  entries:
+  - title: Actualizar OpenJDK
+    url: "/rhel-install/task-upgrade-openjdk-on-linux-wfa.html"
+  - title: Actualice MySQL en Linux
+    url: "/rhel-install/task-upgrade-mysql-on-linux.html"
+- title: Realizar un backup de la base de datos de OnCommand Workflow Automation
+  pdf-filename: Realizar backups de la base de datos OnCommand Workflow Automation
+    de Linux
+  url: "/rhel-install/reference-backing-up-of-the-oncommand-workflow-automation-database.html"
+  entries:
+  - title: Realice una copia de seguridad de la base de datos de WFA desde el portal
+      web
+    url: "/rhel-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html"
+  - title: Realizar backups de la base de datos de WFA con la CLI
+    pdf-filename: Realizar backups de la base de datos de WFA con CLI Linux
+    url: "/rhel-install/concept-backing-up-the-wfa-database-using-the-command-line-interface.html"
+    entries:
+    - title: Realice un backup (completo) de la base de datos de WFA mediante la CLI
+      url: "/rhel-install/task-back-up-full-the-wfa-database-using-perl-script-linux.html"
+    - title: Realice un backup (normal) de la base de datos de WFA con la CLI
+      url: "/rhel-install/task-back-up-regular-the-wfa-database-using-perl-script-linux.html"
+  - title: Realizar backups de la base de datos de WFA con las API DE REST
+    url: "/rhel-install/concept-backing-up-the-wfa-database-using-rest-apis.html"
+    entries:
+    - title: Realice un backup completo de la base de datos WFA usando las API REST
+      url: "/rhel-install/task-back-up-full-oncommand-workflow-automation-database-using-rest-api.html"
+    - title: Realizar un backup regular de la base de datos de WFA usando las API
+        REST
+      url: "/rhel-install/task-back-up-regular-oncommand-workflow-automation-database-using-rest-api.html"
+- title: Restaurar la base de datos OnCommand Workflow Automation
+  pdf-filename: Restaurar la base de datos OnCommand Workflow Automation Linux
+  url: "/rhel-install/concept-restoring-the-wfa-database.html"
+  entries:
+  - title: Restaurar la base de datos de WFA
+    url: "/rhel-install/task-restore-oncommand-workflow-automation-database-using-web-portal.html"
+  - title: Restaurar la base de datos de WFA con la CLI
+    pdf-filename: Restaurar la base de datos de WFA con CLI Linux
+    url: "/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-cli.html"
+    entries:
+    - title: Restaurar (completo) la base de datos de WFA mediante la CLI
+      url: "/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-and-configurations-linux.html"
+    - title: Restaure (regularmente) la base de datos de WFA con la CLI
+      url: "/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-and-configurations-linux.html"
+  - title: Restaurar la base de datos de WFA con API REST
+    pdf-filename: Restaurar la base de datos de WFA con API de REST Linux
+    url: "/rhel-install/concept-restoring-the-oncommand-workflow-automation-database-using-rest-api.html"
+    entries:
+    - title: Restaurar (completo) la base de datos de WFA utilizando las API REST
+      url: "/rhel-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html"
+    - title: Restaure (regularmente) la base de datos de WFA utilizando las API DE
+        REST
+      url: "/rhel-install/task-restore-regular-the-oncommand-workflow-automation-database-using-rest-apis.html"
+- title: Restablece la contraseña de administrador creada durante la instalación
+  url: "/rhel-install/task-reset-the-admin-password-created-during-installation-linux.html"
+- title: Importe el contenido de OnCommand Workflow Automation
+  pdf-filename: Importe el contenido de OnCommand Workflow Automation Linux
+  url: "/rhel-install/task-import-oncommand-workflow-automation-content.html"
+  entries:
+  - title: Consideraciones que tener en cuenta al importar el contenido de OnCommand
+      Workflow Automation
+    url: "/rhel-install/reference-considerations-of-importing-wfa-content.html"
+- title: Migre la instalación de OnCommand Workflow Automation
+  url: "/rhel-install/task-migrate-the-oncommand-workflow-automation-installation-linux.html"
+- title: Desinstale OnCommand Workflow Automation
+  url: "/rhel-install/task-uninstall-oncommand-workflow-automation-linux.html"
+- title: Gestión de certificados SSL de OnCommand Workflow Automation
+  pdf-filename: Gestione el certificado SSL de OnCommand Workflow Automation para
+    Linux
+  url: "/rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html"
+  entries:
+  - title: Reemplace el certificado SSL predeterminado de Workflow Automation
+    url: "/rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html"
+  - title: Cree una solicitud de firma de certificación para Workflow Automation
+    url: "/rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html"
+- title: Gestión de módulos Perl y Perl
+  pdf-filename: Gestión de módulos Perl y Perl Linux
+  url: "/rhel-install/concept-managing-perl-and-perl-modules.html"
+  entries:
+  - title: Configure la distribución Perl que prefiera
+    url: "/rhel-install/task-configure-your-preferred-perl-distribution-linux.html"
+- title: Solución de problemas de instalación y configuración
+  pdf-filename: Solución de problemas de instalación y configuración de Linux
+  url: "/rhel-install/reference-troubleshooting.html"
+  entries:
+  - title: No se pueden ver los datos de Performance Advisor en WFA
+    url: "/rhel-install/reference-cannot-view-performance-advisor-data-in-wfa.html"
+- title: Documentación relacionada para OnCommand Workflow Automation
+  url: "/rhel-install/reference-related-documentation-for-oncommand-workflow-automation.html"

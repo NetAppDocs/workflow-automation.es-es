@@ -1,0 +1,25 @@
+---
+permalink: windows-install/task-back-up-oncommand-workflow-automation-database-using-the-web-portal.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, back up, wfa, database, web portal 
+summary: 'Puede realizar una copia de seguridad de la base de datos OnCommand Workflow Automation (WFA) desde el portal web y utilizar el archivo de backup para fines de recuperación de datos. No puede realizar una copia de seguridad completa desde el portal web.' 
+---
+= Realice una copia de seguridad de la base de datos de WFA desde el portal web
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una copia de seguridad de la base de datos OnCommand Workflow Automation (WFA) desde el portal web y utilizar el archivo de backup para fines de recuperación de datos. No puede realizar una copia de seguridad completa desde el portal web.
+
+Debe tener credenciales de administrador o de arquitecto para realizar esta tarea.
+
+Un usuario de WFA con rol de backup no puede iniciar sesión en el portal web para realizar un backup. Los usuarios de WFA con rol de backup solo pueden realizar backups remotos o con scripts.
+
+.Pasos
+. Inicie sesión en la interfaz gráfica de usuario web de WFA como administrador.
+. Haga clic en *Configuración* y en *Mantenimiento*, haga clic en *copia de seguridad y restauración*.
+. Haga clic en *copia de seguridad*.
+. En el cuadro de diálogo que se abre, seleccione una ubicación y guarde el archivo.
+

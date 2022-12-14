@@ -1,0 +1,185 @@
+---
+permalink: help/reference-finders-window.html 
+sidebar: sidebar 
+keywords: finders, window, display, available, alphabetical order, access, select, workflow, design 
+summary: La ventana Finders muestra los finders disponibles en orden alfabético. Puede acceder a esta ventana seleccionando Diseño de flujo de trabajo > Finders. 
+---
+= Ventana de finders
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Finders muestra los finders disponibles en orden alfabético. Puede acceder a esta ventana seleccionando *Diseño de flujo de trabajo* > *Finders*.
+
+
+NOTE: En función de sus privilegios de rol y cuenta, es posible que esta ventana no se muestre.
+
+Un buscador es una operación de búsqueda para localizar recursos. Un buscador consiste en reglas de filtrado que eliminan recursos irrelevantes. Los buscadores buscan información sobre los objetos de WFA en los repositorios almacenados en caché WFA.
+
+* Tabla de finders
+* Barra de herramientas
+
+
+
+
+== Tabla de finders
+
+La tabla Finders enumera los finders disponibles.
+
+Cada entrada se identifica como una de las siguientes:
+
+* image:../media/community_certification.gif[""] - contenido creado por los usuarios
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenido desarrollado por Servicios profesionales (PS), que está disponible sólo en instalaciones personalizadas realizadas por PS
+* image:../media/community_certification.gif[""] - packs desarrollados por usuarios
+* image:../media/lock_icon_wfa.gif[""] - contenido creado por los usuarios que está bloqueado
+* image:../media/netapp_certified.gif[""] - Contenido certificado por NetApp
+
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla Finders contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si el buscador está creado por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
++
+Puede buscar finders seleccionando las casillas de verificación necesarias de la lista de filtros.
+
+* *Nombre*
++
+Muestra el nombre del buscador.
+
++
+Para buscar un buscador, introduzca su nombre en el cuadro de texto filtro Buscar .
+
+* *Esquema*
++
+Muestra el esquema asociado con los buscadores. Un esquema representa el modelo de datos de un sistema. Por ejemplo, un esquema de vc contiene datos relevantes para su entorno virtual, como máquinas virtuales, hosts y almacenes de datos.
+
++
+Para buscar un buscador, introduzca su esquema en el cuadro de texto filtro Buscar .
+
+* *Tipo*
++
+Muestra el tipo de objeto de diccionario del buscador (por ejemplo, array de agregado o CIFS).
+
++
+Puede buscar buscadores introduciendo el tipo en el cuadro de texto filtro Buscar.
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
++
+Para buscar un buscador, introduzca el número de versión en el cuadro de texto Buscar filtro.
+
+* *Descripción*
++
+Muestra la descripción del buscador.
+
++
+Para buscar un buscador, introduzca su descripción en el cuadro de texto filtro Buscar .
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó el buscador por última vez.
+
++
+Puede buscar finders seleccionando la categoría de tiempo en la lista desplegable de filtros.
+
+* *Actualizado por*
++
+Muestra el usuario que actualizó el buscador.
+
++
+Puede buscar buscadores introduciendo el nombre de usuario en el cuadro de texto filtro Buscar.
+
+* *Bloqueado por*
++
+Muestra el usuario que bloqueó el buscador.
+
++
+Puede buscar buscadores introduciendo el nombre de usuario en el cuadro de texto filtro Buscar.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre la ventana Nuevo Finder, que permite crear un buscador.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre la ventana <finder_name> de Finder para el buscador seleccionado, que permite editar el buscador.
+
++
+También puede hacer doble clic en el buscador para abrir la ventana Editar Finder.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre la ventana Nueva <finder_name> de Finder - copia, que permite crear una copia del buscador seleccionado.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación del Buscador de bloqueo, que permite bloquear el buscador seleccionado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear buscador, que permite desbloquear el buscador seleccionado.
+
++
+Esta opción sólo está activada para los buscadores bloqueados. Los administradores pueden desbloquear buscadores bloqueados por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar buscador, que permite eliminar el buscador creado por el usuario seleccionado.
+
++
+
+NOTE: No puede eliminar el buscador de WFA, el buscador de servicios profesionales o el buscador de muestras.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar el buscador creado por el usuario seleccionado.
+
++
+
+NOTE: No puede exportar el buscador de WFA, el buscador de servicios profesionales o el buscador de muestras.
+
+* *image:../media/test_wfa_icon.gif["icono de prueba"] (Prueba)*
++
+Abre el cuadro de diálogo Buscador de pruebas, que permite probar el buscador seleccionado.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar al paquete de recordatorios, que permite agregar el buscador y sus entidades fiables a un paquete, que es editable.
+
++
+
+NOTE: La función Agregar al paquete sólo está habilitada para los buscadores para los que la certificación está establecida en *Ninguno.*
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar de las esmeriladoras de paquetes para el buscador seleccionado, que permite eliminar o quitar el buscador del paquete.
+
++
+
+NOTE: La función Eliminar del paquete sólo está habilitada para los buscadores para los que la certificación está establecida en *Ninguno.*
+
+

@@ -1,0 +1,46 @@
+---
+permalink: windows-install/task-configure-an-earlier-version-of-wfa-foir-high-availability-windows.html 
+sidebar: sidebar 
+keywords: configure, earlier versions, oncommand, workflow, automation, high availability 
+summary: 'Puede configurar las versiones de OnCommand Workflow Automation (WFA) anteriores a 3.1 para obtener alta disponibilidad.' 
+---
+= Configurar versiones anteriores de OnCommand Workflow Automation para alta disponibilidad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar las versiones de OnCommand Workflow Automation (WFA) anteriores a 3.1 para obtener alta disponibilidad.
+
+.Pasos
+. Actualice la versión existente de WFA a la última versión disponible de WFA.
++
+xref:task-upgrade-oncommand-workflow-automation.adoc[Actualizar WFA]
+
++
+Esta versión actualizada de WFA es el nodo principal del clúster.
+
+. Cree un backup de la base de datos de WFA.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["Realizar un backup de la base de datos WFA"]
+
++
+Si alguno de los parámetros se modificó manualmente, debe crear una copia de seguridad de la base de datos de WFA, desinstalar la instalación existente de WFA, instalar la última versión disponible de WFA, restaurar el backup y, a continuación, continuar con la configuración de Microsoft Cluster Service (MSCS).
+
+. Configure MSCS para instalar WFA en el nodo principal.
++
+link:task-configure-mscs-to-install-wfa.html["Configurar MSCS para instalar WFA"]
+
+. Instale la versión más reciente disponible de WFA en el nodo secundario.
++
+link:task-install-workflow-automation-on-windows.html["Instale WFA"]
+
+. Configurar WFA en MSCS.
++
+link:task-configure-mscs-to-install-wfa.html["Configurar WFA en MSCS"]
+
++
+El servidor de WFA está configurado para alta disponibilidad.
+
+

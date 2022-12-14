@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/reference-pack-identification-during-upgrade.html 
+sidebar: sidebar 
+keywords: pack, identification, upgrade 
+summary: 'Durante el proceso de actualización, OnCommand Workflow Automation (WFA) identifica y clasifica las entidades en un paquete. Si eliminó alguna entidad de un paquete antes de la actualización, el paquete no se identificará durante la actualización.' 
+---
+= Identificación del paquete durante la actualización
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Durante el proceso de actualización, OnCommand Workflow Automation (WFA) identifica y clasifica las entidades en un paquete. Si eliminó alguna entidad de un paquete antes de la actualización, el paquete no se identificará durante la actualización.
+
+Durante el proceso de actualización, WFA compara los paquetes de la base de datos con la lista de paquetes que se lanzaron en el almacén de automatización del almacenamiento para identificar los paquetes que se instalaron antes de la actualización. Por lo tanto, la identificación de paquetes clasifica los paquetes existentes en la base de datos.
+
+WFA realiza los siguientes procesos para identificar y clasificar paquetes:
+
+* Mantiene una lista de paquetes publicados en Storage Automation Store para comparar e identificar los paquetes que se instalaron antes de la actualización.
+* Clasifica las entidades de un paquete como parte de la sincronización del almacén de automatización del almacenamiento si está activado el almacén de automatización del almacenamiento.
+* Clasifica las entidades en paquetes mediante la lista actualizada.
+
+
+La identificación de paquetes solo se aplica a los paquetes certificados de NetApp que se descargaron de Storage Automation Store.
+
+Si no se identifica un paquete durante la actualización, puede volver a importarlo para que se identifique en WFA. Los archivos wfa.log proporcionan detalles acerca de las entidades que no se identificaron como un paquete durante la actualización.

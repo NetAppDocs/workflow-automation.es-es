@@ -1,0 +1,139 @@
+---
+permalink: workflows/task-create-a-command.html 
+sidebar: sidebar 
+keywords: create, wfa command, complete, specific, task, workflow, predefined, suitable 
+summary: Puede crear un comando de WFA para completar una tarea específica en el flujo de trabajo si no hay ningún comando WFA predefinido que sea adecuado para la tarea. 
+---
+= Crear un comando
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear un comando de WFA para completar una tarea específica en el flujo de trabajo si no hay ningún comando WFA predefinido que sea adecuado para la tarea.
+
+.Lo que necesitará
+Debe saber escribir el código necesario para el comando utilizando PowerShell o Perl.
+
+.Pasos
+. Haga clic en *Diseño de flujo de trabajo* > *comandos*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En la ficha *Propiedades* del cuadro de diálogo *Nueva definición de comandos*, introduzca o seleccione los detalles necesarios en los campos *Nombre*, *Descripción* y *tiempo de espera*.
++
+.. En el campo *representación de cadena*, introduzca una representación de cadena para el comando utilizando la sintaxis MVEL.
++
+`+VolumeName + "=>" + SnapshotName+`
+
++
+La representación de cadena de un comando se utiliza para mostrar la información que se desea ver en el diseño del flujo de trabajo durante la planificación y la ejecución. Sólo debe utilizar los parámetros del comando en la representación de cadena de un comando.
+
+.. *Opcional:* Si está creando un comando wait , seleccione *wait for condition* en la sección *Command type* y configure el valor requerido en el campo *Waiting INTERVAL (s)* (intervalo de espera).
+
+
+. En la ficha *Código*, realice los siguientes pasos:
++
+.. Seleccione el lenguaje de secuencias de comandos necesario para el comando en la lista *Idioma de secuencias de comandos*.
++
+Puede hacer clic en + y seleccionar un idioma adicional para el comando.
+
+.. Introduzca el código adecuado para el comando en la ficha Idioma seleccionado.
++
+Si desea utilizar el tipo de contraseña para las entradas de usuario en el script de PowerShell, debe crear un alias para el parámetro e incluirlo `_Password` en el atributo. Para el script Perl, puede especificar el tipo como *Contraseña* en la ficha *Definición de parámetros*.
+
++
+
+NOTE: El editor de comandos no admite los siguientes caracteres especiales: "<", "&amp" y etiquetas XML "< >".
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$false, HelpMessage="Specify an AD administrator password.")]
+  [Alias("ADAdminPassword_Password")]  [string]$ADAdminPassword
+)
+----
+
+
+. En la ficha *Definición de parámetros*, realice los siguientes pasos:
++
+.. Haga clic en *detectar parámetros* para rellenar la tabla de definición de parámetros.
++
+Los parámetros y sus atributos se extraen del código y se muestran en la tabla. Por ejemplo, los parámetros Array y VolumeName se extraen del siguiente código:
+
++
+[listing]
+----
+param (
+  [parameter(Mandatory=$true, HelpMessage="Array name or IP address")]
+  [string]$Array,
+
+  [parameter(Mandatory=$true, HelpMessage="Volume name")]
+  [string]$VolumeName,
+)
+----
+.. Haga clic en la columna Descripción de los parámetros para editar la descripción.
++
+No puede editar ningún otro campo de esta pestaña.
+
+
+
+. En la ficha *asignación de parámetros*, realice los siguientes pasos para cada parámetro:
++
+.. En la columna *Tipo*, seleccione el objeto de diccionario adecuado.
+.. En la columna *attribute*, introduzca o seleccione los atributos apropiados para el objeto de diccionario de la lista.
++
+Después de introducir un atributo, puede introducir un punto (.) e incluya otro atributo de ese objeto.
+
++
+Introduzca `cm_storage.volume` como tipo y. `aggregate.name` Como atributo para el parámetro agregateName.
+
+.. En la columna *Nombre de objeto*, introduzca un nombre de objeto.
++
+El nombre del objeto se utiliza para agrupar los parámetros en una pestaña del cuadro de diálogo parámetros para <command> cuando se especifican los detalles del comando en un flujo de trabajo.
+
+
+
++
+Los parámetros sin asignar se muestran en la ficha *otros parámetros* del cuadro de diálogo parámetros para <command> cuando se especifican los detalles del comando en un flujo de trabajo.
+
+. En la ficha *Reservación*, introduzca una secuencia de comandos de reserva mediante consultas SQL para reservar los recursos requeridos por el comando durante una ejecución de flujo de trabajo programada:
++
+.. *Opcional:* en el campo *representación de reserva*, introduzca una representación de cadena para la reserva utilizando la sintaxis MVEL.
++
+"Añadir regla para la etiqueta de SnapMirror"
+
++
+`" + SnapMirrorLabel + "[.code]` A la política de SnapMirror "
+
++
+`" + PolicyName + "`"`
+
++
+La representación de cadena se utiliza para mostrar los detalles de los recursos reservados en la ventana Reservas.
+
+
+
++
+
+NOTE: El script de reserva no debe realizar ninguna operación en bases de datos excepto cm_Storage, cm_Performance, almacenamiento, rendimiento, vc, y esquemas personalizados.
+
+. *Opcional:* en la ficha *verificación*, introduzca una consulta SQL para comprobar si el comando ha afectado a los orígenes de datos y a la caché de WFA como se esperaba para poder eliminar la reserva.
++
+La consulta SQL que escriba sólo puede constar de sentencias SELECT SQL.
+
++
+.. Haga clic en *verificación de prueba* para probar la secuencia de comandos de verificación.
+.. En el cuadro de diálogo *verificación*, introduzca los parámetros de prueba necesarios.
+.. Si no desea utilizar los datos de reserva para probar la secuencia de comandos de verificación, desactive el campo *usar *datos de reserva en test*.
+.. Haga clic en *Prueba*.
+.. Tras revisar el resultado de la prueba, cierre el cuadro de diálogo.
+
+
+. Haga clic en *Prueba* para probar el comando.
+. En el cuadro de diálogo *<command name> de comandos de prueba*, haga clic en *Prueba*.
++
+El resultado de la prueba se muestra en la sección Log messages del cuadro de diálogo.
+
+. Haga clic en *Guardar*.
+

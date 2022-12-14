@@ -1,0 +1,16 @@
+---
+permalink: rhel-install/reference-managing-oncommand-workflow-automation-ssl-certificates.html 
+sidebar: sidebar 
+keywords: manage, oncommand, workflow, automation, ssl certificate 
+summary: 'Puede sustituir el certificado SSL predeterminado OnCommand Workflow Automation (WFA) por un certificado autofirmado o un certificado firmado por una entidad de certificación (CA).' 
+---
+= Gestión de certificados SSL de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede sustituir el certificado SSL predeterminado OnCommand Workflow Automation (WFA) por un certificado autofirmado o un certificado firmado por una entidad de certificación (CA).
+
+El certificado WFA SSL autofirmado predeterminado se genera durante la instalación de WFA. Al actualizar, el certificado de la instalación anterior se reemplaza por el nuevo certificado. Si utiliza un certificado autofirmado no predeterminado o un certificado firmado por una CA, debe reemplazar el certificado SSL de WFA por su certificado.

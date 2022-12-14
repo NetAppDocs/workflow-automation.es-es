@@ -1,0 +1,78 @@
+---
+permalink: help/reference-mvel-enabled-fields-in-wfa.html 
+sidebar: sidebar 
+keywords: field, oncommand, workflow, automation, enable, expression, language, syntax, design 
+summary: 'Hay varios campos en OnCommand Workflow Automation (WFA) habilitados para MVFLEX Expression Language (MVEL). Puede utilizar las sintaxis MVEL en estos campos mientras diseña flujos de trabajo.' 
+---
+= Campos habilitados para MVEL en OnCommand Workflow Automation
+:allow-uri-read: 
+:experimental: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Hay varios campos en OnCommand Workflow Automation (WFA) habilitados para MVFLEX Expression Language (MVEL). Puede utilizar las sintaxis MVEL en estos campos mientras diseña flujos de trabajo.
+
+La siguiente tabla explica cuándo y dónde puede utilizar las sintaxis de MVEL en la interfaz de WFA:
+
+[cols="2*"]
+|===
+| Cuando... | Dónde usar... 
+
+
+ a| 
+Crear o editar un flujo de trabajo
+ a| 
+* _MENU:flujo de trabajo_[Detalles > parámetros de retorno > valor de parámetro]
+* _MENU:flujo de trabajo_[Detalles > constantes > valor]
+
+
+
+
+ a| 
+Crear o editar detalles de comandos en un flujo de trabajo
+ a| 
+* Menú:comandos[parámetros para _parameter_name_ > introducir criterios de búsqueda > selección de recursos > Finder > parámetros]
+* Menú:comandos[parámetros para _parameter_name_ > introducir criterios de búsqueda > selección de recursos > Avanzado > Ejecutar búsqueda sólo cuando la siguiente expresión se evalúe como TRUE]
+* Menú:comandos[parámetros para _parameter_name_ > Avanzado > Si LA siguiente expresión es VERDADERA]
+* Menú:comandos[parámetros para _parameter_name_ > otros parámetros]
+* Menú:comandos[_parameter_name_ > atributos]
+
+
+
+
+ a| 
+Crear o editar un comando
+ a| 
+* Menú:comandos[Definición de comandos _command_name_ > Propiedades > representación de cadena]
+
+
+
+
+ a| 
+Crear o editar una función
+ a| 
+* Menú:funciones[función _Function_name_ > Definición de función]
+
+
+
+
+ a| 
+Crear o editar una plantilla
+ a| 
+* Menú:plantilla[parámetros para _parameter_name_ > plantilla _template_name_ > atributos > valor]
+
+
+
+
+ a| 
+Edición de una fila
+ a| 
+* _MENU:flujo de trabajo_[flujo de trabajo > repetir fila > repeticiones > número de veces]
+* _MENU:flujo de trabajo_[flujo de trabajo > repetir fila > variables para _Initial_Value_ y _expression_]
+* _MENU:flujo de trabajo_[flujo de trabajo > repetir fila > repeticiones > para cada recurso de un grupo > criterios de búsqueda de recursos > parámetros para filtrar]
+* _MENU:flujo de trabajo_[flujo de trabajo > Agregar condición > Si LA siguiente expresión es VERDADERA]
+
+
+|===

@@ -1,0 +1,32 @@
+---
+permalink: help/concept-what-incremental-naming-is.html 
+sidebar: sidebar 
+keywords: incremental, naming, algorithm, enable, attribute, workflow, search, results, parameter, attribute, incremental, value, custom, expression, functionality, help, implement, convention, requirement 
+summary: La nomenclatura incremental es un algoritmo que permite asignar un nombre a los atributos de un flujo de trabajo en función de los resultados de búsqueda de un parámetro. Puede asignar un nombre a los atributos basado en un valor incremental o en una expresión personalizada. La funcionalidad de nomenclatura incremental le ayuda a implementar una convención de nomenclatura en función de sus necesidades. 
+---
+= Qué es la nomenclatura incremental
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La nomenclatura incremental es un algoritmo que permite asignar un nombre a los atributos de un flujo de trabajo en función de los resultados de búsqueda de un parámetro. Puede asignar un nombre a los atributos basado en un valor incremental o en una expresión personalizada. La funcionalidad de nomenclatura incremental le ayuda a implementar una convención de nomenclatura en función de sus necesidades.
+
+Puede usar la funcionalidad de nomenclatura incremental cuando diseñe flujos de trabajo para asignar nombres de forma dinámica a los objetos creados por el flujo de trabajo. La funcionalidad permite especificar criterios de búsqueda para un objeto mediante la característica de selección de recursos y el valor devuelto por los criterios de búsqueda se utiliza para el atributo del objeto. Además, puede especificar un valor para el atributo si no se encontró ningún objeto con los criterios de búsqueda especificados.
+
+Puede utilizar una de las siguientes opciones para asignar nombres a los atributos:
+
+* Proporciona un valor de incremento y un sufijo
++
+Puede proporcionar un valor que se debe utilizar junto con el valor del objeto encontrado por los criterios de búsqueda e incrementar con el número que especifique. Por ejemplo, si desea crear volúmenes con la convención de nomenclatura de `_filer name_unique number_environment,_` puede usar un buscador para buscar el último volumen por su prefijo de nombre e incrementar el número único en 1, así como añadir el nombre del sufijo al nombre del volumen. Si el último prefijo de nombre de volumen encontrado era _vf_023_prod_ y está creando tres volúmenes, los nombres de los volúmenes creados son _vf_024_prod, vf_025_prod,_ y _vf_026_prod._
+
+* Proporcionar una expresión personalizada
++
+Puede proporcionar un valor que se debe utilizar junto con el valor del objeto encontrado por los criterios de búsqueda y agregar valores adicionales basados en la expresión que especifique. Por ejemplo, si desea crear un volumen con la convención de nomenclatura de `last volume name_environment name padded with 1,` puede introducir la expresión `last_volume.name + '_' + nextName("lab1")`. Si el último nombre de volumen encontrado era _vf_023,_ el nombre del volumen creado es _vf_023_lab2._
+
+
+
+La siguiente ilustración muestra cómo se puede proporcionar una expresión personalizada para especificar una convención de nomenclatura:
+
+image::../media/incrmnmgwzd.png[incl mnmgwzd]

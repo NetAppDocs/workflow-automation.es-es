@@ -1,0 +1,131 @@
+---
+permalink: help/reference-packs-window.html 
+sidebar: sidebar 
+keywords: pack, window, display, oncommand, automation, pack, imported, available, server, contain, information, file, workflow, commands, filters, functions, finders, templates 
+summary: La ventana Paquetes muestra los paquetes de WFA de OnCommand Workflow Automation que se importan y están disponibles en el servidor de WFA. Cada paquete contiene el archivo de información del paquete y el contenido de WFA, como flujos de trabajo, comandos, filtros, funciones, buscadores y plantillas. 
+---
+= Ventana Paquetes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Paquetes muestra los paquetes de WFA de OnCommand Workflow Automation que se importan y están disponibles en el servidor de WFA. Cada paquete contiene el archivo de información del paquete y el contenido de WFA, como flujos de trabajo, comandos, filtros, funciones, buscadores y plantillas.
+
+* Tabla Paquetes
+* Barra de herramientas
+
+
+
+
+== Tabla Paquetes
+
+La tabla de paquetes muestra en formato tabular los paquetes de WFA que están disponibles en el servidor de WFA. Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla Packs contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si el paquete es creado por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""])
+
++
+Puede buscar paquetes seleccionando las casillas de verificación de opciones necesarias en la lista de filtros.
+
+* *Nombre*
++
+Muestra el nombre del paquete.
+
++
+Puede buscar un paquete introduciendo su nombre en el cuadro de texto de filtro *Buscar*.
+
+* *Descripción*
++
+Muestra la descripción del paquete.
+
++
+Puede buscar un paquete introduciendo su descripción en el cuadro de texto de filtro *Buscar*.
+
+* *Versión de entidad*
++
+Muestra el número de versión del paquete en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó el paquete.
+
++
+Puede buscar paquetes seleccionando la categoría de tiempo requerida en la lista desplegable de filtros.
+
+* *Actualizado por*
++
+Muestra el nombre del usuario que actualizó el paquete.
+
++
+Puede buscar un paquete introduciendo el nombre de usuario en el cuadro de texto de filtro *Buscar*.
+
+* *Detalles*
++
+Muestra los detalles del paquete en el sitio web de Storage Automation Store.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_pack.png[""](Nuevo)*
++
+Abre el cuadro de diálogo Nuevo paquete, que permite crear un nuevo paquete.
+
+* *image:../media/details_wfa_icon.gif["Icono Detalles"] (Editar)*
++
+Abre el cuadro de diálogo Contenido del paquete, que contiene las siguientes fichas para obtener información detallada sobre el contenido de los paquetes:
+
++
+** Flujos de trabajo
+** Buscadores
+** Filtros
+** Comandos
+** Empresarial
+** Plantillas
+** Diccionario
+** Esquemas
+** Consultas en caché
+** Tipos de origen de datos SQL
+** Tipos de origen de datos de script
+** Tipos de sistemas remotos
+** Categorías
+
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar paquete, que permite eliminar el paquete seleccionado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear paquete, que permite desbloquear el paquete seleccionado. Esta opción sólo está habilitada para los paquetes bloqueados por usted. Sin embargo, los administradores pueden desbloquear paquetes bloqueados por otros usuarios.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Abre el cuadro de diálogo Exportar, que permite exportar el paquete seleccionado.
+
+* *image:../media/import_from_server_folder.png[""] (Importar desde la carpeta del servidor)*
++
+Abre el cuadro de diálogo Importar desde la carpeta del servidor, que permite importar el paquete desde la ubicación de carpeta seleccionada en el sistema de servidor.
+
+* *image:../media/export_to_server_folder.png[""] (Exportar a carpeta del servidor)*
++
+Abre el cuadro de diálogo Exportar a carpeta del servidor, que permite exportar el paquete a la ubicación de carpeta seleccionada en el sistema de servidor.
+
+

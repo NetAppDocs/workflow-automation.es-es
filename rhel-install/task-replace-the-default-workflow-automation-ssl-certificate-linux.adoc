@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-replace-the-default-workflow-automation-ssl-certificate-linux.html 
+sidebar: sidebar 
+keywords: replace, default, workflow, automation, ssl, certificate 
+summary: 'Puede reemplazar el certificado SSL predeterminado de Workflow Automation (WFA) si el certificado ha caducado o si desea aumentar el período de validez del certificado.' 
+---
+= Reemplace el certificado SSL predeterminado de Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede reemplazar el certificado SSL predeterminado de Workflow Automation (WFA) si el certificado ha caducado o si desea aumentar el período de validez del certificado.
+
+Debe tener privilegios raíz para el sistema Linux en el que haya instalado WFA.
+
+La ruta de instalación predeterminada de WFA se utiliza en este procedimiento. Si ha cambiado la ubicación predeterminada durante la instalación, debe utilizar la ruta de instalación personalizada de WFA.
+
+.Pasos
+. Inicie sesión como usuario raíz en el equipo host de WFA.
+. En la confirmación del shell, desplácese hasta el siguiente directorio del servidor de WFA: WFA_install_location/wfa/bin
+. Detenga la base de datos y los servicios del servidor de WFA:
++
+`./wfa --stop=WFA`
+
++
+`./wfa --stop=DB`
+
+. Elimine el archivo wfa.keystore de la siguiente ubicación: WFA_install_location/wfa/jboss/Standalone/Configuration/keystore.
+. Abra un indicador de comandos de shell en el servidor de WFA y cambie los directorios a la siguiente ubicación: <OpenJDK_install_location>/bin
+. Obtenga la clave de la base de datos:
++
+`keytool -keysize 2048 -genkey -alias "ssl keystore" -keyalg RSA -keystore "WFA_install_location/wfa/jboss/standalone/configuration/keystore/wfa.keystore" -validity xxxx`
+
++
+xxxx es el número de días para la validez del nuevo certificado.
+
+. Cuando se le solicite, introduzca la contraseña (predeterminada o nueva).
++
+La contraseña predeterminada es una contraseña cifrada generada aleatoriamente.
+
++
+Para obtener y descifrar la contraseña predeterminada, siga los pasos del artículo de Knowledge base link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["Cómo renovar el certificado autofirmado en WFA 5.1.1.0.4"^]
+
++
+Para utilizar una nueva contraseña, siga los pasos del artículo de la base de conocimientos link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["Cómo actualizar una contraseña nueva para el almacén de claves en WFA."^]
+
+. Introduzca los detalles obligatorios para el certificado.
+. Revise la información que se muestra y después introduzca `Yes`.
+. Pulse *Intro* cuando se le solicite el siguiente mensaje: Introduzca la contraseña de la tecla para <SSL keystore> <RETURN if same as keystore password>.
+. Reinicie los servicios de WFA:
++
+`./wfa --start=DB`
+
++
+`./wfa --start=WFA`
+
+

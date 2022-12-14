@@ -1,0 +1,119 @@
+---
+permalink: help/reference-edit-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, data, source, dialog box, enable, modify, existing 
+summary: El cuadro de diálogo Editar origen de datos permite modificar un origen de datos existente. 
+---
+= Cuadro de diálogo Edit Data Source
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar origen de datos permite modificar un origen de datos existente.
+
+
+
+== Propiedades de configuración del origen de datos
+
+* *Nombre*
++
+Permite modificar el nombre del origen de datos.
+
+* *Tipo de origen de datos*
++
+Muestra el tipo de origen de datos del origen de datos. No puede modificar este campo.
+
+* *Nombre del host*
++
+Permite especificar el nombre de host o la dirección IP (IPv4 o IPv6) del origen de datos.
+
++
+
+NOTE: El tipo de origen de datos Active IQ Unified Manager no admite direcciones IPv6.
+
+* *Puerto*
++
+Muestra el número de puerto asociado, si lo hay, para el tipo de origen de datos seleccionado. Puede cambiar el número de puerto predeterminado para el origen de datos.
+
+* *Esquema*
++
+Muestra el esquema asociado con el tipo de origen de datos seleccionado, por ejemplo, _cm_Storage_ para Unified Manager - 6.0 (MYSQL).
+
++
+Esta propiedad no se puede modificar.
+
+* *Nombre de usuario*
++
+Muestra el nombre de usuario asociado, si lo hay, para el tipo de origen de datos seleccionado.
+
++
+Debe especificar el nombre de usuario apropiado para este origen de datos para anular el nombre de usuario predeterminado:
+
++
+** Para las versiones de Unified Manager anteriores a 6.0, debe introducir el nombre de usuario que utilizó para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.
+** Para Unified Manager 6.0 y versiones posteriores, debe introducir el nombre de usuario de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager.
+** Para Performance Advisor, debe introducir el nombre de usuario de un usuario de Active IQ Unified Manager con la función mínima GlobalRead.
+
+
+* *Contraseña*
++
+Permite especificar una contraseña para el tipo de origen de datos seleccionado.
+
++
+Debe especificar una contraseña para omitir la contraseña predeterminada para el nombre de usuario de este origen de datos:
+
++
+** Para las versiones de Unified Manager anteriores a 6.0, debe introducir la contraseña que ha utilizado para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.
+** Para Unified Manager 6.0 y versiones posteriores, debe introducir la contraseña de la cuenta de usuario de la base de datos que haya creado en el servidor.
+** Para Performance Advisor, debe introducir la contraseña de un usuario de Unified Manager con el rol mínimo de GlobalRead.
+
+
+* *Base de datos*
++
+Muestra el nombre de la base de datos asociada, si lo hay, para el tipo de origen de datos seleccionado.
+
+* *Intervalo (minutos)*
++
+Le permite hacer clic en el valor y seleccionar un intervalo (en minutos) mediante las flechas arriba y abajo.
+
++
+
+NOTE: Si el intervalo se establece en cero (0), se desactiva el muestreo automático.
+
++
+El intervalo predeterminado para el muestreo de datos es:
+
++
+** Tipo de origen de datos basado en secuencias de comandos: 1440 (rendimiento y vc)
+** Tipo de origen de datos basado en SQL: 30 (cm_Storage, almacenamiento y cm_rendimiento)
+
+
+* *Consulte la Guía de instrucciones de configuración*
++
+Abre el cuadro de diálogo Guía de instrucciones de configuración, que describe los pasos para configurar el origen de datos.
+
+
+
+
+
+== Botones de comando
+
+* *Restablecer esquema*
++
+Abre el cuadro de diálogo de confirmación Restablecer esquema. Este cuadro de diálogo permite restablecer el almacenamiento en caché para el esquema seleccionado, que se produce durante la siguiente adquisición de datos.
+
++
+
+IMPORTANT: El proceso de restablecimiento elimina todos los datos almacenados en caché, incluidas todas las tablas. La caché completa se construye desde el inicio durante la siguiente adquisición de datos.
+
+* *Guardar*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

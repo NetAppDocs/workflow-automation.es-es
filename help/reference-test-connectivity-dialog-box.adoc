@@ -1,0 +1,44 @@
+---
+permalink: help/reference-test-connectivity-dialog-box.html 
+sidebar: sidebar 
+keywords: test, connectivity, dialog box, enable, test, system, associated, credential, operation, trigger, search, path, first, look, exact, match, pattern, service, authentication 
+summary: El cuadro de diálogo probar conectividad permite probar la conexión al sistema asociado con una credencial. La operación de conectividad de prueba activa la ruta de búsqueda y primero busca una coincidencia exacta, luego una coincidencia de patrones y, finalmente, para la autenticación del servicio LDAP. 
+---
+= Cuadro de diálogo probar conectividad
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo probar conectividad permite probar la conexión al sistema asociado con una credencial. La operación de conectividad de prueba activa la ruta de búsqueda y primero busca una coincidencia exacta, luego una coincidencia de patrones y, finalmente, para la autenticación del servicio LDAP.
+
+El protocolo de mensajes de control de Internet (ICMP) se utiliza para comprobar si el sistema se está ejecutando antes de probar la conectividad.
+
+
+
+== Parámetros de conectividad de prueba
+
+* *Tipo*
++
+Permite seleccionar el tipo de credencial de la lista desplegable.
+
+* *Nombre/IP*
++
+Permite especificar el nombre de host o la dirección IP para la credencial.
+
+
+
+
+
+== Botones de comando
+
+* *Prueba*
++
+Abre un intento de conexión al nombre de host o la dirección IP.
+
+* *Cerrar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

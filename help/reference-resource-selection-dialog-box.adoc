@@ -1,0 +1,109 @@
+---
+permalink: help/reference-resource-selection-dialog-box.html 
+sidebar: sidebar 
+keywords: resource, selection, dialog box, enable, search, map, command 
+summary: El cuadro de diálogo selección de recursos permite buscar recursos y asignar los recursos a un comando. 
+---
+= Cuadro de diálogo Resource Selection
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo selección de recursos permite buscar recursos y asignar los recursos a un comando.
+
+* Seleccione la pestaña <dictionary object> by
+* Pestaña Avanzada
+
+
+
+
+== Seleccione la pestaña <dictionary object> by
+
+Esta ficha permite especificar un buscador o filtros como criterios de búsqueda e introducir atributos para los criterios de búsqueda seleccionados. También puede guardar los filtros seleccionados como buscador.
+
+* *Definir reglas de filtro*
++
+Le permite definir un conjunto de reglas para los recursos de entrada de diccionario, como unidades vFiler, agregados y máquinas virtuales.
+
++
+Las reglas de filtro pueden contener uno o más grupos de reglas.
+
++
+Una regla consta de un atributo de entrada de diccionario, un operador y un valor. El atributo también puede incluir atributos de sus referencias. Por ejemplo, puede especificar una regla para los agregados de la siguiente forma: Enumerar todos los agregados con nombre comenzando por la cadena «'aggr'» y tener un tamaño disponible superior a 5 GB. La primera regla del grupo es el atributo «'nombre'», con el operador «mantarritos con» y el valor «'aggr». La segunda regla para el mismo grupo es el atributo "'available_size_mb'", con el operador "'>'" y el valor "'5000'".
+
++
+La opción *definir reglas de filtro* está desactivada si ha seleccionado un buscador.
+
++
+Puede borrar los valores especificados haciendo clic en el botón *Restablecer*.
+
+* *Seleccione un recurso por sus claves naturales*
++
+Le permite seleccionar un recurso en función de las claves naturales del recurso.
+
+* *Finder*
++
+Permite seleccionar un buscador de la lista. *Ninguno* está seleccionado de forma predeterminada.
+
++
+Los filtros se muestran debajo de la lista del buscador. No puede seleccionar filtros si ha seleccionado un buscador.
+
+* *Parámetros*
++
+Permite introducir los valores para el buscador o filtros seleccionados. Debe introducir todos los valores necesarios para completar los criterios de búsqueda.
+
+* *Botones de comando*
++
+** *Guardar como Finder*
++
+Guarda los filtros seleccionados como buscador.
+
+** *Prueba*
++
+Permite probar los parámetros de los filtros seleccionados antes de especificar los valores en el área parámetros.
+
+** *OK*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+** *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+
+
+
+
+
+
+== Pestaña Avanzada
+
+Esta pestaña le permite especificar cuándo se debe realizar la búsqueda y permite ordenar los atributos del recurso y el estado de los atributos del recurso.
+
+* *Ejecutar siempre esta búsqueda*
++
+Ejecuta la búsqueda sin ninguna restricción cuando se ejecuta el comando.
+
+* *Ejecutar búsqueda sólo cuando la siguiente expresión se evalúe como TRUE*
++
+Ejecuta la búsqueda sólo cuando el valor del atributo opcional especificado en el cuadro es "'true'". Puede utilizar la sintaxis MVFLEX Expression Language (MVEL) para especificar el atributo opcional.
+
+* *Tabla de clasificación*
++
+Muestra los atributos y el orden de clasificación de los filtros seleccionados en la ficha *Seleccionar <dictionary object> por*. El orden de ordenación es significativo para la selección de recursos; por ejemplo, si seleccionó descendente como orden de clasificación de los agregados, el agregado con el máximo `available_space` se selecciona como el recurso. Para cambiar el orden de clasificación de un atributo, puede hacer clic en la columna de estado del atributo y seleccionar el orden de clasificación requerido en la lista.
+
+* *Botones de comando*
++
+** *Arriba*
++
+Mueve la entrada seleccionada hacia arriba una fila de la tabla Ordenar.
+
+** *Abajo*
++
+Mueve la entrada seleccionada hacia abajo una fila de la tabla Ordenar.
+
+
+
+

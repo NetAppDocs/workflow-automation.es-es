@@ -1,0 +1,58 @@
+---
+permalink: help/reference-clone-cache-query-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, cache, query, dialog box, enable, associated, dictionary, entry 
+summary: El cuadro de diálogo Editar consulta de caché permite editar una consulta de caché asociada a una entrada de diccionario. 
+---
+= Cuadro de diálogo Clone Cache Query
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar consulta de caché permite editar una consulta de caché asociada a una entrada de diccionario.
+
+* *Entrada de diccionario*
++
+Especifica una entrada de diccionario asociada con la consulta de caché.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión de la consulta de caché en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Tipos de origen de datos*
++
+Especifica el tipo de origen de datos asociado a la consulta de caché.
+
+
+
+
+
+== Estructura de tabla
+
+Muestra los atributos y la sintaxis SQL asociados con la entrada del diccionario.
+
+* *Consulta de selección SQL*
++
+Especifica la consulta SQL asociada con la entrada del diccionario y el tipo de proveedor de datos seleccionado.
+
+
+
+
+
+== Botones de comando
+
+* *Prueba*
++
+Permite probar la consulta SQL introducida en el campo de consulta de selección SQL.
+
+* *Guardar*
++
+Guarda la consulta de caché como una nueva entrada en la tabla consultas de caché y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

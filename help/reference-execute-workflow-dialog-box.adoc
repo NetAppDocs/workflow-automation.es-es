@@ -1,0 +1,46 @@
+---
+permalink: help/reference-execute-workflow-dialog-box.html 
+sidebar: sidebar 
+keywords: execute, workflow, dialog box, enable, specify, user, iputs, time, execution, comment 
+summary: El cuadro de diálogo Ejecutar flujo de trabajo permite especificar las entradas de usuario necesarias, el tiempo de ejecución y el comentario de ejecución para un flujo de trabajo. 
+---
+= Cuadro de diálogo Ejecutar flujo de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Ejecutar flujo de trabajo permite especificar las entradas de usuario necesarias, el tiempo de ejecución y el comentario de ejecución para un flujo de trabajo.
+
+
+
+== Entradas del usuario
+
+Permite especificar las entradas para el flujo de trabajo. Los atributos obligatorios están marcados con un asterisco (*) y el borde de los cuadros está en rojo.
+
+
+
+== Opciones
+
+Permite especificar el tiempo para la ejecución del flujo de trabajo.
+
+* *Ejecutar ahora*
++
+Permite ejecutar el flujo de trabajo de inmediato.
+
+* *Ejecutar de forma recurrente*
++
+Permite configurar el flujo de trabajo para que se repita periódicamente. Esta opción solo se muestra cuando se creó una programación.
+
+* *Ejecutar una vez*
++
+Permite programar la ejecución del flujo de trabajo.
+
+
+
+
+
+== Comentario de ejecución
+
+Permite especificar un comentario para la ejecución del flujo de trabajo. Este comentario se muestra en la ventana Estado de ejecución.

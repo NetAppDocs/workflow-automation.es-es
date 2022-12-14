@@ -1,0 +1,48 @@
+---
+permalink: help/task-configure-a-database-user-by-running-ocsetup-on-windows.html 
+sidebar: sidebar 
+keywords: run, ocsetup, file, datafabric, manager, server, configure, read-only, access, oncommand, workflow, automation 
+summary: Puede ejecutar el archivo ocsetup en el servidor DataFabric Manager 5.x para configurar el acceso de solo lectura de la base de datos de DataFabric Manager 5.x a OnCommand Workflow Automation. 
+---
+= Configure un usuario de base de datos ejecutando ocsetup en Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede ejecutar el `ocsetup` Archivo en el servidor DataFabric Manager 5.x para configurar el acceso de solo lectura de la base de datos DataFabric Manager 5.x a OnCommand Workflow Automation.
+
+. Descargue el `wfa_ocsetup.exe` Archivo a un directorio del servidor DataFabric Manager 5.x desde la siguiente ubicación:
++
++https://WFA_Server_IP/download/wfa_ocsetup.exe.+
+
++
+_WFA_Server_IP_ es la dirección IP (dirección IPv4 o IPv6) de su servidor WFA.
+
++
+Si ha especificado un puerto no predeterminado para WFA, debe incluir el número de puerto de la siguiente forma:
+
++
++https://wfa_server_ip:port/download/wfa_ocsetup.exe.+
+
++
+_Port_ es el número de puerto TCP que ha utilizado para el servidor WFA durante la instalación.
+
++
+Si especifica una dirección IPv6, debe escribirla entre corchetes.
+
+. Haga doble clic en `wfa_ocsetup.exe` archivo.
+. Lea la información del asistente de configuración y haga clic en *Siguiente*.
+. Busque o escriba la ubicación de OpenJDK y haga clic en *Siguiente*.
+. Introduzca un nombre de usuario y una contraseña para anular las credenciales predeterminadas.
++
+Se crea una nueva cuenta de usuario de la base de datos con acceso a la base de datos DataFabric Manager 5.x.
+
++
+
+NOTE: Si no crea una cuenta de usuario, se utilizan las credenciales predeterminadas. Debe crear una cuenta de usuario con fines de seguridad.
+
+. Haga clic en *Siguiente* y revise los resultados.
+. Haga clic en *Siguiente* y, a continuación, haga clic en *Finalizar* para completar el asistente.
+

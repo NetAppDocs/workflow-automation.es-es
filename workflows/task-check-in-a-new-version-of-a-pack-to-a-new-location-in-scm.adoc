@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-check-in-a-new-version-of-a-pack-to-a-new-location-in-scm.html 
+sidebar: sidebar 
+keywords: update, version, pack, oncommand, workflow, automation, check, new, location, source, control, management, server 
+summary: 'Puede actualizar la versión de un paquete en OnCommand Workflow Automation (WFA) y, a continuación, realizar el check-in del paquete actualizado a una nueva ubicación en el servidor de gestión de control de origen (SCM).' 
+---
+= Compruebe una nueva versión de un paquete de flujo de trabajo WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede actualizar la versión de un paquete en OnCommand Workflow Automation (WFA) y, a continuación, realizar el check-in del paquete actualizado a una nueva ubicación en el servidor de gestión de control de origen (SCM).
+
+.Lo que necesitará
+El SCM debe estar configurado y debe tener credenciales de administrador o de arquitecto.
+
+.Pasos
+. Inicie sesión en la ventana *WFA* a través de un navegador web.
+. Haga clic en *Administración de contenido* > *Paquetes*.
+. Haga clic en el icono *Editar paquete*.
+. En el cuadro de diálogo *<pack name> Pack*, en el campo *Versión*, actualice la versión del paquete.
+. Haga clic en *Guardar*.
+. Haga clic en el icono *Exportar al servidor* en el nivel de paquete.
+. En el cuadro de diálogo *Exportar a carpeta del servidor*, en el campo *ubicación de carpeta en el sistema del servidor*, introduzca una nueva ubicación del sistema de archivos.
++
+Si el paquete se guardó anteriormente en `C:\p4\cdot\1.0.0` ubicación del sistema de archivos, ahora guárdelo en el `C:\p4\cdot\2.0.0` ubicación.
+
+. En la ubicación del cliente SCM, compruebe el contenido del paquete en una nueva ubicación en el servidor SCM.
++
+Si el paquete se guardó anteriormente en `//depot/wfa/packs/cdot/1.0.0` Ruta en el servidor SCM, puede guardarlo en otra ubicación, como `//depot/wfa/packs/cdot/2.0.0.`
+
+

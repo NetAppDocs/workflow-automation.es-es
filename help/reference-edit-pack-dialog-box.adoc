@@ -1,0 +1,112 @@
+---
+permalink: help/reference-edit-pack-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, pack, dialog, enable 
+summary: El cuadro de diálogo Editar paquete permite editar el paquete. 
+---
+= Cuadro de diálogo Edit Pack
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar paquete permite editar el paquete.
+
+* Ficha Detalles
+* Contenido del paquete
+
+
+
+
+== Ficha Detalles
+
+* *Nombre*
++
+Permite introducir un nombre y guardar el paquete.
+
+* *Versión*
++
+Permite introducir una versión y guardar el paquete.
+
+* *Autor*
++
+Permite introducir el nombre del autor y guardar el paquete.
+
+* *Descripción*
++
+Permite introducir una descripción y guardar el paquete.
+
+
+
+
+
+== Contenido del paquete
+
+* *Flujo de trabajo*
++
+La opción *flujo de trabajo* le permite ver *Nombre* y *Versión de entidad* del flujo de trabajo.
+
+* *Finders*
++
+La opción *Finders* le permite ver *Nombre* y *Versión de entidad* del buscador.
+
+* *Filtros*
++
+La opción *Filtros* le permite ver *Nombre* y *Versión de entidad* del filtro.
+
+* *Comandos*
++
+La opción *Commands* permite ver *Name* y *Entity Version* del comando.
+
+* *Funciones*
++
+La opción *funciones* le permite ver *Nombre* y *Versión de entidad* de la función.
+
+* *Plantillas*
++
+La opción *Plantillas* le permite ver *Nombre* y *Versión de entidad* de la plantilla.
+
+* *Diccionario*
++
+La opción *Diccionario* le permite ver *Nombre* y *Versión de entidad* del diccionario.
+
+* *Esquemas*
++
+La opción *combinaciones* le permite ver *Nombre* y *Versión de entidad* del esquema.
+
+* *Consultas en caché*
++
+La opción *consultas de caché* permite ver *Nombre* y *Versión de entidad* de la consulta de caché.
+
+* *Tipos de origen de datos SQL*
++
+La opción *tipos de origen de datos SQL* permite ver *Nombre* y *Versión de entidad* del tipo de origen de datos SQL.
+
+* *Tipos de origen de datos de secuencia de comandos*
++
+La opción *tipos de origen de datos de secuencia de comandos* permite ver *Nombre* y *Versión de entidad* del tipo de origen de datos de secuencia de comandos.
+
+* *Categorías*
++
+La opción *Categorías* le permite ver *Nombre* y *Versión de entidad* de la categoría.
+
+* *Tipos de sistemas remotos*
++
+La opción *tipos de sistema remoto* le permite ver *Nombre* y *Versión de entidad* del tipo de sistema remoto.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda el paquete y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cierra el cuadro de diálogo sin guardar.
+
+

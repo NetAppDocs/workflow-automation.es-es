@@ -1,0 +1,135 @@
+---
+permalink: workflows/reference-guidelines-for-sql-in-wfa.html 
+sidebar: sidebar 
+keywords: aware, guidelines, use, sql, oncommand, workflow, automation, write, sql, queries, wfa 
+summary: 'Debe estar al tanto de las directrices para usar SQL en OnCommand Workflow Automation (WFA) a fin de escribir consultas SQL para WFA.' 
+---
+= Directrices para SQL en WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe estar al tanto de las directrices para usar SQL en OnCommand Workflow Automation (WFA) a fin de escribir consultas SQL para WFA.
+
+SQL se utiliza en las siguientes ubicaciones de WFA:
+
+* Consultas SQL para rellenar las entradas del usuario para su selección
+* Consultas SQL para crear filtros para filtrar objetos de un tipo de entrada de diccionario específico
+* Datos estáticos en tablas en la base de datos de juegos
+* Tipo de origen de datos personalizado de tipo SQL en el que los datos deben extraerse de un origen de datos externo, como una base de datos de administración de configuración personalizada (CMDB).
+* Consultas SQL para secuencias de comandos de reserva y verificación
+
+
+[cols="2*"]
+|===
+| Directrices | Ejemplo 
+
+
+ a| 
+Las palabras clave reservadas de SQL deben tener caracteres en mayúsculas.
+ a| 
+[listing]
+----
+SELECT
+    vserver.name
+FROM
+    cm_storage.vserver vserver
+----
+
+
+ a| 
+Los nombres de tablas y columnas deben tener caracteres en minúsculas.
+ a| 
+Tabla: Agregado
+
+Columna: Used_Space_mb
+
+
+
+ a| 
+Separe las palabras con un carácter de subrayado (_). No se permiten espacios.
+ a| 
+rendimiento_de_cabina
+
+
+
+ a| 
+El nombre de la tabla se define en singular. Una tabla es un conjunto de una o más entradas.
+ a| 
+«'function'», no «'functions'»
+
+
+
+ a| 
+Utilice alias de tabla con nombres significativos en consultas SELECCIONADAS.
+ a| 
+[listing]
+----
+SELECT
+	vserver.name
+FROM
+	cm_storage.cluster cluster,
+	cm_storage.vserver vserver
+WHERE
+	vserver.cluster_id = cluster.id
+	AND cluster.name = '${ClusterName}'
+	AND vserver.type = 'cluster'
+ORDER BY
+	vserver.name ASC
+----
+
+
+ a| 
+Si tiene que hacer referencia a un parámetro de entrada de filtro o a un parámetro de entrada de usuario en una consulta de filtro o una consulta de usuario, utilice la sintaxis como '$\{inputVariableName}.también puede utilizar la sintaxis para hacer referencia a un parámetro de definición de comandos en secuencias de comandos de reserva y secuencias de comandos de verificación.
+ a| 
+[listing]
+----
+SELECT
+	volume.name AS Name,
+	aggregate.name as Aggregate,
+	volume.size_mb AS 'Total Size (MB)',
+	voulme.used_size_mb AS 'Used Size (MB)',
+	volume.space_guarantee AS 'Space Guarantee'
+FROM
+	cm_storage.cluster,
+	cm_storage.aggregate,
+	cm_storage.vserver,
+	cm_storage.volume
+WHERE
+	cluster.id = vserver.cluster_id
+	AND aggregate.id = volume.aggregate_id
+	AND vserver.id = voulme.vserver_id
+	AND vserver.name = '${VserverName}'
+	AND cluster.name = '${ClusterName}'
+ORDER BY
+	volume.name ASC
+----
+
+
+ a| 
+Utilice comentarios para consultas complejas. Algunos de los estilos de comentario admitidos en las consultas son los siguientes:
+
+* «»--» hasta el final de la línea
++
+Es obligatorio un espacio después del segundo guión de este estilo de comentario.
+
+* De un carácter «»#» hasta el final de la línea
+* De un «»/*`" to the following "`*/'"secuencia
+
+ a| 
+[listing]
+----
+/*
+multi-line
+comment
+*/
+--line comment
+SELECT
+	ip as ip, # comment till end of this line
+	NAME as name
+FROM --end of line comment
+	storage.array
+----
+|===

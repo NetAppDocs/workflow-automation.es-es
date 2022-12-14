@@ -1,0 +1,33 @@
+---
+permalink: windows-install/task-configure-snmp-version-1.html 
+sidebar: sidebar 
+keywords: snmp, version 1, snmp traps, configure 
+summary:  
+---
+= Configurar la versión 1 de SNMP
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+.Pasos
+. Inicie sesión en WFA a través de un navegador web como usuario administrador y acceda al servidor de WFA.
+. Haga clic en *Configuración* y en *Configuración* haga clic en *SNMP*.
+. Active la casilla de verificación *Activar SNMP*.
+. En la lista desplegable **Version**, seleccione *Versión 1*.
+. Introduzca una dirección IPv4 o IPv6 o el nombre de host y el número de puerto del host de gestión.
++
+WFA envía capturas SNMP al número de puerto especificado. El número de puerto predeterminado es 162.
+
+. En la sección notificar, seleccione una o más de las siguientes casillas de verificación:
++
+** Se inició la ejecución del flujo de trabajo
+** La ejecución del flujo de trabajo se ha realizado correctamente
+** La ejecución del flujo de trabajo ha fallado o se ha realizado correctamente
+** Ejecución del flujo de trabajo en espera de aprobación
+** Error de adquisición
+
+
+. Haga clic en *Enviar notificación de prueba* para comprobar la configuración.
+. Haga clic en *Guardar*.
+

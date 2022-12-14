@@ -1,0 +1,230 @@
+---
+permalink: workflows/reference-workflow-requirements-checklist.html 
+sidebar: sidebar 
+keywords: workflow, requirements, checklist, include, details, requirements, commands, user, input, resources, planned, workflow, identify, gap 
+summary: Una lista de comprobación de requisitos de flujo de trabajo incluye requisitos detallados, como comandos, entradas de usuario y recursos, para un flujo de trabajo planificado. Puede utilizar la lista de comprobación para planificar los flujos de trabajo e identificar las lagunas de los requisitos. 
+---
+= Lista de verificación de requisitos de flujo de trabajo de ejemplo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Una lista de verificación de requisitos de flujo de trabajo incluye requisitos detallados, como comandos, entradas de usuario y recursos, para un flujo de trabajo planificado. Puede utilizar la lista de comprobación para planificar los flujos de trabajo e identificar las lagunas de los requisitos.
+
+
+
+== Ejemplo de lista de requisitos
+
+En la siguiente lista de verificación de requisitos de flujo de trabajo de ejemplo se enumeran los requisitos para el flujo de trabajo «'Crear un volumen de Clustered Data ONTAP'». Puede utilizar esta lista de comprobación de ejemplo como plantilla para enumerar los requisitos del flujo de trabajo.
+
+[cols="2*"]
+|===
+| Requisito | Descripción 
+
+
+ a| 
+Nombre del flujo de trabajo
+ a| 
+Cree un volumen de Clustered Data ONTAP
+
+
+
+ a| 
+Categoría
+ a| 
+Aprovisionamiento de almacenamiento
+
+
+
+ a| 
+Descripción
+ a| 
+El flujo de trabajo crea un nuevo volumen en una SVM específica. Este flujo de trabajo está pensado para un escenario en el que se aprovisiona un volumen y se delega para un uso posterior.
+
+
+
+ a| 
+Descripción de alto nivel del funcionamiento del flujo de trabajo
+ a| 
+* El usuario especifica la SVM que contiene el volumen (clúster, nombres de SVM).
+* Se crea un volumen según el tamaño especificado.
+* La configuración del volumen se describe en una plantilla.
+
+
+
+
+ a| 
+Detalles
+ a| 
+* Utilice el comando *Crear volumen cm*
+* Detalles del comando para *Crear volumen cm*:
++
+** La ejecución se define como siempre
+** Los detalles del volumen se especifican rellenando los atributos del volumen
+** Utilice la plantilla *Space Congarantizado Settings* para configurar el volumen
+** El usuario proporciona el nombre de volumen y el tamaño.
++
+El volumen se montará en el espacio de nombres de SVM tal como `/volname` (en el espacio de nombres raíz).
+
+** Utilice la función *actualVolumeSize* porque la reserva snap será del 5%.
+** La referencia de SVM se define con la siguiente lógica de selección de recursos:
++
+*** CM SVM por clave: Busca SVM por nombre y clúster, que proporciona el usuario
+*** SVM DE CM por tipo -- solo SVM de datos (tipo = clúster)
+*** SVM por estado -- (estado = en ejecución)
+
+
+** La referencia de agregado se define con la lógica de selección de recursos como un buscador predefinido (agregado cm por umbrales de espacio y tipo RAID):
++
+*** Agregado DE CM por capacidad disponible (capacidad = tamaño de volumen que se va a aprovisionar, clúster determinado por el usuario)
+*** Agregado DE CM por delegación a SVM
+*** Agregado DE CM por tipo de RAID (RAID-DP)
+*** El agregado DE CM no es aggr0
+*** CM de agregado en % de tamaño usado (umbral = 90, spaceToBeProvisioned = tamaño proporcionado, ya que la garantía es volumen)
+*** Agregado CM por encima del compromiso (umbral = 300, spaceToBeAllocalizado = tamaño del volumen que se aprovisiona)
+*** Seleccione el agregado con el máximo espacio libre
+
+
+
+
+
+
+|===
+[cols="3*"]
+|===
+| Nombre | Tipo | Descripción (valores de datos, validación, etc.) 
+
+
+ a| 
+Clúster
+ a| 
+Consulta bloqueada (tabular)
+ a| 
+* Clúster que aloja la SVM
+* La consulta puede aparecer en una tabla de resultados con la dirección primaria y el nombre del clúster
+* Ordenar alfabéticamente por nombre
+
+
+
+
+ a| 
+SVM
+ a| 
+Consulta bloqueada
+ a| 
+* SVM en la que se aprovisiona el volumen
+* La consulta solo debe mostrar los nombres de las SVM que pertenecen al clúster seleccionado en la entrada anterior
++
+Muestra solo las SVM de tipo de clúster, no las de administrador ni nodo (tipo columna de cm_Storage.Vserver)
+
+* Ordenar alfabéticamente
+
+
+
+
+ a| 
+Volumen
+ a| 
+Cadena
+ a| 
+* Nombre del volumen que se creará
+
+
+
+
+ a| 
+El tamaño en GB
+ a| 
+Entero
+ a| 
+* El tamaño del volumen que se va a aprovisionar
+* Tamaño de los datos (se debe tener en cuenta la reserva snap)
+
+
+|===
+*Comandos*
+
+[cols="3*"]
+|===
+| Nombre | Descripción | Estado 
+
+
+ a| 
+Crear volumen cm
+ a| 
+Crea un volumen en la SVM
+ a| 
+Existente
+
+|===
+*Parámetros de retorno*
+
+[cols="2*"]
+|===
+| Nombre | Valor 
+
+
+ a| 
+Nombre del volumen
+ a| 
+El nombre del volumen aprovisionado
+
+
+
+ a| 
+Nombre del agregado
+ a| 
+Nombre del agregado seleccionado
+
+
+
+ a| 
+Nombre del nodo
+ a| 
+El nombre del nodo
+
+
+
+ a| 
+Nombre del clúster
+ a| 
+El nombre del clúster
+
+|===
+*Lagunas y problemas*
+
+[cols="2*"]
+|===
+
+
+ a| 
+1.
+ a| 
+
+
+
+ a| 
+2.
+ a| 
+
+
+
+ a| 
+3.
+ a| 
+
+
+
+ a| 
+4.
+ a| 
+
+
+
+ a| 
+5.
+ a| 
+
+|===

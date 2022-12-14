@@ -1,0 +1,40 @@
+---
+permalink: windows-install/task-restore-full-the-oncommand-workflow-automation-database-using-rest-apis.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, restore, wfa, database, rest, apis 
+summary: 'Puede realizar una restauración completa de la base de datos de OnCommand Workflow Automation (WFA) utilizando las API DE REST. En una restauración completa, puede restaurar la base de datos de WFA, la configuración de WFA y la clave.' 
+---
+= Restaurar (completo) la base de datos de WFA utilizando las API REST
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar una restauración completa de la base de datos de OnCommand Workflow Automation (WFA) utilizando las API DE REST. En una restauración completa, puede restaurar la base de datos de WFA, la configuración de WFA y la clave.
+
+* Debe haber creado un backup .zip de la base de datos de WFA.
+* Debe tener credenciales de administrador o de arquitecto.
+* Si va a restaurar la base de datos como parte del procedimiento de migración, debe realizar una restauración completa.
+
+
+.Pasos
+. Introduzca la siguiente URL en el explorador para cliente DE REST: `+https://IP address of WFA server/rest/backups?full=true+`
+. En la ventana copia de seguridad, seleccione el método *POST*.
+. En la lista desplegable *parte*, seleccione *cuerpo multiparte*.
+. En el campo *Archivo*, introduzca la siguiente información:
++
+.. En la lista desplegable *Tipo de contenido*, seleccione *multiparte/datos de formulario*.
+.. En la lista desplegable *Charset*, seleccione *ISO-8859-1*.
+.. En el campo *Nombre de archivo*, introduzca el nombre del archivo de copia de seguridad que ha creado y que desea restaurar.
+.. Haga clic en *examinar*.
+.. Seleccione la ubicación del archivo .zip backup.
+
+
+. Desplácese hasta el directorio WFA_install_location\wfa\bin y reinicie los servicios de WFA:
+. Reinicie *NetApp WFA Database* y *NetApp WFA Server* Service:
++
+`wfa --restart`
+
+. Compruebe que la operación de restauración se ha realizado correctamente y que se puede acceder a WFA.
+

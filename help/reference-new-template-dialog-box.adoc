@@ -1,0 +1,50 @@
+---
+permalink: help/reference-new-template-dialog-box.html 
+sidebar: sidebar 
+keywords: new, template, dialog box, enable, create, new 
+summary: El cuadro de diálogo Nueva plantilla permite crear una plantilla nueva. 
+---
+= Cuadro de diálogo Nueva plantilla
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nueva plantilla permite crear una plantilla nueva.
+
+* *Nombre*
++
+Permite introducir un nombre para la plantilla.
+
+* *Tipo*
++
+Permite seleccionar un objeto de diccionario de la lista.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión de la plantilla en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite introducir una descripción para la plantilla.
+
+* *Atributos*
++
+Muestra los atributos del objeto de diccionario seleccionado y permite introducir un valor para cada atributo, como enumeración y función.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda la plantilla y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda la plantilla y cierra el cuadro de diálogo.
+
+

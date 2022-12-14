@@ -1,0 +1,64 @@
+---
+permalink: workflows/task-create-a-data-source-type.html 
+sidebar: sidebar 
+keywords: create, data, source, type, enable, acquisition, predefined, oncommand, workflow, automation 
+summary: 'Debe crear un tipo de origen de datos para habilitar la adquisición de datos desde un origen de datos, que no está predefinido en OnCommand Workflow Automation (WFA).' 
+---
+= Cree un tipo de origen de datos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe crear un tipo de origen de datos para habilitar la adquisición de datos desde un origen de datos, que no está predefinido en OnCommand Workflow Automation (WFA).
+
+.Lo que necesitará
+* Debe haber creado la entrada y esquema de diccionario necesarios si está creando un tipo de origen de datos personalizado que no está predefinido en WFA.
+* Debe conocer los scripts de PowerShell para crear un tipo de origen de datos que utilice el método de script.
+
+
+.Pasos
+. Haga clic en *Diseño de origen de datos* > *tipos de origen de datos*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En el cuadro de diálogo *Tipo de nuevo origen de datos*, introduzca o seleccione los detalles necesarios en los campos *origen de datos*, *Versión de origen de datos* y *Esquema*.
+. En el campo *Puerto predeterminado*, introduzca el número de puerto.
++
+`2638`
+
++
+El número de puerto introducido se rellena al agregar este tipo de origen de datos para la adquisición de datos. De forma predeterminada, WFA utiliza el puerto para comunicarse con el origen de datos y el puerto debe estar abierto en el servidor de origen de datos.
+
+. En la lista *método*, seleccione el método que WFA debe utilizar para adquirir datos:
++
+[cols="2*"]
+|===
+| Si seleccionó... | Realice lo siguiente... 
+
+
+ a| 
+SQL
+ a| 
+En la lista *Tipo de controlador*, seleccione uno de los siguientes controladores que sean adecuados para el origen de datos:
+
+** *Sybase jConnect3*
+** *Conector MySQL/J*
+** *Controlador JDBC del servidor MySQL 3.0*
+** *Controlador Oracle JDBC 11.2.0.3*
+
+
+
+
+ a| 
+GUIÓN
+ a| 
+En el campo *Script*, introduzca la secuencia de comandos de PowerShell que se utiliza para conectar y recuperar datos del origen de datos.
+
+[NOTE]
+====
+Los datos de los archivos CSV equivalentes de la entrada del diccionario deben incluir tabulaciones como separador de campo. Por ejemplo, consulte el script de PowerShell para el tipo de origen de datos de VMware vCenter.
+
+====
+|===
+. Haga clic en *Guardar*.
+

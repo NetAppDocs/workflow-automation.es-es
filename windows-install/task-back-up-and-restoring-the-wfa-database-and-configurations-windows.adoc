@@ -1,0 +1,32 @@
+---
+permalink: windows-install/task-back-up-and-restore-the-wfa-database-and-configurations-windows.html 
+sidebar: sidebar 
+keywords: back up, restore, oncommand, workflow, automation, database, configurations windows 
+summary: 'Puede realizar un backup y restaurar la base de datos de OnCommand Workflow Automation (WFA) y las configuraciones compatibles para que pueda recuperar los datos en caso de desastre. Las configuraciones compatibles incluyen acceso a datos, tiempo de espera HTTP y certificados SSL.' 
+---
+= Realizar backups y restaurar la base de datos de OnCommand Workflow Automation y sus configuraciones en Windows
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar un backup y restaurar la base de datos de OnCommand Workflow Automation (WFA) y las configuraciones compatibles para que pueda recuperar los datos en caso de desastre. Las configuraciones compatibles incluyen acceso a datos, tiempo de espera HTTP y certificados SSL.
+
+Debe tener privilegios de administrador o credenciales de arquitecto.
+
+Debe crear el backup en una ubicación segura porque mediante la restauración del backup se proporcionará acceso a todos los sistemas de almacenamiento a los que accede con WFA.
+
+
+NOTE: Solo pueden utilizarse los comandos de la CLI o las API DE REST para realizar operaciones completas de backup y restauración durante la recuperación ante desastres. No puede usar la interfaz de usuario web de para crear un backup durante la recuperación ante desastres en un entorno de alta disponibilidad.
+
+.Pasos
+. Realice un backup de sus bases de datos y configuraciones existentes.
++
+link:reference-backing-up-of-the-oncommand-workflow-automation-database.html["Realizar un backup de la base de datos de OnCommand Workflow Automation"]
+
+. Restaurar un backup anterior de bases de datos y configuraciones.
++
+link:concept-restoring-the-wfa-database.html["Restaurar la base de datos OnCommand Workflow Automation"]
+
+

@@ -1,0 +1,121 @@
+---
+permalink: help/reference-new-data-source-dialog-box.html 
+sidebar: sidebar 
+keywords: new, data, source, dialog box, enable, add 
+summary: El cuadro de diálogo Nuevo origen de datos permite agregar un nuevo origen de datos. 
+---
+= Cuadro de diálogo New Data Source
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nuevo origen de datos permite agregar un nuevo origen de datos.
+
+
+
+== Propiedades de configuración del origen de datos
+
+* *Nombre*
++
+Permite especificar un nombre para el origen de datos.
+
+* *Tipo de origen de datos*
++
+Permite seleccionar el tipo de origen de datos, por ejemplo, Active IQ Unified Manager - 6.0 (MYSQL).
+
++
+Al seleccionar un tipo de origen de datos, el puerto, la combinación, el nombre de usuario, la contraseña, los campos intervalo (minutos) y tiempo de espera (segundos) se rellenan con datos.
+
++
+
+NOTE: Si desea ejecutar flujos de trabajo de protección de datos OnCommand Workflow Automation (WFA) desde un servidor Active IQ Unified Manager, debe configurar WFA en el servidor Active IQ Unified Manager.
+
++
+Para obtener más información, consulte la Ayuda en línea de _OnCommand Unified Manager_.
+
+* *Nombre del host*
++
+Permite especificar el nombre de host o la dirección IP (IPv4 o IPv6) del origen de datos.
+
++
+
+NOTE: El tipo de origen de datos Active IQ Unified Manager no admite direcciones IPv6.
+
+* *Puerto*
++
+Muestra el número de puerto asociado, si lo hay, para el tipo de origen de datos seleccionado.
+
++
+Puede cambiar el puerto predeterminado y especificar otro puerto para el origen de datos.
+
+* *Esquema*
++
+Muestra el esquema asociado con el tipo de origen de datos seleccionado, por ejemplo, _cm_Storage_ para Active IQ Unified Manager - 6.0 (MYSQL).
+
++
+Esta propiedad no se puede modificar.
+
+* *Nombre de usuario*
++
+Muestra el nombre de usuario asociado, si lo hay, para el tipo de origen de datos seleccionado.
+
++
+Debe especificar el nombre de usuario apropiado para este origen de datos para anular el nombre de usuario predeterminado:
+
++
+** Para las versiones de Active IQ Unified Manager anteriores a 6.0, debe introducir el nombre de usuario que utilizó para anular las credenciales predeterminadas mientras ejecuta ocsetup.
+** Para Active IQ Unified Manager 6.0 y versiones posteriores, debe introducir el nombre de usuario de la cuenta de usuario de la base de datos que creó en el servidor Active IQ Unified Manager.
+** Para Performance Advisor, debe introducir el nombre de usuario de un usuario de Active IQ Unified Manager con la función mínima GlobalRead.
+
+
+* *Contraseña*
++
+Permite especificar una contraseña para el tipo de origen de datos seleccionado.
+
++
+Debe especificar una contraseña para omitir la contraseña predeterminada para el nombre de usuario de este origen de datos:
+
++
+** Para las versiones de Active IQ Unified Manager anteriores a la 6.0, debe introducir la contraseña que ha utilizado para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.
+** Para Active IQ Unified Manager 6.0 y versiones posteriores, debe introducir la contraseña de la cuenta de usuario de la base de datos que creó en el servidor Active IQ Unified Manager.
+** Para Performance Advisor, debe introducir la contraseña de un usuario de Active IQ Unified Manager con el rol mínimo de GlobalRead.
+
+
+* *Base de datos*
+* *Intervalo (minutos)*
++
+Le permite hacer clic en el valor y seleccionar un intervalo (en minutos) mediante las flechas arriba y abajo.
+
++
+
+NOTE: Si el intervalo se establece en cero (0), se desactiva el muestreo automático.
+
++
+El intervalo predeterminado para el muestreo de datos es:
+
++
+** Tipo de origen de datos basado en secuencias de comandos: 1440 (rendimiento y vc)
+** Tipo de origen de datos basado en SQL: 30 (cm_almacenamiento, almacenamiento y cm_rendimiento)
+
+
+* *Consulte la Guía de instrucciones de configuración*
++
+Abre el cuadro de diálogo Guía de instrucciones de configuración, que permite especificar las instrucciones para configurar el origen de datos.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

@@ -1,0 +1,117 @@
+---
+permalink: help/reference-new-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: new, finder, dialog box, enable, create 
+summary: El cuadro de diálogo Nuevo Finder permite crear nuevos buscadores. 
+---
+= Nuevo cuadro de diálogo Finder
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nuevo Finder permite crear nuevos buscadores.
+
+* Propiedades
+* Filtros
+* Ficha atributos devueltos
+
+
+
+
+== Propiedades
+
+La ficha *Propiedades* le permite especificar un nombre para el buscador, seleccionar el tipo de objeto de diccionario WFA e introducir una descripción para el buscador. La ficha también muestra los parámetros de entrada después de seleccionar un filtro en la ficha *Filtros*.
+
+* *Nombre*
++
+Permite introducir un nombre para el buscador.
+
+* *Tipo*
++
+Le permite seleccionar el tipo de objeto de la lista, como agregado, igroup y clúster. Los filtros del objeto seleccionado se muestran en la ficha *Filtros*.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión del buscador en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite introducir una descripción para el buscador.
+
+* *Tabla de parámetros de entrada*
++
+Muestra los parámetros de entrada de los filtros seleccionados.
+
+
+
+
+
+== Pestaña Filters
+
+Permite seleccionar los filtros necesarios de la lista de filtros disponibles.
+
+* *Filtros disponibles*
++
+Muestra la lista de filtros disponibles para el objeto seleccionado en la ficha *Propiedades*.
+
+* *Filtros seleccionados*
++
+Muestra la lista de filtros seleccionados de los filtros disponibles.
+
+* *Botones de selección*
++
+Mueve la entrada seleccionada de un cuadro a otro.
+
+
+
+
+
+== Ficha atributos devueltos
+
+Le permite ver detalles sobre los filtros disponibles, seleccionar los atributos necesarios de los filtros disponibles y especificar el orden de clasificación de los atributos.
+
+* *Disponible*
++
+Muestra los filtros disponibles y los atributos de los filtros.
+
+* *Seleccionado*
++
+Muestra los filtros y atributos seleccionados, los alias y el orden de clasificación de los filtros seleccionados.
+
+* *Botones de comando*
++
+** *Arriba*
++
+Mueve la entrada seleccionada hacia arriba una fila de la tabla seleccionada.
+
+** *Abajo*
++
+Mueve la entrada seleccionada hacia abajo una fila de la tabla seleccionada.
+
+** *Botones de selección*
++
+Mueve la entrada seleccionada de una tabla a otra.
+
+
+
+
+
+
+
+== Botones de comando
+
+* *Prueba*
++
+Permite probar el buscador que ha definido.
+
+* *Guardar*
++
+Guarda el buscador y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda el buscador y cierra el cuadro de diálogo.
+
+

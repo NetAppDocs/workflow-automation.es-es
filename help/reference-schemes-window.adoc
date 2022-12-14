@@ -1,0 +1,167 @@
+---
+permalink: help/reference-schemes-window.html 
+sidebar: sidebar 
+keywords: scheme, window, display, available, scheme, enable, manage, oncommand, workflow, automation, acquire, data, relevant, environment 
+summary: 'La ventana combinaciones muestra los esquemas disponibles y permite administrar los esquemas. OnCommand Workflow Automation (WFA) utiliza esquemas para adquirir datos relevantes para un entorno.' 
+---
+= Ventana esquemas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana combinaciones muestra los esquemas disponibles y permite administrar los esquemas. OnCommand Workflow Automation (WFA) utiliza esquemas para adquirir datos relevantes para un entorno.
+
+Un esquema representa el modelo de datos de un sistema. El modelo de datos es una colección de entradas de diccionario. Puede definir una combinación y, a continuación, definir un tipo de origen de datos. El origen de datos define cómo se adquieren los datos y se llena el esquema. Por ejemplo, un esquema _vc_ contiene datos relevantes para su entorno virtual, como máquinas virtuales, hosts y almacenes de datos.
+
+
+
+== Tabla combinaciones
+
+En la tabla esquemas se enumeran las entradas de esquema disponibles. Cada entrada se identifica como una de las siguientes:
+
+* image:../media/community_certification.gif[""] - contenido creado por los usuarios
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenido desarrollado por Servicios profesionales (PS), que está disponible sólo en instalaciones personalizadas realizadas por PS
+* image:../media/community_certification.gif[""] - packs desarrollados por usuarios
+* image:../media/lock_icon_wfa.gif[""] - contenido creado por los usuarios que está bloqueado
+* image:../media/netapp_certified.gif[""] - Contenido certificado por NetApp
+
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla combinaciones contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si el esquema es creado por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Nombre*
++
+Muestra el nombre de la combinación.
+
++
+Puede buscar un esquema introduciendo su nombre en el cuadro de texto de filtro *Buscar*.
+
+* *Nombre para mostrar*
++
+Muestra el nombre de la combinación.
+
++
+Puede buscar un esquema introduciendo su nombre en el cuadro de texto de filtro *Buscar*.
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
++
+Puede buscar un esquema introduciendo el número de versión en el cuadro de texto de filtro *Buscar*.
+
+* *Descripción*
++
+Muestra la descripción del esquema.
+
++
+Puede buscar un esquema introduciendo su descripción en el cuadro de texto de filtro *Buscar*.
+
+* *Tipo*
++
+Indica si el esquema se utiliza para adquirir datos de un sistema remoto o directamente de flujos de trabajo o comandos. Los valores posibles son adquisición de orígenes de datos y otros.
+
++
+Puede buscar esquemas introduciendo el tipo en el cuadro de texto filtro *Buscar*.
+
+* *Indicador de reinicio*
++
+Indica si el esquema se restablece durante el siguiente ciclo de adquisición de datos. Los valores posibles son TRUE y FALSE.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó el esquema por última vez.
+
++
+Puede buscar esquemas seleccionando la categoría de tiempo requerida en la lista desplegable filtro.
+
+* *Actualizado por*
++
+Muestra el nombre del usuario que actualizó la combinación.
+
++
+Puede buscar esquemas introduciendo el nombre de usuario en el cuadro de texto de filtro *Buscar*.
+
+* *Bloqueado por*
++
+Muestra el nombre del usuario que bloqueó la combinación.
+
++
+Puede buscar esquemas introduciendo el nombre de usuario en el cuadro de texto de filtro *Buscar*.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre el cuadro de diálogo nuevos esquemas, que permite crear un nuevo esquema.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre el cuadro de diálogo <SchemeName> de esquema para el esquema seleccionado, que permite editar el esquema.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación Bloquear el esquema, que permite bloquear el esquema seleccionado. Esta opción sólo está habilitada para los esquemas que creó.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear esquema, que permite desbloquear el esquema seleccionado. Esta opción sólo está habilitada para los esquemas bloqueados. Los administradores pueden desbloquear esquemas bloqueados por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar esquema, que permite eliminar los esquemas creados por el usuario seleccionados.
+
++
+
+NOTE: No puede eliminar un esquema de WFA o PS.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar el esquema creado por el usuario seleccionado.
+
++
+
+NOTE: No puede exportar un esquema de WFA o PS.
+
+* *image:../media/reset_scheme_wfa_icon.gif["Icono Restablecer esquema"] (Restablecer esquema)*
++
+Permite restablecer el esquema durante el siguiente ciclo de adquisición de datos.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar a esquemas de paquetes, que permite agregar el esquema y sus entidades fiables a un paquete, que se puede editar.
+
++
+
+NOTE: La función Agregar al paquete sólo está habilitada para los esquemas para los que la certificación se ha establecido en *Ninguno.*
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar esquemas de paquetes para el esquema seleccionado, que permite eliminar o quitar el esquema del paquete.
+
++
+
+NOTE: La función Eliminar del paquete sólo está habilitada para los esquemas para los que la certificación está establecida en *Ninguno.*
+
+

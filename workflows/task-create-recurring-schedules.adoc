@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-create-recurring-schedules.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, schedule, options, execute, specific, time, create, recurring, associate, routinely 
+summary: 'OnCommand Workflow Automation (WFA) proporciona dos opciones de programación para los flujos de trabajo. Puede programar un flujo de trabajo para que se ejecute una vez en un momento específico, o bien crear programaciones periódicas y asociar las programaciones a flujos de trabajo para que los flujos de trabajo se ejecuten de forma rutinaria.' 
+---
+= Crear programas recurrentes
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) proporciona dos opciones de programación para los flujos de trabajo. Puede programar un flujo de trabajo para que se ejecute una vez en un momento específico, o bien crear programaciones periódicas y asociar las programaciones a flujos de trabajo para que los flujos de trabajo se ejecuten de forma rutinaria.
+
+.Acerca de esta tarea
+Una programación que haya creado puede volver a utilizarse y asociarse con varios flujos de trabajo.
+
+.Pasos
+. Haga clic en *ejecución* > *programas*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En el cuadro de diálogo *Nueva programación*, introduzca o seleccione un nombre, una descripción y una frecuencia para la programación.
++
+Para frecuencia, debe introducir la hora en formato de 24 horas. La hora del servidor WFA se aplica a las programaciones.
+
+. Haga clic en *Aceptar*.
+
+
+
+
+== Después de terminar
+
+* Puede asociar la programación a un flujo de trabajo cuando ejecute el flujo de trabajo utilizando la opción *Ejecutar de forma recurrente*.
+* Para ver los detalles de un flujo de trabajo y su asociación con un programa, haga clic en *ejecución* > *programas recurrentes*.
++
+La planificación de los recursos y la ejecución de los flujos de trabajo programados para ejecutarse una vez se realiza de inmediato cuando los flujos de trabajo son programados. Sin embargo, la planificación de recursos y ejecución para los flujos de trabajo con programación recurrente tiene lugar a la hora programada y no cuando la programación está asociada a un flujo de trabajo.
+
+

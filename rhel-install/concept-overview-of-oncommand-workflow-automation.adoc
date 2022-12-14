@@ -1,0 +1,52 @@
+---
+permalink: rhel-install/concept-overview-of-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: overview, oncommand, workflow, automation 
+summary: 'OnCommand Workflow Automation (WFA) es una solución de software que ayuda a automatizar tareas de gestión del almacenamiento, como aprovisionamiento, migración, decomisionado, configuraciones de protección de datos, y clonado de almacenamiento. Puede utilizar WFA para crear flujos de trabajo para completar las tareas especificadas en sus procesos. WFA admite ONTAP.' 
+---
+= Descripción general de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) es una solución de software que ayuda a automatizar tareas de gestión del almacenamiento, como aprovisionamiento, migración, decomisionado, configuraciones de protección de datos, y clonado de almacenamiento. Puede utilizar WFA para crear flujos de trabajo para completar las tareas especificadas en sus procesos. WFA admite ONTAP.
+
+Un flujo de trabajo es una tarea repetitiva y de procedimiento que consiste en pasos secuenciales, incluidos los siguientes tipos de tareas:
+
+* Aprovisionamiento, migración o decomisión del almacenamiento para bases de datos o sistemas de archivos
+* Configuración de un nuevo entorno de virtualización, incluidos los switches de almacenamiento y los almacenes de datos
+* Configuración de almacenamiento para una aplicación como parte de un proceso de orquestación completo
+
+
+Los arquitectos de almacenamiento pueden definir flujos de trabajo para seguir las prácticas recomendadas y cumplir los requisitos de la organización, como los siguientes:
+
+* Utilizar las convenciones de nomenclatura necesarias
+* Establecimiento de opciones únicas para los objetos de almacenamiento
+* Selección de recursos
+* Integrar la base de datos de gestión de la configuración (CMDB) interna y las aplicaciones de emisión de boletos
+
+
+
+
+== Funciones DE WFA
+
+* Portal de diseño de flujos de trabajo para crear flujos de trabajo
++
+El portal de diseño del flujo de trabajo incluye varios elementos básicos, como comandos, plantillas, buscadores, filtros, y funciones, que se utilizan para crear flujos de trabajo. El diseñador le permite incluir funcionalidades avanzadas para flujos de trabajo como la selección automatizada de recursos, la repetición de filas (bucle) y los puntos de aprobación.
+
++
+El portal de diseño de flujos de trabajo también incluye elementos básicos, como entradas de diccionario, consultas de caché y tipos de origen de datos, para almacenar en caché datos de sistemas externos.
+
+* Portal de ejecución para ejecutar flujos de trabajo, verificar el estado de la ejecución del flujo de trabajo y los registros de acceso
+* Opción Administration/Settings para tareas como configurar WFA, conectarse a orígenes de datos y configurar credenciales de usuario
+* Interfaces de servicio web para invocar flujos de trabajo desde portales externos y software de orquestación del centro de datos
+* Almacén de automatización del almacenamiento para descargar paquetes de WFA. El paquete ONTAP 9.7.0 se incluye con WFA 5.1.
+
+
+
+
+== Información de licencia DE WFA
+
+No se necesita ninguna licencia para usar el servidor OnCommand Workflow Automation.

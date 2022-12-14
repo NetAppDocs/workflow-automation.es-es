@@ -1,0 +1,95 @@
+---
+permalink: help/reference-edit-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, active directory, dialog box, enable, view, modify, oncommand, workflow, automation, group 
+summary: El cuadro de diálogo Editar grupo de Active Directory permite ver y modificar la configuración del grupo de Active Directory de OnCommand Workflow Automation. 
+---
+= Cuadro de diálogo Edit Active Directory Group
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar grupo de Active Directory permite ver y modificar la configuración del grupo de Active Directory de OnCommand Workflow Automation.
+
+En función de los privilegios y la función del grupo de Active Directory, es posible que no tenga acceso a la ventana grupos de Active Directory. Sin embargo, puede editar la configuración de su grupo de Active Directory seleccionando *Configuración*, y en *Administración* haga clic en *grupos de Active Directory*.
+
+
+NOTE: Los campos disponibles para su edición dependen de los privilegios de grupo de Active Directory.
+
+* *Nombre del grupo*
++
+Muestra el nombre del grupo para el grupo de Active Directory.
+
+* *Rol*
++
+Muestra el rol asignado para la cuenta de usuario.
+
++
+Muestra uno de los siguientes roles de grupo asignados al grupo de Active Directory:
+
++
+** *Invitado*
++
+Este grupo sólo puede ver el estado de una ejecución de flujo de trabajo o recibir notificaciones sobre un cambio en el estado de una ejecución de flujo de trabajo.
+
+** *Operador*
++
+Este grupo puede obtener una vista previa y ejecutar los flujos de trabajo para los que se proporciona acceso al grupo.
+
+** *Approver*
++
+Este grupo puede previsualizar, ejecutar, aprobar y rechazar los flujos de trabajo a los que se proporciona acceso el grupo.
+
++
+
+NOTE: Debe indicar el ID de correo electrónico del aprobador y el estado del flujo de trabajo que se va a notificar al aprobador. Si hay varios autorizadores, puede proporcionar un ID de correo electrónico de grupo en el campo *correo electrónico*.
+
+** *Arquitecto*
++
+Este grupo tiene acceso completo para crear flujos de trabajo, pero está restringido a la modificación de la configuración global del servidor WFA.
+
+** *Admin*
++
+Este grupo tiene acceso completo al servidor WFA.
+
++
+
+NOTE: Debe configurar al menos un grupo de administración.
+
+
+
+* *Correo electrónico*
++
+Especifica el correo electrónico del grupo de Active Directory al que se envían las notificaciones si se selecciona la opción *notificar en*.
+
+* *Notificar el*
++
+Permite seleccionar cuándo se debe notificar por correo electrónico al grupo de Active Directory durante la ejecución del flujo de trabajo activada por ese grupo de directorios activo. Puede seleccionar cualquier combinación de las siguientes opciones:
+
++
+** Ejecución del flujo de trabajo iniciada: Notifica al usuario cuando comienza la ejecución del flujo de trabajo.
+** La ejecución del flujo de trabajo ha fallado o se ha realizado correctamente: Notifica al usuario si la ejecución del flujo de trabajo falla o si el flujo de trabajo se ha ejecutado correctamente aunque uno o más pasos hayan fallado.
++
+La ejecución se ha completado porque los pasos fallidos se han configurado para permitir que la ejecución del flujo de trabajo continúe incluso cuando el paso falle.
+
+** La ejecución del flujo de trabajo se ha completado correctamente: Notifica al usuario cuando la ejecución del flujo de trabajo se ha completado correctamente.
+** Ejecución del flujo de trabajo en espera de aprobación: Notifica al usuario si la ejecución del flujo de trabajo está a la espera de aprobación de un usuario operador o arquitecto, en función del valor de configuración de WFA.
+
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

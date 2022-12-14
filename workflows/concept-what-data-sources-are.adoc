@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-data-sources-are.html 
+sidebar: sidebar 
+keywords: data, source, method, establishing, connection, systems, files, databases, order, extract, example, active iq, unified manager 9.4, type 
+summary: Un origen de datos es un método para establecer una conexión con otros sistemas, archivos y bases de datos con el fin de extraer datos. Por ejemplo, un origen de datos puede ser una conexión con una base de datos Active IQ Unified Manager del tipo de origen de datos Active IQ Unified Manager 9.4. 
+---
+= Qué fuentes de datos son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un origen de datos es un método para establecer una conexión con otros sistemas, archivos y bases de datos con el fin de extraer datos. Por ejemplo, un origen de datos puede ser una conexión con una base de datos Active IQ Unified Manager del tipo de origen de datos Active IQ Unified Manager 9.4.
+
+Puede añadir un origen de datos personalizado a OnCommand Workflow Automation (WFA) para la adquisición de datos después de definir el tipo de origen de datos requerido asociando el esquema de almacenamiento en caché, el puerto requerido y el método de adquisición al tipo de origen de datos.
+
+WFA almacena información en caché a través de varios orígenes de datos. WFA recopila información de recursos de los orígenes de datos y la formatea para el esquema de almacenamiento en caché. Las tablas de caché, que son las tablas dentro de los esquemas de almacenamiento en caché, tienen el formato de forma que coincidan con los objetos de entrada del diccionario. Cuando utiliza un buscador en flujos de trabajo, devuelve un objeto de diccionario y los datos del objeto de diccionario se rellenan de las tablas de caché. El proceso de adquisición de datos de los orígenes de datos se conoce como _fuente de datos adquisición_. Puede utilizar un método basado en scripts o un método basado en controladores para la adquisición del origen de datos. Los orígenes pueden ser diferentes entre sí y la adquisición de orígenes de datos puede muestrearlos a intervalos de tiempo diferentes. WFA entonces fusiona esa información en la base de datos y superimpone los datos de reserva para mantener la información actualizada de los recursos en la base de datos.
+
+La base de datos de WFA incluye varios esquemas de almacenamiento en caché diferentes. Un esquema de almacenamiento en caché es un conjunto de tablas y cada tabla incluye información de un determinado tipo de entrada de diccionario; sin embargo, las tablas pueden incluir información combinada de varios orígenes de un tipo de origen de datos específico. WFA usa la información de la base de datos para comprender el estado de los recursos, realizar cálculos y ejecutar comandos en los recursos.

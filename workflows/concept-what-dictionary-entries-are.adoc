@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-what-dictionary-entries-are.html 
+sidebar: sidebar 
+keywords: dictionary, entries, oncommand, workflow, automation, building, blocks, use, represent, object, types, relationships, storage, environments, filters, return, value, natural, keys 
+summary: 'Las entradas del diccionario son uno de los elementos básicos de OnCommand Workflow Automation (WFA). Puede utilizar entradas del diccionario para representar tipos de objetos y sus relaciones en los entornos de almacenamiento y relacionados con el almacenamiento. A continuación, puede utilizar filtros en los flujos de trabajo para devolver el valor de las claves naturales de las entradas del diccionario.' 
+---
+= Qué entradas de diccionario son
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Las entradas del diccionario son uno de los elementos básicos de OnCommand Workflow Automation (WFA). Puede utilizar entradas del diccionario para representar tipos de objetos y sus relaciones en los entornos de almacenamiento y relacionados con el almacenamiento. A continuación, puede utilizar filtros en los flujos de trabajo para devolver el valor de las claves naturales de las entradas del diccionario.
+
+Una entrada de diccionario es la definición de un tipo de objeto compatible con WFA. Cada entrada de diccionario representa un tipo de objeto y su relación en los entornos de almacenamiento y relacionados con el almacenamiento admitidos. Un objeto de diccionario consta de una lista de atributos, que puede ser de tipo verificado. Un objeto de diccionario con valores completos describe una instancia de objeto de un tipo. Además, los atributos de referencia describen la relación del objeto con el entorno; por ejemplo, un objeto de diccionario de volumen tiene muchos atributos, como nombre, tamaño_mb y volumen_garantizado. Además, el objeto de diccionario de volúmenes incluye referencias al agregado y a la matriz que contiene el volumen en forma de array_id y aggregate_id
+
+La tabla de caché de un objeto es una base de datos que contiene algunos o todos los atributos de la entrada de diccionario marcados para el almacenamiento en caché. Para que una entrada de diccionario incluya una tabla de caché, al menos uno de los atributos de la entrada de diccionario debe marcarse para almacenar en caché. Las entradas del diccionario incluyen claves naturales, que son identificadores únicos de los objetos; por ejemplo, los volúmenes de 7-Mode se identifican de forma única por su nombre y la dirección IP de la matriz que los contiene. Los qtrees se identifican mediante el nombre del qtree, el nombre del volumen y la dirección IP de la cabina. Debe identificar los atributos del diccionario que forman parte de las claves naturales de la entrada del diccionario al crear entradas del diccionario.

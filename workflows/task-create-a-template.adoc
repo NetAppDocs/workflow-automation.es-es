@@ -1,0 +1,30 @@
+---
+permalink: workflows/task-create-a-template.html 
+sidebar: sidebar 
+keywords: create, template, use, blueprint, fill, attribute, command, details 
+summary: Puede crear una plantilla que se pueda utilizar como guía para rellenar atributos en los detalles del comando. 
+---
+= Cree una plantilla
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una plantilla que se pueda utilizar como guía para rellenar atributos en los detalles del comando.
+
+.Pasos
+. Haga clic en *Diseño de flujo de trabajo* > *Plantillas*.
+. Haga clic en image:../media/new_wfa_icon.gif["Icono nuevo"] en la barra de herramientas.
+. En el cuadro de diálogo *Nueva plantilla*, introduzca o seleccione los detalles necesarios en los campos *Nombre*, *Tipo* y *Descripción*.
++
+La tabla atributos se rellena en función del objeto de diccionario seleccionado en el campo *Tipo*.
+
+. Haga clic en la columna valor de cada atributo y realice una de las siguientes acciones:
++
+** Introduzca o seleccione el valor requerido de la lista.
+** Introduzca una entrada de entrada de usuario, por ejemplo: `$size` para entrada de usuario de tamaño.
+
+
+. Haga clic en *Guardar*.
+

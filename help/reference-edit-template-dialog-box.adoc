@@ -1,0 +1,50 @@
+---
+permalink: help/reference-edit-template-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, template, dialog box, enable 
+summary: El cuadro de diálogo Editar plantilla permite editar una plantilla. 
+---
+= Cuadro de diálogo Editar plantilla
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar plantilla permite editar una plantilla.
+
+* *Nombre*
++
+Permite editar el nombre de la plantilla.
+
+* *Tipo*
++
+Permite seleccionar un objeto de diccionario de la lista.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión de la plantilla en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite editar la descripción de la plantilla.
+
+* *Atributos*
++
+Muestra los atributos del objeto de diccionario seleccionado y permite introducir un valor para cada atributo, como enumeración y función.
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los cambios y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

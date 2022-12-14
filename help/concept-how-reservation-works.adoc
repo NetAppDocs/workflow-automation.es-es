@@ -1,0 +1,36 @@
+---
+permalink: help/concept-how-reservation-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, resource, reservation, capability, require, resource, ensure, available, successful, execution, workflow 
+summary: La capacidad de reserva de recursos de OnCommand Workflow Automation reserva los recursos necesarios para garantizar que los recursos estén disponibles para ejecutar correctamente los flujos de trabajo. 
+---
+= Cómo funciona la reserva
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La capacidad de reserva de recursos de OnCommand Workflow Automation reserva los recursos necesarios para garantizar que los recursos estén disponibles para ejecutar correctamente los flujos de trabajo.
+
+Los comandos WFA pueden reservar los recursos necesarios y eliminar la reserva una vez que el recurso está disponible en la base de datos de la caché de WFA, normalmente después de adquirir una memoria caché. La funcionalidad de reserva garantiza que los recursos reservados estén disponibles para el flujo de trabajo hasta el periodo de caducidad de la reserva que se haya configurado en las opciones de configuración de WFA.
+
+Puede utilizar la funcionalidad de reservas para excluir recursos reservados por otros flujos de trabajo durante la selección de recursos. Por ejemplo, si se programa la ejecución de un flujo de trabajo que ha reservado 100 GB de espacio en un agregado después de una semana, Además, está ejecutando otro flujo de trabajo que utiliza el comando *Crear volumen*, el flujo de trabajo que se está ejecutando no consume el espacio reservado por el flujo de trabajo programado para crear un nuevo volumen. Además, la capacidad de reserva permite ejecutar flujos de trabajo en paralelo.
+
+Al ver con antelación un flujo de trabajo para su ejecución, el planificador de WFA considera todos los objetos reservados, incluidos los existentes en la base de datos de la memoria caché. Si ha habilitado la reserva, al planificar el flujo de trabajo se tendrán en cuenta los efectos de los flujos de trabajo programados y los flujos de trabajo que se ejecuten en paralelo, así como la existencia de elementos de almacenamiento.
+
+La flecha de la siguiente ilustración muestra que la reserva está habilitada para el flujo de trabajo:
+
+image::../media/reservation.png[reserva]
+
+
+
+== Ejemplos de reserva en flujos de trabajo predefinidos
+
+Puede abrir los siguientes flujos de trabajo predefinidos en el Diseñador para comprender cómo se utiliza la reserva:
+
+* Entorno de clones
+* Cree un volumen de Clustered Data ONTAP
+* Establezca la relación entre clústeres
+* Quite un volumen de Data ONTAP en clúster
+

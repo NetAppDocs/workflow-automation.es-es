@@ -1,0 +1,117 @@
+---
+permalink: help/reference-clone-finder-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, finder, dialog box, enable, create, copy, finder, edit 
+summary: El cuadro de diálogo Buscador de clones permite crear una copia del buscador y editar el buscador clonado. 
+---
+= Cuadro de diálogo Buscador de clones
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Buscador de clones permite crear una copia del buscador y editar el buscador clonado.
+
+* Propiedades
+* Filtros
+* Ficha atributos devueltos
+
+
+
+
+== Propiedades
+
+La ficha Propiedades permite editar el nombre del buscador, el tipo de objeto y la descripción del buscador. La ficha también muestra los parámetros de entrada del filtro utilizado en el buscador.
+
+* *Nombre*
++
+Permite editar el nombre del buscador. El nombre del buscador que ha seleccionado para clonar se utiliza como nombre para el clon y se adjunta con `- copy` de forma predeterminada.
+
+* *Tipo*
++
+Permite seleccionar el tipo de objeto de la lista. Los filtros del objeto seleccionado se muestran en la pestaña Filtros.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión del buscador en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite editar la descripción del buscador.
+
+* *Tabla de parámetros de entrada*
++
+Muestra los parámetros de entrada de los filtros seleccionados.
+
+
+
+
+
+== Pestaña Filters
+
+Permite seleccionar los filtros necesarios de la lista de filtros disponibles.
+
+* *Filtros disponibles*
++
+Muestra la lista de filtros disponibles para el objeto seleccionado en la ficha Propiedades.
+
+* *Filtros seleccionados*
++
+Muestra la lista de filtros seleccionados de los filtros disponibles.
+
+* *Botones de selección*
++
+Permite mover la entrada seleccionada de un cuadro a otro.
+
+
+
+
+
+== Ficha atributos devueltos
+
+Permite ver los detalles de los filtros disponibles, seleccionar los atributos necesarios de los filtros disponibles y especificar el orden de clasificación de los atributos.
+
+* *Disponible*
++
+Muestra los filtros disponibles y los atributos de los filtros.
+
+* *Seleccionado*
++
+Muestra los filtros y atributos seleccionados, los alias y el orden de clasificación de los filtros seleccionados.
+
+* *Botones de comando*
++
+** *Arriba*
++
+Mueve la entrada seleccionada hacia arriba una fila de la tabla seleccionada.
+
+** *Abajo*
++
+Mueve la entrada seleccionada hacia abajo una fila de la tabla seleccionada.
+
+** *Botones de selección*
++
+Mueve la entrada seleccionada de una tabla a otra.
+
+
+
+
+
+
+
+== Botones de comando
+
+* *Prueba*
++
+Le permite probar el buscador que ha seleccionado para clonar.
+
+* *Guardar*
++
+Guarda el buscador y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

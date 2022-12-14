@@ -1,0 +1,34 @@
+---
+permalink: workflows/task-import-oncommand-workflow-automation-content.html 
+sidebar: sidebar 
+keywords: import, user-created, oncommand, workflow, automation, content, finders, commands, export, installation, downloaded, storage, community, pack, data, pwershell, toolkits, perl 
+summary: 'Puede importar contenido de OnCommand Workflow Automation (WFA) creado por el usuario, como flujos de trabajo, buscadores y comandos. También puede importar contenido que se exporta desde otra instalación de WFA, contenido que se descarga desde el almacén de automatización del almacenamiento o la comunidad de WFA, así como paquetes, incluidos los kits de herramientas PowerShell de Data ONTAP y los kits de herramientas Perl de NMSDK.' 
+---
+= Importe el contenido de OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede importar contenido de OnCommand Workflow Automation (WFA) creado por el usuario, como flujos de trabajo, buscadores y comandos. También puede importar contenido que se exporta desde otra instalación de WFA, contenido que se descarga desde el almacén de automatización del almacenamiento o la comunidad de WFA, así como paquetes, incluidos los kits de herramientas PowerShell de Data ONTAP y los kits de herramientas Perl de NMSDK.
+
+.Lo que necesitará
+* Debe tener acceso al contenido de WFA que desee importar.
+* El contenido que desea importar debe haberse creado en un sistema que ejecute la misma versión o una versión anterior de WFA.
++
+Por ejemplo, si está ejecutando WFA 2.2, no puede importar contenido que se haya creado con WFA 3.0.
+
+* Puede importar contenido desarrollado en versiones N-2 de WFA solo a WFA 5.1.
+* Si la `.dar` Referencias de archivo el contenido certificado por NetApp, deben importarse los paquetes de contenido certificados por NetApp.
++
+Los paquetes de contenido certificados por NetApp se pueden descargar en la Storage Automation Store. Debe consultar la documentación del paquete para verificar que se cumplen todos los requisitos.
+
+
+
+.Pasos
+. Inicie sesión en WFA mediante un navegador web.
+. Haga clic en *Configuración* y en *Mantenimiento* haga clic en *flujos de trabajo de importación*.
+. Haga clic en *elegir archivo* para seleccionar `.dar` Archivo que desea importar y, a continuación, haga clic en *Importar*.
+. En el cuadro de diálogo *éxito de importación*, haga clic en *Aceptar*.
+

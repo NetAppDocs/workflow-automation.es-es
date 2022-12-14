@@ -1,0 +1,74 @@
+---
+permalink: help/reference-new-category-dialog-box.html 
+sidebar: sidebar 
+keywords: new, category, dialog box, enable, create, workflow 
+summary: El cuadro de diálogo Nueva categoría permite crear una nueva categoría de flujo de trabajo. 
+---
+= Nuevo cuadro de diálogo Categoría
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nueva categoría permite crear una nueva categoría de flujo de trabajo.
+
+* *Nombre*
++
+Permite introducir un nombre para la categoría. Debe introducir un nombre para guardar la categoría.
+
+* *Descripción*
++
+Permite introducir una descripción para la categoría.
+
+* *Flujos de trabajo disponibles*
++
+Muestra todos los flujos de trabajo disponibles que no se mueven al cuadro *flujos de trabajo seleccionados*.
+
+* *Flujos de trabajo seleccionados*
++
+Muestra todos los flujos de trabajo seleccionados para la categoría.
+
+* *Categoría utilizada para la autorización de flujo de trabajo*
++
+Permite seleccionar usuarios con función de operador que puedan ejecutar la categoría. De forma predeterminada, la casilla de verificación no está seleccionada y la categoría está disponible para todos los usuarios.
+
+* *Restringir el acceso a los flujos de trabajo de esta categoría a los siguientes usuarios y grupos de Active Directory*
++
+Permite restringir el acceso a los flujos de trabajo de la categoría seleccionada a los usuarios y grupos de Active Directory seleccionados.
+
+* *Aprobadores y operadores disponibles*
++
+Muestra todos los usuarios con funciones de supervisor y operador.
+
+* *Aprobadores y operadores seleccionados*
++
+Muestra los usuarios que tienen permiso para ejecutar la categoría.
+
+* *Grupos de Approver y operadores disponibles*
++
+Muestra todos los grupos con funciones de supervisor y operador.
+
+* *Grupos de Approver y operadores seleccionados*
++
+Muestra los grupos que pueden ejecutar la categoría.
+
+
+
+
+
+== Botones de comando
+
+* *Botones de selección*
++
+Permite mover la entrada seleccionada de un cuadro a otro.
+
+* *Guardar*
++
+Guarda la categoría y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda la categoría y cierra el cuadro de diálogo.
+
+

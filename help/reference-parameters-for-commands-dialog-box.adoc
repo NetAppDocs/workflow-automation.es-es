@@ -1,0 +1,109 @@
+---
+permalink: help/reference-parameters-for-commands-dialog-box.html 
+sidebar: sidebar 
+keywords: specify, parameters, settings, execution, commands, through, parameters, dialog box 
+summary: Puede especificar parámetros y otros parámetros para la ejecución de comandos a través del cuadro de diálogo parámetros para comandos. 
+---
+= Cuadro de diálogo parámetros para comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede especificar parámetros y otros parámetros para la ejecución de comandos a través del cuadro de diálogo parámetros para comandos.
+
+El cuadro de diálogo muestra una o más fichas de objetos de diccionario y las siguientes fichas:
+
+* Otros parámetros
+* Avanzada
+
+
+
+
+== Pestañas <Dictionary objects>
+
+* *Definir <dictionary object>*
++
+Permite especificar los parámetros de comando que se asignan al objeto de diccionario especificando atributos, utilizando un objeto definido previamente o buscando un objeto existente.
+
++
+** *rellenando atributos*
++
+Le permite introducir atributos para esta variable. Puede utilizar el cuadro de diálogo selección de recursos para los campos marcados con image:../media/resource_selection_icon_wfa.gif[""]. Opcionalmente, puede utilizar una plantilla que incluya valores predefinidos para ciertos atributos del objeto. Puede ver y utilizar atributos adicionales desactivando la casilla de verificación *Mostrar sólo atributos utilizados por <dictionary object>*. El cuadro situado junto a *definir <dictionary object>* muestra el nombre predeterminado de la variable seleccionada. Puede editar el nombre de la variable. Los atributos obligatorios están marcados con un asterisco (*) y un borde rojo para el cuadro.
+
+** *utilizando un <dictionary object>* definido previamente
++
+Permite seleccionar una variable definida previamente. Puede seleccionar el objeto de diccionario definido previamente en el cuadro situado junto a *definir <dictionary object>*.
+
+** *buscando un <dictionary object>* existente
++
+Permite definir una variable mediante la búsqueda de un objeto de diccionario existente. Puede especificar los criterios de búsqueda para el objeto de diccionario. Puede especificar una de las acciones siguientes si se encuentra el objeto de diccionario:
+
++
+*** Aborte el flujo de trabajo
+*** Desactive el comando
+*** Rellene los atributos de la <dictionary object> y ejecute el comando
++
+
+NOTE: Esta opción es similar a la opción *rellenando atributos*.
+
+
+
+
+
+
+
+
+
+== Otros parámetros
+
+Permite especificar los parámetros de comando que no están asignados a ningún objeto de diccionario para la ejecución del comando.
+
+
+
+== Avanzada
+
+Permite especificar condiciones para la ejecución del comando y proporcionar una descripción. También puede configurar el flujo de trabajo para que la ejecución del flujo de trabajo continúe incluso si uno o varios comandos del flujo de trabajo han fallado.
+
+* *Ejecutar este comando*
++
+** *Siempre*
++
+Ejecuta el comando incondicionalmente.
+
+** *Si se encontró la siguiente variable*
++
+Permite ejecutar un comando solo cuando se encuentra la variable especificada. Puede especificar la variable en el cuadro adyacente.
+
+** *Si no se encontró la siguiente variable*
++
+Le permite ejecutar un comando solo cuando no se encuentra la variable especificada. Puede especificar la variable en el cuadro adyacente.
+
+** *Si LA siguiente expresión es VERDADERA*
++
+Permite ejecutar un comando sólo cuando la expresión MVFLEX Expression Language (MVEL) especificada es "'true'". Puede especificar la expresión en el cuadro adyacente.
+
+
+
+* *Descripción*
++
+Le permite introducir una descripción para el comando.
+
+* *Si falla la ejecución*
++
+** *Anular ejecución de flujo de trabajo*
++
+Permite finalizar la ejecución del flujo de trabajo.
+
+** *Continúe la ejecución desde el siguiente paso*
++
+Permite continuar la ejecución del flujo de trabajo desde el siguiente paso.
+
+** *Continuar la ejecución desde la siguiente fila*
++
+Permite continuar la ejecución del flujo de trabajo desde la siguiente fila.
+
+
+
+

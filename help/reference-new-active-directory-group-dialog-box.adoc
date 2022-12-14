@@ -1,0 +1,87 @@
+---
+permalink: help/reference-new-active-directory-group-dialog-box.html 
+sidebar: sidebar 
+keywords: active, directory, group, enable, create, new, oncommand, workflow, automation 
+summary: El cuadro de diálogo Nuevo grupo de Active Directory permite crear un nuevo grupo de Active Directory de OnCommand Workflow Automation. 
+---
+= Nuevo cuadro de diálogo Grupo de Active Directory
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nuevo grupo de Active Directory permite crear un nuevo grupo de Active Directory de OnCommand Workflow Automation.
+
+* *Nombre del grupo*
++
+Especifica el nombre del grupo.
+
+* *Rol*
++
+Permite seleccionar uno de los siguientes roles de grupo:
+
++
+** *Invitado*
++
+Este grupo sólo puede ver el estado de una ejecución de flujo de trabajo o recibir notificaciones sobre un cambio en el estado de una ejecución de flujo de trabajo.
+
+** *Operador*
++
+Este grupo puede obtener una vista previa y ejecutar flujos de trabajo para los que se proporciona acceso al grupo.
+
+** *Approver*
++
+Este grupo puede previsualizar, ejecutar, aprobar y rechazar flujos de trabajo a los que se proporciona acceso el grupo.
+
++
+
+NOTE: Debe indicar el ID de correo electrónico del aprobador y el estado del flujo de trabajo que se va a notificar al aprobador. Si hay varios autorizadores, puede proporcionar un ID de correo electrónico de grupo en el campo *correo electrónico*.
+
+** *Arquitecto*
++
+Este grupo tiene acceso completo para crear flujos de trabajo, pero está restringido a la modificación de la configuración global del servidor WFA.
+
+** *Admin*
++
+Este grupo tiene acceso completo al servidor WFA.
+
++
+
+NOTE: Debe configurar al menos un grupo de administración.
+
+
+
+* *Correo electrónico*
++
+Permite especificar la dirección de correo electrónico del grupo a la que se envían las notificaciones si se selecciona la opción *notificar en*.
+
+* *Notificar el*
++
+Permite seleccionar cuándo se debe notificar por correo electrónico al grupo de Active Directory. Las notificaciones de estado de ejecución del flujo de trabajo son específicas de los flujos de trabajo ejecutados por el grupo. Puede seleccionar cualquier combinación de las siguientes opciones:
+
++
+** Ejecución del flujo de trabajo iniciada: Notifica al grupo cuando comienza la ejecución del flujo de trabajo.
+** La ejecución del flujo de trabajo ha fallado o se ha realizado correctamente: Notifica al grupo si la ejecución del flujo de trabajo falla o si el flujo de trabajo se ha ejecutado correctamente aunque uno o más pasos hayan fallado.
++
+La ejecución se ha completado porque los pasos fallidos se han configurado para permitir que la ejecución del flujo de trabajo continúe incluso cuando el paso falle.
+
+** La ejecución del flujo de trabajo se ha completado correctamente: Notifica al grupo cuando la ejecución del flujo de trabajo se ha completado correctamente.
+** Ejecución del flujo de trabajo en espera de aprobación: Notifica al grupo si la ejecución del flujo de trabajo está a la espera de aprobación del grupo aprobador, arquitecto o operador, según el valor de configuración de WFA.
+
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

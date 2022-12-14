@@ -1,0 +1,38 @@
+---
+permalink: workflows/task-test-the-wfa-reservation-script-for-commands.html 
+sidebar: sidebar 
+keywords: test, reservation, scripts, written, oncommand, workflow, automation, commands, playground, database, ensure, affect, table 
+summary: 'Puede probar los scripts de reserva que ha escrito para los comandos OnCommand Workflow Automation (WFA) en la base de datos de juegos para garantizar que los scripts funcionan bien y no afectan a las tablas de la base de datos de WFA.' 
+---
+= Pruebe el script de reserva para comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede probar los scripts de reserva que ha escrito para los comandos OnCommand Workflow Automation (WFA) en la base de datos de juegos para garantizar que los scripts funcionan bien y no afectan a las tablas de la base de datos de WFA.
+
+.Acerca de esta tarea
+La ruta de instalación predeterminada de WFA se utiliza en este procedimiento. Si ha cambiado la ubicación predeterminada durante la instalación, debe utilizar la ruta de instalación de WFA cambiada.
+
+.Pasos
+. Abra un símbolo del sistema en el servidor de WFA y cambie los directorios a la siguiente ubicación: `c:\Program Files\NetApp\WFA\mysql\bin`
+. Cree un volcado de la base de datos de WFA usando el siguiente comando: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table database_tables> dump_location`
++
+Comando para crear un volcado de las tablas de la base de datos cm_Storage: `mysqldump -u wfa -pWfa123 --single-transaction --skip-add-drop-table cm_storage> c:\tmp\cmSt2.sql`
+
+. Restaure el volcado que ha creado en la base de datos de la zona de juegos de WFA usando el siguiente comando: `mysql -u wfa -pWfa123 playground < dump_location`
++
+`mysql -u wfa -pWfa123 playground < c:\tmp\cmSt2.sql`
+
+. Cree o edite un comando de WFA y escriba el script de reserva en la pestaña *Reservación*.
++
+Debe asegurarse de que las secuencias de comandos de reserva y verificación sólo utilicen la base de datos de juegos.
+
+. Cree o edite un flujo de trabajo, incluya el comando en el flujo de trabajo y, a continuación, ejecute el flujo de trabajo.
+. Confirmar que las secuencias de comandos de reserva y verificación funcionan según lo esperado.
++
+El proceso de adquisición del origen de datos de WFA no actualiza la base de datos de juegos. Es necesario quitar manualmente las reservas que ha creado el comando.
+
+

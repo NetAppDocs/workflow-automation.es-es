@@ -1,0 +1,84 @@
+---
+permalink: help/reference-new-filter-dialog-box.html 
+sidebar: sidebar 
+keywords: use, new, filter, dialog box, create, develop, finders 
+summary: Puede usar el cuadro de diálogo Nuevo filtro para crear un filtro nuevo. Puede utilizar el filtro para desarrollar buscadores. 
+---
+= Nuevo cuadro de diálogo filtro
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede usar el cuadro de diálogo Nuevo filtro para crear un filtro nuevo. Puede utilizar el filtro para desarrollar buscadores.
+
+* Propiedades
+* Ficha Consulta
+
+
+
+
+== Propiedades
+
+La ficha *Propiedades* permite especificar un nombre para el filtro, seleccionar un objeto de diccionario e introducir una descripción para el filtro.
+
+* *Nombre*
++
+Permite introducir un nombre para el filtro.
+
+* *Tipo*
++
+Permite seleccionar un objeto de diccionario de la lista.
+
+* *Versión de entidad*
++
+Permite introducir el número de versión del filtro en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Permite introducir una descripción para el filtro.
+
+
+
+
+
+== Ficha Consulta
+
+Permite introducir una consulta SQL y editar la etiqueta y la descripción de los atributos.
+
+* *Consulta SQL*
++
+Permite introducir una consulta SQL para el filtro.
+
+* *Tabla de parámetros de entrada*
++
+Muestra la lista de parámetros de la consulta SQL que ha introducido y que requieren la entrada del usuario cuando se utiliza el filtro. Puede hacer clic en la columna *Label* o *Description* de un parámetro para editar la etiqueta o introducir una descripción.
+
+* *Tabla de atributos devuelta*
++
+Muestra la lista de atributos devueltos de la consulta SQL.
+
+
+
+
+
+== Botones de comando
+
+* *Prueba*
++
+Permite probar el filtro definido.
+
+* *Actualizar*
++
+Rellena la tabla *parámetros de entrada* y la tabla *atributos* devueltos con valores modificados, si los hubiera.
+
+* *Guardar*
++
+Guarda el filtro y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda el filtro y cierra el cuadro de diálogo.
+
+

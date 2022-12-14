@@ -1,0 +1,20 @@
+---
+permalink: workflows/concept-what-finders-are.html 
+sidebar: sidebar 
+keywords: finders, combination, filters, together, identify, common, results, workflows, select, required, resources, execution 
+summary: Un buscador es una combinación de uno o más filtros que se utilizan conjuntamente para identificar resultados comunes. Puede usar un buscador en los flujos de trabajo para seleccionar los recursos necesarios para la ejecución del flujo de trabajo. 
+---
+= Lo que son los buscadores
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Un buscador es una combinación de uno o más filtros que se utilizan conjuntamente para identificar resultados comunes. Puede usar un buscador en los flujos de trabajo para seleccionar los recursos necesarios para la ejecución del flujo de trabajo.
+
+Los finders pueden aplicar una orden de clasificación para diferenciar los resultados aplicables. Los buscadores devuelven el mejor recurso en función de los criterios de selección y la ordenación.
+
+Los finders devuelven un resultado o ningún resultado; por tanto, pueden utilizarse para verificar la existencia de determinados elementos de almacenamiento. Sin embargo, cuando se utiliza un buscador como parte de una definición de fila de repetición, los conjuntos de resultados se utilizan para formar la lista de miembros del grupo. Los filtros que se utilizan en los codificadores devuelven la clave natural del tipo de diccionario, como mínimo, pero pueden devolver campos adicionales cuyo valor se puede hacer referencia a ellos. Es posible que se aplique un orden de clasificación a cualquier campo devuelto de la consulta SQL de un filtro.
+
+Puede probar los resultados de un buscador. A la hora de probar un buscador, puede ver los resultados comunes de todos los filtros de WFA, donde el resultado efectivo del buscador se resalta en los resultados. Si utiliza un buscador en un flujo de trabajo, puede crear un mensaje de error personalizado para transmitir información significativa al operador de almacenamiento.

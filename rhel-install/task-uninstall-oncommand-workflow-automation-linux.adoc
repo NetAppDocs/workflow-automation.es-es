@@ -1,0 +1,27 @@
+---
+permalink: rhel-install/task-uninstall-oncommand-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: uninstall, oncommand, workflow, automation 
+summary: 'Puede desinstalar OnCommand Workflow Automation (WFA) de su máquina Red Hat Enterprise Linux mediante un único comando.' 
+---
+= Desinstale OnCommand Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede desinstalar OnCommand Workflow Automation (WFA) de su máquina Red Hat Enterprise Linux mediante un único comando.
+
+Debe tener acceso de usuario raíz al equipo de Red Hat Enterprise Linux desde el que desee desinstalar WFA.
+
+.Pasos
+. Inicie sesión como usuario root en el equipo Red Hat Enterprise Linux desde el que desea desinstalar WFA.
+. En el símbolo del sistema del shell, introduzca el siguiente comando:
++
+`rpm -e wfa`
+
++
+Si se cambió la ubicación predeterminada de la instalación, el directorio de datos de MySQL no se eliminará cuando desinstale WFA. Debe eliminar manualmente el directorio.
+
+

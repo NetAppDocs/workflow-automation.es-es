@@ -1,0 +1,53 @@
+---
+permalink: windows-install/task-configure-snmp-version-3.html 
+sidebar: sidebar 
+keywords: snmp Version 3, snmp traps, configure 
+summary: 'También puede configurar OnCommand Workflow Automation (WFA) para que envíe capturas de protocolo simple de gestión de redes (SNMP) versión 3 acerca del estado de las operaciones del flujo de trabajo.' 
+---
+= Configurar SNMP versión 3
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+También puede configurar OnCommand Workflow Automation (WFA) para que envíe capturas de protocolo simple de gestión de redes (SNMP) versión 3 acerca del estado de las operaciones del flujo de trabajo.
+
+La versión 3 ofrece dos opciones de seguridad adicionales:
+
+* Versión 3 con autenticación
++
+Los retos se envían sin cifrar a través de la red. Las aplicaciones de gestión SNMP, que se configuran con los mismos parámetros de autenticación que los mensajes de captura SNMP, pueden recibir capturas.
+
+* Versión 3 con autenticación y cifrado
++
+Las capturas se envían cifradas a través de la red. Para recibir y descifrar estas capturas, debe configurar aplicaciones de administración SNMP con los mismos parámetros de autenticación y clave de cifrado que las capturas SNMP.
+
+
+
+.Pasos
+. Inicie sesión en WFA a través de un navegador web como usuario administrador y acceda al servidor de WFA.
+. Haga clic en *Configuración* y en *Configuración* haga clic en *SNMP*.
+. Active la casilla de verificación *Activar SNMP*.
+. En la lista desplegable *Versión*, seleccione una de las siguientes opciones:
++
+** Versión 3
+** Versión 3 con autenticación
+** Versión 3 con autenticación y cifrado
+
+
+. Seleccione las opciones de configuración de SNMP que correspondan a la opción específica de la versión 3 de SNMP que seleccionó en el paso 4.
+. Introduzca una dirección IPv4 o IPv6 o el nombre de host y el número de puerto del host de gestión. WFA envía capturas SNMP al número de puerto especificado. El número de puerto predeterminado es 162.
+. En la sección notificar, seleccione una o más de las siguientes casillas de verificación:
++
+** La planificación del flujo de trabajo se ha iniciado, ha fallado o ha finalizado
+** Se inició la ejecución del flujo de trabajo
+** La ejecución del flujo de trabajo se ha realizado correctamente
+** La ejecución del flujo de trabajo ha fallado/ se ha realizado parcialmente correctamente
+** Ejecución del flujo de trabajo en espera de aprobación
+** Error de adquisición
+
+
+. Haga clic en *Enviar notificación de prueba* para comprobar la configuración.
+. Haga clic en *Guardar*.
+

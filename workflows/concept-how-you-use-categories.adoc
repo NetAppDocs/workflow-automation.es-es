@@ -1,0 +1,18 @@
+---
+permalink: workflows/concept-how-you-use-categories.html 
+sidebar: sidebar 
+keywords: categorize, workflows, better, organize, apply, access, control, capability 
+summary: Puede clasificar los flujos de trabajo para organizar mejor los flujos de trabajo y aplicar la funcionalidad de control de acceso en los flujos de trabajo. 
+---
+= Cómo se utilizan las categorías
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede clasificar los flujos de trabajo para organizar mejor los flujos de trabajo y aplicar la funcionalidad de control de acceso en los flujos de trabajo.
+
+Puede clasificar los flujos de trabajo de forma que aparezcan en grupos específicos en el portal de WFA. También puede aplicar la funcionalidad de control de acceso en categorías de flujos de trabajo. Por ejemplo, solo puede permitir que determinados operadores o aprobadores de almacenamiento vean determinadas categorías de flujos de trabajo. Los operadores o autorizadores de almacenamiento sólo pueden ejecutar los flujos de trabajo de la categoría para los que se les han concedido derechos de acceso.
+
+Los grupos de Active Directory también se pueden utilizar para controlar el acceso a las categorías.

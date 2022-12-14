@@ -1,0 +1,29 @@
+---
+permalink: workflows/concept-how-you-execute-custom-rest-end-points.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, provide, mechanism, configure, custom, end points, execute, help, architect, configure, easy, understand, intuitive, uniform, resource, identifiers, follow, conventions, post, put, delete, based, semantics, client, code, developers 
+summary: 'OnCommand Workflow Automation (WFA) proporciona un mecanismo para configurar los extremos DE REST personalizados para ejecutar los flujos de trabajo. Los extremos de REST personalizados ayudan a un arquitecto a configurar identificadores de recursos (URI) fáciles de entender, intuitivos y uniformes para ejecutar flujos de trabajo, que siguen las convenciones DE REST de POST, PUT o DELETE en función de la semántica del flujo de trabajo. Estos URI facilitan el desarrollo de código de cliente para los desarrolladores de clientes.' 
+---
+= Cómo ejecutar puntos finales de REST personalizados
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) proporciona un mecanismo para configurar los extremos DE REST personalizados para ejecutar los flujos de trabajo. Los extremos de REST personalizados ayudan a un arquitecto a configurar identificadores de recursos (URI) fáciles de entender, intuitivos y uniformes para ejecutar flujos de trabajo, que siguen las convenciones DE REST de POST, PUT o DELETE en función de la semántica del flujo de trabajo. Estos URI facilitan el desarrollo de código de cliente para los desarrolladores de clientes.
+
+WFA permite configurar una ruta de URI personalizada para la ejecución del flujo de trabajo a través de las llamadas API. Cada segmento de la ruta URI puede ser una cadena o un nombre válido de la entrada del usuario del flujo de trabajo entre paréntesis, por ejemplo, `/devops/\{ProjectName}/clone.` El flujo de trabajo se puede invocar como una llamada a. `_https_://WFAServer: HTTPS_PORT/rest/devops/Project1/clone/jobs.`
+
+La validación de la ruta de URI es la siguiente:
+
+* La vía DE DESCANSO deberá empezar por «»/».
+* Los caracteres permitidos son alfabetos, dígitos y subrayado.
+* El nombre de entrada del usuario deberá estar rodeado por «»{}».
++
+
+NOTE: Deberá comprobar que el valor rodeado por «»{}» es un nombre de entrada de usuario válido.
+
+* No debería haber segmentos de ruta vacíos, por ejemplo, //, /{}/, etc.
+* La configuración del método HTTP y la configuración de la ruta de URI personalizada deben estar configuradas o no configurarse.
+

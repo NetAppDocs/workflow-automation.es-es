@@ -1,0 +1,61 @@
+---
+permalink: help/reference-client-preferences-dialog-box.html 
+sidebar: sidebar 
+keywords: preference, window, enable, view, modify, refresh, logging, options, client, associated specific, workflow, automation, server, access, settings, setup, click 
+summary: 'La ventana Preferencias le permite ver y modificar las opciones de actualización y registro de todos los clientes asociados con el servidor específico de Workflow Automation (WFA). Para acceder a esta ventana, seleccione Configuración y, en Configuración, haga clic en Preferencias.' 
+---
+= Preferencias
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Preferencias le permite ver y modificar las opciones de actualización y registro de todos los clientes asociados con el servidor específico de Workflow Automation (WFA). Puede acceder a esta ventana seleccionando *Configuración* y en *Configuración* haga clic en *Preferencias*.
+
+* *Activar actualización automática*
++
+Permite elegir la actualización automática del cliente, que es activada por el servidor. Esta opción está seleccionada de forma predeterminada. Cuando se selecciona, las siguientes tablas de WFA se actualizan automáticamente:
+
++
+** Estado de ejecución
+** Fuentes de datos
+** Reservas
+
+
+
+
+Si no está seleccionada, las tablas no se actualizarán hasta que haga clic en *Actualizar*. Esta casilla de comprobación está activada de forma predeterminada.
+
+* *Intervalo de actualización (segundos)*
++
+Permite seleccionar el intervalo de actualización. El valor predeterminado es 3 segundos.
+
+* *Número máximo de filas para mostrar*
++
+Permite hacer clic en el valor de la columna *Tamaño máximo* y modificar el número de filas que el servidor recupera y muestra al usuario por tipo de lista.
+
++
+Por ejemplo, la configuración *ejecución de flujo de trabajo* muestra el número de ejecuciones de historial pasadas al usuario. A continuación, se muestran los valores predeterminados:
+
++
+** Ejecución del flujo de trabajo: 100
+** Historial de adquisición: 30
+** Reservas: 100
+** Añadir filas de inventario: 1000
++
+Permite especificar el número máximo de resultados que debe obtener el inventario. El valor predeterminado es 1000.
+
+
+
+
+
+
+
+== Botón de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración.
+
+

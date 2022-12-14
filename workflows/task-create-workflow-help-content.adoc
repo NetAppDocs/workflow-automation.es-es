@@ -1,0 +1,49 @@
+---
+permalink: workflows/task-create-workflow-help-content.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, admins, architects, design, workflows, create, help, content, include 
+summary: 'Los administradores y arquitectos de OnCommand Workflow Automation (WFA) que diseñan flujos de trabajo pueden crear contenido de ayuda para los flujos de trabajo e incluirlo en el flujo de trabajo.' 
+---
+= Crear contenido de ayuda del flujo de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los administradores y arquitectos de OnCommand Workflow Automation (WFA) que diseñan flujos de trabajo pueden crear contenido de ayuda para los flujos de trabajo e incluirlo en el flujo de trabajo.
+
+.Lo que necesitará
+Debe ser consciente de cómo crear páginas Web mediante HTML.
+
+.Acerca de esta tarea
+La ayuda debe proporcionar información sobre el flujo de trabajo y las entradas del usuario para el flujo de trabajo al operador de almacenamiento que ejecuta el flujo de trabajo.
+
+.Pasos
+. Cree una carpeta con el siguiente nombre: Workflow-help.
+. Cree el contenido de la ayuda con un editor HTML o un editor de texto y guárdelo como un `index.htm` en la `workflow-help` carpeta.
++
+No debe incluir archivos JavaScript como parte del contenido de ayuda. Las siguientes son las extensiones de archivo compatibles:
+
++
+** .jpg
+** .jpeg
+** .gif
+** .png
+** .xml
+** .thmx
+** .htm
+** .html
+** .css
+
+
++
+También puede incluir el `Thumbs.db` Archivo, creado por Windows.
+
+. Compruebe que el `index.htm` el archivo y otros archivos asociados con el contenido de ayuda, como las imágenes, están disponibles en la `workflow-help` carpeta.
+. Cree un `.zip` archivo de la carpeta y asegúrese de que el tamaño de `.zip` El archivo no es superior a 2 MB.
++
+`Create an NFS volume-help.zip`
+
+. Edite el flujo de trabajo para el que ha creado el contenido de la ayuda y, a continuación, haga clic en *Configuración* > *Contenido de la ayuda* > *examinar* para cargar el `.zip` archivo.
+

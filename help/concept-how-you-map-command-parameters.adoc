@@ -1,0 +1,133 @@
+---
+permalink: help/concept-how-you-map-command-parameters.html 
+sidebar: sidebar 
+keywords: parameter, workflow, automation, commands, specific, attribute, dictionary, entry, reference, certain, rule, aware, edit 
+summary: 'Los parámetros de los comandos de Workflow Automation (WFA) se asignan a atributos específicos y referencias de entrada de diccionario en función de ciertas reglas. Debe estar al tanto de las reglas para asignar parámetros de comandos al crear o editar un comando de WFA.' 
+---
+= Cómo se asignan los parámetros de comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Los parámetros de los comandos de Workflow Automation (WFA) se asignan a atributos específicos y referencias de entrada de diccionario en función de ciertas reglas. Debe estar al tanto de las reglas para asignar parámetros de comandos al crear o editar un comando de WFA.
+
+La asignación de parámetros de comandos define cómo se definen los detalles de los comandos en los flujos de trabajo. Los parámetros de comando asignados de un comando se muestran en las pestañas cuando especifica los detalles del comando para los comandos de los flujos de trabajo. Las fichas se nombran en función del nombre de grupo especificado en la columna Nombre de objeto de la ficha asignación de parámetros. Los parámetros que no están asignados se muestran en la ficha otros parámetros cuando se especifican los detalles del comando en los flujos de trabajo.
+
+Las reglas para la asignación de parámetros de comandos se aplican en función de la categoría de comandos y de cómo se representan los comandos en el editor de flujos de trabajo.
+
+Las siguientes son las categorías de comandos:
+
+* Comandos que crean objetos
+* Comandos que actualizan objetos
+* Comandos que quitan objetos
+* Comandos que tratan objetos padre e hijo opcionales
+* Comandos que actualizan asociaciones entre objetos
+
+
+Las reglas se enumeran a continuación para cada categoría:
+
+
+
+== Todas las categorías de comandos
+
+Cuando se asigna un parámetro de comando, debe utilizar la ruta natural en función de cómo se utilice el comando en los flujos de trabajo.
+
+Los ejemplos siguientes muestran cómo puede definir un trazado natural:
+
+* Para la `ArrayIP` según el comando, debe usar el `aggregate.array.ip` atributo de `Volume` entrada de diccionario y no de `array.ip` atributo.
++
+Esto es importante cuando un flujo de trabajo crea un volumen y, a continuación, realiza un paso adicional con el volumen creado haciendo referencia a él. Los siguientes son ejemplos similares:
+
++
+** `volume.aggregate.array.ip` de la `Qtree` entrada de diccionario
+** `volume.aggregate.array.ip` de la `LUN` entrada de diccionario
+
+
+* Para `Cluster` utilizado en comandos, debe utilizar una de las siguientes opciones:
++
+** `vserver.cluster.primary_address` de la `Volume` entrada de diccionario
+** `volume.vserver.cluster.primary_address` de la `Qtree` entrada de diccionario
+
+
+
+
+
+
+== Comandos que crean objetos
+
+Esta categoría de comandos se utiliza para una de las siguientes opciones:
+
+* Buscar un objeto padre y definir nuevos objetos
+* Buscar un objeto y crear el objeto si éste no existe
+
+
+Debe utilizar las siguientes reglas de asignación de parámetros para esta categoría de comandos:
+
+* Asigne los parámetros relevantes del objeto que se crea a la entrada de diccionario del objeto.
+* Asigne el objeto primario a través de las referencias de la entrada de diccionario creada.
+* Asegúrese de que el atributo relevante está presente en la entrada del diccionario al agregar un nuevo parámetro.
++
+A continuación se muestran los escenarios de excepción de esta regla:
+
++
+** Algunos objetos que se crean no tienen una entrada de diccionario correspondiente y sólo el objeto primario se asigna a la entrada de diccionario principal correspondiente (por ejemplo, el comando *Crear VIF*) en el que sólo se puede asignar una matriz a una entrada de diccionario de matriz.
+** No es necesaria la asignación de parámetros
++
+Por ejemplo, la `ExecutionTimeout` El parámetro del comando *Crear o redimensionar agregado* es un parámetro sin asignar.
+
+
+
+
+
+Los siguientes comandos certificados son ejemplos de esta categoría:
+
+* Cree el volumen
+* Cree la LUN
+
+
+
+
+== Comandos que actualizan objetos
+
+Esta categoría de comandos se utiliza para buscar un objeto y actualizar los atributos.
+
+Debe utilizar las siguientes reglas de asignación de parámetros para esta categoría de comandos:
+
+* Asigne los objetos que se actualizan a la entrada del diccionario.
+* No asigne los parámetros que se actualizan para el objeto.
++
+Por ejemplo, en el comando *definir estado de volumen*, el `Volume` el parámetro está asignado pero el nuevo `State` está desasignada.
+
+
+
+
+
+== Comandos que quitan objetos
+
+Esta categoría de comandos se utiliza para buscar un objeto y eliminarlo.
+
+Debe asignar el objeto eliminado por el comando a su entrada de diccionario. Por ejemplo, en el comando *Remove Volume*, el `Volume` a eliminar se asigna a los atributos y referencias pertinentes de `Volume` entrada de diccionario.
+
+
+
+== Comandos que tratan objetos padre e hijo opcionales
+
+Debe utilizar las siguientes reglas de asignación de parámetros para esta categoría de comandos:
+
+* No asigne ningún parámetro obligatorio de un comando como referencia desde un parámetro opcional del comando.
++
+Esta regla es más relevante cuando un comando trata los objetos secundarios opcionales de un objeto primario específico. En este caso, se debe asignar explícitamente el objeto hijo y el objeto padre. Por ejemplo, en el comando *Stop Deduplication Jobs*, el comando detiene un trabajo de deduplicación en ejecución en un volumen específico cuando se especifica junto con `Array` o en todos los volúmenes de un valor especificado `Array`. En este caso, el parámetro array se debe asignar directamente al `array` entrada de diccionario y no a. `Volume.Array` porque `Volume` es un parámetro opcional en este comando.
+
+* Si existe una relación padre-hijo entre las entradas del diccionario en el nivel lógico pero no entre las instancias reales en un comando específico, esos objetos se deben asignar por separado.
++
+Por ejemplo, en el comando *mover volumen*, `Volume` se mueve de su agregado principal actual a un nuevo agregado de destino. Por lo tanto, `Volume` los parámetros se asignan a un `Volume` la entrada de diccionario y los parámetros de agregado de destino se asignan por separado a la `Aggregate` entrada de diccionario pero no como `volume.aggregate.name.`
+
+
+
+
+
+== Comandos que actualizan asociaciones entre objetos
+
+Para esta categoría de comandos, debe asignar tanto la asociación como los objetos a entradas de diccionario relevantes. Por ejemplo, en la `Add Volume to vFiler` comando, el `Volume` y.. `vFiler` los parámetros se asignan a los atributos relevantes del `Volume` y.. `vFiler` entradas de diccionario.

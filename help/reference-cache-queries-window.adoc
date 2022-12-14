@@ -1,0 +1,130 @@
+---
+permalink: help/reference-cache-queries-window.html 
+sidebar: sidebar 
+keywords: cache, queries, window, enable, manage, dictionary, entries, data, source, types 
+summary: 'La ventana Cache Queries (consultas en caché) le permite gestionar las consultas en caché para las entradas del diccionario WFA y sus tipos de origen de datos asociados.' 
+---
+= Consultas en caché
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Cache Queries (consultas en caché) le permite gestionar las consultas en caché para las entradas del diccionario WFA y sus tipos de origen de datos asociados.
+
+Una consulta de caché es una consulta SQL que recupera los datos necesarios de la tabla especificada en la consulta. Una consulta de caché está asociada con una entrada de diccionario y uno o más tipos de origen de datos, por ejemplo, la consulta de caché para *volumen (almacenamiento)* está asociada con los tipos de origen de datos Active IQ Unified Manager 5.1 y 5.2. Puede definir una consulta de caché cuando desee recuperar parte de la información, como un volumen de una tabla de un origen de datos Active IQ Unified Manager 6.0, en la caché de WFA.
+
+* Tabla consultas en caché
+* Barra de herramientas
+
+
+
+
+== Lista consultas en caché
+
+La tabla consultas de caché muestra las entradas del diccionario y sus tipos de origen de datos asociados. Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla consultas en caché contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si la consulta de caché se crea por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
+* *Esquema*
++
+Indica un nombre de esquema (esquema) que contiene datos relevantes para el entorno. Por ejemplo, un esquema de almacenamiento en caché *cm_Storage* contiene datos relevantes para Clustered Data ONTAP. La información del esquema correspondiente se obtiene del origen de datos.
+
+* *Entrada de diccionario*
++
+Muestra la entrada de diccionario asociada con el esquema.
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Tipos de origen de datos*
++
+Muestra el tipo de origen de datos asociado con la entrada de diccionario.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó por última vez la consulta de la caché.
+
+* *Actualizado por*
++
+Muestra el usuario que actualizó la consulta de caché.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre el cuadro de diálogo Agregar consulta de caché, que permite crear una consulta de caché.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre el cuadro de diálogo Editar consulta de caché para la consulta de caché seleccionada, que permite editar la consulta de caché.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre el cuadro de diálogo Agregar consulta de caché, que permite crear un clon o una copia de la consulta de caché seleccionada.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación, que permite bloquear la consulta de caché seleccionada.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación, que permite desbloquear la consulta de caché seleccionada. Esta opción sólo está habilitada para las consultas en caché que usted haya bloqueado. Sin embargo, los administradores pueden desbloquear las consultas en caché bloqueadas por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación, que permite eliminar la consulta de caché creada por el usuario seleccionado.
+
++
+
+NOTE: No puede eliminar consultas de WFA, PS ni de caché de muestra.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Abre el cuadro de diálogo de confirmación, que permite exportar la consulta de caché creada por el usuario seleccionado.
+
++
+
+NOTE: No puede exportar consultas de WFA, PS ni de caché de muestra.
+
+* *image:../media/test_wfa_icon.gif["icono de prueba"] (Prueba)*
++
+Abre el cuadro de diálogo Consulta de caché de prueba, que permite probar la consulta de caché seleccionada.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar a consulta de caché de paquetes, que permite agregar la consulta de caché y sus entidades fiables a un paquete, que se puede editar.
+
++
+
+NOTE: La función Agregar a paquete sólo está habilitada para la consulta de caché para la que la certificación está establecida en *Ninguno.*
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar de la consulta de caché de paquetes de la consulta de caché seleccionada, que permite eliminar o quitar la consulta de caché del paquete.
+
++
+
+NOTE: La función Eliminar del paquete sólo está habilitada para la consulta de caché para la que la certificación está establecida en *Ninguno.*
+
+

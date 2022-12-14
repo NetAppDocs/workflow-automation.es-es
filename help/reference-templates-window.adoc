@@ -1,0 +1,147 @@
+---
+permalink: help/reference-templates-window.html 
+sidebar: sidebar 
+keywords: template, window, display, available, alphabetical, order, collection, settings, workflows, quickly 
+summary: La ventana Plantillas muestra las plantillas disponibles en orden alfabético. Una plantilla es un conjunto de configuraciones que se pueden utilizar al crear flujos de trabajo. Puede utilizar plantillas para crear flujos de trabajo rápidamente. 
+---
+= Plantillas
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Plantillas muestra las plantillas disponibles en orden alfabético. Una plantilla es un conjunto de configuraciones que se pueden utilizar al crear flujos de trabajo. Puede utilizar plantillas para crear flujos de trabajo rápidamente.
+
+
+NOTE: En función de sus privilegios de rol y cuenta, es posible que esta ventana no se muestre.
+
+* Tabla de plantillas
+* Barra de herramientas
+
+
+
+
+== Tabla de plantillas
+
+La tabla Plantillas enumera las plantillas disponibles. Cada entrada se identifica como una de las siguientes:
+
+* image:../media/community_certification.gif[""] - contenido creado por los usuarios
+* image:../media/ps_certified_icon_wfa.gif[""] - Contenido desarrollado por Servicios profesionales (PS), que está disponible sólo en instalaciones personalizadas realizadas por PS
+* image:../media/community_certification.gif[""] - packs desarrollados por usuarios
+* image:../media/lock_icon_wfa.gif[""] - contenido creado por los usuarios que está bloqueado
+* image:../media/netapp_certified.gif[""] - Contenido certificado por NetApp
+
+
+Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.
+
+* image:../media/filter_icon_wfa.gif["Icono de filtro"] activa o desactiva el filtrado de toda la tabla. Aparece una "x" roja sobre el icono si el filtrado está desactivado.
+* Haga doble clic image:../media/filter_icon_wfa.gif["Icono de filtro"] borra y restablece las selecciones de filtrado.
+* image:../media/wfa_filter_icon.gif["Icono de filtro"] en cada encabezado de columna puede filtrar en función del contenido de las columnas. Haga clic en image:../media/wfa_filter_icon.gif["Icono de filtro"] en una columna permite filtrar un elemento específico de la lista desplegable o de todos los elementos disponibles.
+* Al hacer clic en el encabezado de columna, se alterna entre el orden ascendente y descendente de clasificación. Puede identificar el orden aplicado mediante las flechas de ordenación (image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"] para ascendente y. image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] para descendente).
+* Para reorganizar la ubicación de las columnas, puede arrastrar y soltar columnas para colocarlos en el orden que desee. Sin embargo, no puede ocultar ni eliminar ninguna de estas columnas.
+* Al hacer clic en el cuadro de texto de filtro *Buscar* podrá buscar contenido específico. Además, puede buscar utilizando operadores compatibles para el tipo de columna aplicable, Alfabético o numérico.
+
+
+La tabla Templates contiene las siguientes columnas:
+
+* *Certificación*
++
+Indica si la plantilla es creada por el usuario (image:../media/community_certification.gif[""]), PS (image:../media/ps_certified_icon_wfa.gif[""]), comunidad (image:../media/community_certification.gif[""]), bloqueado por el usuario (image:../media/lock_icon_wfa.gif[""]) O certificado por NetApp (image:../media/netapp_certified.gif[""]).
+
++
+Puede buscar plantillas seleccionando las casillas de verificación necesarias en la lista de filtros.
+
+* *Nombre*
++
+Muestra el nombre de la plantilla.
+
+* *Esquema*
++
+Muestra el esquema asociado con la plantilla. Un esquema representa el modelo de datos de un sistema. Por ejemplo, un esquema de vc contiene datos relevantes para su entorno virtual, como máquinas virtuales, hosts y almacenes de datos.
+
+* *Tipo*
++
+Muestra el tipo de objeto de diccionario de la plantilla, por ejemplo, Volume y Snapshot_Policy.
+
+* *Versión de entidad*
++
+Muestra el número de versión del objeto en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Muestra la descripción de la plantilla.
+
+* *Última actualización el*
++
+Muestra la fecha y la hora en que se actualizó la plantilla por última vez.
+
+* *Actualizado por*
++
+Muestra el nombre del usuario que actualizó la plantilla.
+
+* *Bloqueado por*
++
+Muestra el nombre del usuario que bloqueó la plantilla.
+
+
+
+
+
+== Barra de herramientas
+
+La barra de herramientas está situada encima del encabezado de la columna. Puede utilizar los iconos de la barra de herramientas para realizar varias acciones. También se puede acceder a estas acciones desde el menú contextual de la ventana.
+
+* *image:../media/new_wfa_icon.gif["Icono nuevo"] (Nuevo)*
++
+Abre el cuadro de diálogo Nueva plantilla, que permite crear una plantilla nueva.
+
+* *image:../media/edit_wfa_icon.gif["Icono Editar"] (Editar)*
++
+Abre el cuadro de diálogo <template_name> de plantilla, que permite modificar la configuración de la plantilla seleccionada. También puede hacer doble clic en la plantilla para abrir el cuadro de diálogo <template_name> de plantilla.
+
+* *image:../media/clone_wfa_icon.gif["El icono de clon"] (Clon)*
++
+Abre el cuadro de diálogo Nueva plantilla - copia <template_name>, que permite crear un clon o una copia de la plantilla seleccionada.
+
+* *image:../media/lock_wfa_icon.gif["Icono de bloqueo"] (Bloqueo)*
++
+Abre el cuadro de diálogo de confirmación Bloquear plantilla, que permite bloquear la plantilla seleccionada. Esta opción sólo está activada para las plantillas que haya creado.
+
+* *image:../media/unlock_wfa_icon.gif["Icono de desbloqueo"] (Desbloqueo)*
++
+Abre el cuadro de diálogo de confirmación Desbloquear plantilla, que permite desbloquear la plantilla seleccionada. Esta opción sólo está activada para las plantillas bloqueadas por usted. Sin embargo, los administradores pueden desbloquear plantillas bloqueadas por otros usuarios.
+
+* *image:../media/delete_wfa_icon.gif["Icono de eliminar"] (Eliminar)*
++
+Abre el cuadro de diálogo de confirmación Eliminar plantilla, que permite eliminar la plantilla creada por el usuario seleccionada.
+
++
+
+NOTE: No puede eliminar una plantilla de muestra.
+
+* *image:../media/export_wfa_icon.gif["Icono Exportar"] (Exportación)*
++
+Permite exportar la plantilla creada por el usuario seleccionada.
+
++
+
+NOTE: No puede exportar una plantilla de muestra.
+
+* *image:../media/add_to_pack.png["icono agregar al paquete"] (Añadir al paquete)*
++
+Abre el cuadro de diálogo Agregar a plantillas de paquete, que permite agregar la plantilla y sus entidades fiables a un paquete, que se puede editar.
+
++
+
+NOTE: La función Agregar a paquete sólo está habilitada para las plantillas para las que la certificación está establecida en *Ninguno.*
+
+* *image:../media/remove_from_pack.png["eliminar del icono de paquete"] (Eliminar del paquete)*
++
+Abre el cuadro de diálogo Quitar de plantillas de paquetes de la plantilla seleccionada, que permite eliminar o quitar la plantilla.
+
++
+
+NOTE: La función Eliminar del paquete sólo está activada para las plantillas para las que la certificación está establecida en *Ninguno.*
+
+

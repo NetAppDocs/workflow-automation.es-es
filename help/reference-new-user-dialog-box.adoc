@@ -1,0 +1,76 @@
+---
+permalink: help/reference-new-user-dialog-box.html 
+sidebar: sidebar 
+keywords: new, user, dialog box, enable, create, account 
+summary: El cuadro de diálogo Nuevo usuario permite crear una nueva cuenta de usuario. 
+---
+= Cuadro de diálogo New User
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nuevo usuario permite crear una nueva cuenta de usuario.
+
+* *Nombre de usuario*
++
+Especifica el nombre de usuario.
+
+* *Rol*
++
+Permite seleccionar uno de los siguientes roles de usuario:
+
++
+** Invitado: Este usuario sólo puede ver el estado de una ejecución de flujo de trabajo o recibir notificaciones sobre un cambio en el estado de una ejecución de flujo de trabajo.
+** Operador: Este usuario puede obtener una vista previa y ejecutar flujos de trabajo para los que se proporciona acceso al usuario.
+** Arquitecto: Este usuario tiene acceso completo para crear flujos de trabajo, pero está restringido a la modificación de la configuración global del servidor WFA.
+** Admin: Este usuario tiene acceso completo al servidor WFA.
+** Backup: Este usuario es el único usuario que puede generar copias de seguridad del servidor WFA de forma remota; sin embargo, el usuario está restringido desde el resto del acceso.
+
+
+* *Correo electrónico*
++
+Permite especificar la dirección de correo electrónico del usuario a la que se envían las notificaciones si se selecciona la opción notificar.
+
+* *Contraseña*
++
+Especifica la contraseña del usuario.
+
+* *Confirmar*
++
+Especifica de nuevo la contraseña.
+
+* *Notificar el*
++
+Permite seleccionar cuándo se debe notificar por correo electrónico al usuario de la cuenta. Las notificaciones de estado de ejecución del flujo de trabajo son específicas de los flujos de trabajo ejecutados por el usuario. Puede seleccionar cualquier combinación de las siguientes opciones:
+
++
+** Ejecución del flujo de trabajo iniciada: Notifica al usuario cuando comienza la ejecución del flujo de trabajo.
+** La ejecución del flujo de trabajo ha fallado o se ha realizado correctamente: Notifica al usuario si la ejecución del flujo de trabajo falla o si el flujo de trabajo se ha ejecutado correctamente incluso si uno o más pasos han fallado.
++
+La ejecución se completa porque los pasos fallidos se han configurado de forma que la ejecución del flujo de trabajo continúa incluso cuando el paso ha fallado.
+
+** La ejecución del flujo de trabajo se ha completado correctamente: Notifica al usuario cuando la ejecución del flujo de trabajo se ha completado correctamente.
+** Ejecución del flujo de trabajo en espera de aprobación: Notifica al usuario si la ejecución del flujo de trabajo está a la espera de aprobación de un usuario operador o arquitecto, en función del valor de configuración de WFA.
+** Fallo de adquisición: Notifica al usuario cuando falla la adquisición de datos para orígenes de datos.
++
+Esta opción está habilitada solo para usuarios de administrador y de arquitecto.
+
+
+
+
+
+
+
+== Botones de comando
+
+* *Guardar*
++
+Guarda los ajustes de configuración y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

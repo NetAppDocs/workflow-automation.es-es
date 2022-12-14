@@ -1,0 +1,37 @@
+---
+permalink: help/concept-how-resource-selection-works.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, wfa, search, algorithm, storage, resource, execution, design, efficient 
+summary: 'OnCommand Workflow Automation (WFA) utiliza algoritmos de búsqueda para seleccionar recursos de almacenamiento para la ejecución del flujo de trabajo. Debe comprender cómo funciona la selección de recursos para diseñar flujos de trabajo de forma eficiente.' 
+---
+= Cómo funciona la selección de recursos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+OnCommand Workflow Automation (WFA) utiliza algoritmos de búsqueda para seleccionar recursos de almacenamiento para la ejecución del flujo de trabajo. Debe comprender cómo funciona la selección de recursos para diseñar flujos de trabajo de forma eficiente.
+
+WFA selecciona recursos de entrada del diccionario, como unidades vFiler, agregados y máquinas virtuales, mediante algoritmos de búsqueda. A continuación, los recursos seleccionados se utilizan para ejecutar el flujo de trabajo. Los algoritmos de búsqueda de WFA forman parte de los elementos básicos de WFA, e incluyen buscadores y filtros. Para localizar y seleccionar los recursos necesarios, los algoritmos de búsqueda buscan los datos almacenados en caché desde diferentes repositorios, como Active IQ Unified Manager, VMware vCenter Server y una base de datos. De forma predeterminada, hay un filtro disponible para cada entrada de diccionario para buscar un recurso basado en sus claves naturales.
+
+Debe definir los criterios de selección de recursos para cada comando del flujo de trabajo. Además, puede usar un buscador para definir los criterios de selección de recursos en cada fila del flujo de trabajo. Por ejemplo, cuando se crea un volumen que requiere una cantidad específica de espacio de almacenamiento, puede utilizar el buscador «'Buscar agregado por capacidad disponible'» del comando «'Crear volumen'», que selecciona un agregado con una cantidad específica de espacio disponible y crea el volumen en él.
+
+Puede definir un conjunto de reglas de filtro para recursos de entrada de diccionario, como unidades vFiler, agregados y máquinas virtuales. Las reglas de filtro pueden contener uno o más grupos de reglas. Una regla consta de un atributo de entrada de diccionario, un operador y un valor. El atributo también puede incluir atributos de sus referencias. Por ejemplo, puede especificar una regla para los agregados de la siguiente manera: Enumerar todos los agregados que tienen nombres que comienzan con la cadena "'aggr'" y tienen más de 5 GB de espacio disponible. La primera regla del grupo es el atributo «'nombre'», con el operador «mantarritos con» y el valor «'aggr». La segunda regla para el mismo grupo es el atributo "'available_size_mb'", con el operador "'>'" y el valor "'5000'". Puede definir un conjunto de reglas de filtro junto con filtros públicos. La opción definir reglas de filtro está desactivada si ha seleccionado un buscador. La opción Guardar como Finder se desactiva si ha seleccionado la casilla de verificación definir reglas de filtro.
+
+Además de los filtros y los buscadores, puede utilizar un comando Search o define para buscar los recursos disponibles. El comando search o define es la opción preferida sobre los comandos no-op. El comando Search and define se puede utilizar para definir recursos tanto del tipo de entrada de diccionario certificado como del tipo de entrada de diccionario personalizado. El comando search o define busca recursos pero no realiza ninguna acción en el recurso. Sin embargo, cuando se utiliza un buscador para buscar recursos, se utiliza en el contexto de un comando y las acciones definidas por el comando se ejecutan en los recursos. Los recursos devueltos por un comando search o define se utilizan como variables para los demás comandos del flujo de trabajo.
+
+En la siguiente ilustración, se muestra un filtro para la selección de recursos:
+
+image::../media/resource_selection_5_x.png[selección de recursos 5 x]
+
+
+
+== Ejemplos de selección de recursos en flujos de trabajo predefinidos
+
+Puede abrir los detalles del comando de los siguientes flujos de trabajo predefinidos en el Diseñador para comprender cómo se utilizan las opciones de selección de recursos:
+
+* Cree un volumen NFS de Clustered Data ONTAP
+* Establezca la relación entre clústeres
+* Quite un volumen de Data ONTAP en clúster
+

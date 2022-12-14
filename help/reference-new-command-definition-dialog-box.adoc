@@ -1,0 +1,194 @@
+---
+permalink: help/reference-new-command-definition-dialog-box.html 
+sidebar: sidebar 
+keywords: new, command, definition, dialog box, enable, define, create, workflow, predefined, meet, requirements 
+summary: El cuadro de diálogo Nueva definición de comandos permite definir un nuevo comando. Puede crear comandos nuevos para los flujos de trabajo si los comandos predefinidos no cumplen con los requisitos. 
+---
+= Cuadro de diálogo Nueva definición de comandos
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Nueva definición de comandos permite definir un nuevo comando. Puede crear comandos nuevos para los flujos de trabajo si los comandos predefinidos no cumplen con los requisitos.
+
+* Propiedades
+* Ficha Código
+* Definición de parámetros
+* Pestaña asignación de parámetros
+* Pestaña reservation
+* Pestaña verificación
+
+
+
+
+== Propiedades
+
+Permite especificar las propiedades del comando, como el nombre, la descripción y la versión de la entidad.
+
+* *Nombre*
++
+Permite especificar un nombre para el comando. Debe especificar un nombre para guardar el comando.
+
+* *Versión de entidad*
++
+Permite especificar el número de versión del comando en `major.minor.revision` formato: por ejemplo, 1.0.0.
+
+* *Descripción*
++
+Le permite introducir una descripción para el comando.
+
+* *Representación de cadena*
++
+Permite especificar una representación de cadena para el comando mediante la sintaxis MVFLEX Expression Language (MVEL).
+
++
+Debe especificar la representación de cadena para guardar el comando. La representación de cadena se utiliza para mostrar los detalles del comando en el diseño del flujo de trabajo durante la planificación y ejecución. Sólo debe utilizar los parámetros de un comando en la representación de cadena de ese comando.
+
+* *Tiempo de espera (s)*
++
+Permite especificar el valor de tiempo de espera (en segundos) para el comando. El valor predeterminado es 600 segundos.
+
+* *Tipo de comando*
++
+Permite especificar el tipo de ejecución del comando.
+
++
+** *Ejecución estándar*
++
+Permite ejecutar el comando sin ningún período de espera. La ejecución estándar está seleccionada de forma predeterminada.
+
+** *Espere por condición*
++
+Permite especificar el tiempo (en segundos) durante el cual el comando debe esperar antes de la ejecución. El valor predeterminado es 60 segundos.
+
+
+
+* *Versiones mínimas de software*
++
+Especifica las versiones mínimas del software necesarias para que funcione el comando. Por ejemplo, el software puede ser Clustered Data ONTAP 8.2.0 y vCenter 6.0. Las versiones se muestran como valores separados por comas.
+
+
+
+
+
+== Ficha Código
+
+Permite introducir el código del comando en el lenguaje de secuencias de comandos seleccionado. Puede agregar un nuevo lenguaje de secuencias de comandos seleccionando el idioma requerido en la lista desplegable Idioma de secuencias de comandos.
+
+* *Parámetros de descubrimiento*
++
+Copia los parámetros definidos en el código de PowerShell en la tabla Definición de parámetros y la tabla asignación de parámetros.
+
+
+
+
+
+== Definición de parámetros
+
+Muestra los parámetros definidos en el código que introdujo en la ficha Código.
+
+* *Nombre*
++
+Muestra el nombre del parámetro.
+
+* *Descripción*
++
+Muestra la descripción del parámetro.
+
+* *Obligatorio*
++
+Muestra una casilla de verificación seleccionada para los parámetros obligatorios.
+
+* *Tipo*
++
+Muestra el tipo del parámetro, como cadena, enumeración, matriz o contraseña.
+
+* *Valores*
++
+Muestra el valor establecido para el parámetro.
+
+* *Agregar parámetro*
++
+Permite agregar un parámetro al comando si el lenguaje de scripting seleccionado es Perl.
+
+* *Eliminar parámetro*
++
+Permite eliminar un parámetro del comando si el lenguaje de secuencias de comandos seleccionado es Perl.
+
+
+
+
+
+== Pestaña asignación de parámetros
+
+Permite asignar los parámetros a objetos de diccionario y especificar el atributo y el nombre del objeto.
+
+* *Nombre*
++
+Muestra el nombre del parámetro.
+
+* *Tipo*
++
+Permite seleccionar un objeto de diccionario para el parámetro.
+
+* *Atributo*
++
+Permite especificar el atributo requerido. Puede seleccionar el atributo (si está disponible) o introducir el atributo.
+
+* *Nombre del objeto*
++
+Permite especificar un nombre para el objeto de diccionario.
+
+
+
+
+
+== Pestaña reservation
+
+Le permite reservar los recursos que requiere el comando.
+
+* *Guión de reserva*
++
+Permite introducir una consulta SQL para reservar los recursos que requiere el comando. Esto ayuda a garantizar que los recursos estén disponibles durante una ejecución programada del flujo de trabajo.
+
+* *Representación de reservas*
++
+Permite especificar una representación de cadena para la reserva mediante la sintaxis MVEL. La representación de cadena se utiliza para mostrar los detalles de la reserva en la ventana Reservas.
+
+
+
+
+
+== Pestaña verificación
+
+Permite verificar una reserva y eliminar la reserva después de la ejecución del comando.
+
+* *Secuencia de comandos de verificación*
++
+Permite introducir una consulta SQL para verificar el uso de los recursos que se reservaron en el script de reserva. El script de verificación también verifica si la caché de WFA se ha actualizado y elimina la reserva después de la adquisición de una caché.
+
+* *Verificación de prueba*
++
+Se abre el cuadro de diálogo Verification para realizar una prueba de los parámetros del script de verificación.
+
+
+
+
+
+== Botones de comando
+
+* *Prueba*
++
+Se abre el cuadro de diálogo Test Command <CommandName> en <ScriptLanguage>, que permite probar el comando.
+
+* *Guardar*
++
+Guarda el comando y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

@@ -1,0 +1,14 @@
+---
+permalink: workflows/reference-guidelines-for-wfa-building-blocks.html 
+sidebar: sidebar 
+keywords: aware, guidelines, workflow, automation, building, blocks 
+summary: Debe conocer las directrices para usar los elementos básicos de Workflow Automation. 
+---
+= Directrices para los elementos básicos de WFA
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Debe conocer las directrices para usar los elementos básicos de Workflow Automation.

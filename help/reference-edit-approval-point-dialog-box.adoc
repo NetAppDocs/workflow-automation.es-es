@@ -1,0 +1,64 @@
+---
+permalink: help/reference-edit-approval-point-dialog-box.html 
+sidebar: sidebar 
+keywords: edit, approval, point, dialog box, enable, modify, check point, workflow, execution, resume 
+summary: El cuadro de diálogo Editar punto de aprobación permite modificar un punto de aprobación que se agregó como punto de verificación en un flujo de trabajo para pausar la ejecución del flujo de trabajo y reanudarlo basándose en su aprobación. 
+---
+= Cuadro de diálogo Editar punto de aprobación
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Editar punto de aprobación permite modificar un punto de aprobación que se agregó como punto de verificación en un flujo de trabajo para pausar la ejecución del flujo de trabajo y reanudarlo basándose en su aprobación.
+
+* *Introducir comentario (opcional)*
++
+Permite proporcionar información, como tiempo de cambio, usuario y comentarios, que permite ver cuándo y por qué se puso en pausa o se reanudó la ejecución del flujo de trabajo.
+
++
+Los comentarios del punto de aprobación pueden incluir expresiones MVFLEX Expression Language (MVEL).
+
+* *Introduzca la condición de ejecución (si la hay)*
++
+Permite especificar las siguientes condiciones para la ejecución de un comando:
+
++
+** Siempre
++
+Ejecuta el comando incondicionalmente.
+
+** Si se encuentra la siguiente variable
++
+Permite ejecutar un comando solo cuando se encuentra la variable especificada. Puede especificar la variable en el cuadro.
+
+** Si no se encuentra la siguiente variable
++
+Le permite ejecutar un comando solo cuando no se encuentra la variable especificada. Puede especificar la variable en el cuadro.
+
+** Si LA siguiente expresión ES VERDADERA
++
+Permite ejecutar un comando sólo cuando la expresión MVEL especificada sea "'true'". Puede especificar la expresión en el cuadro.
+
+
+
+
+
+
+
+== Botones de comando
+
+* *Eliminar aprobación*
++
+Permite eliminar el punto de aprobación antes de ejecutar el comando.
+
+* *OK*
++
+Permite modificar los cambios en la configuración del punto de aprobación.
+
+* *Cancelar*
++
+Cancela los cambios, si los hay, y cierra el cuadro de diálogo.
+
+

@@ -1,0 +1,43 @@
+---
+permalink: help/reference-incremental-naming-wizard.html 
+sidebar: sidebar 
+keywords: incremental, naming, wizard, enable, define, value, attribute, search, existing, parameter 
+summary: El Asistente para nombres incrementales permite definir el valor de un atributo basándose en una búsqueda de un parámetro existente. 
+---
+= Asistente de nomenclatura incremental
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El Asistente para nombres incrementales permite definir el valor de un atributo basándose en una búsqueda de un parámetro existente.
+
+* *Criterios de búsqueda para <dictionary object>* existente
++
+Abre el cuadro de diálogo *selección de recursos*, que permite especificar criterios de búsqueda para el objeto de diccionario.
+
+* *Introduzca un valor para <attribute> si no <dictionary object> coincide con los criterios de búsqueda anteriores*
++
+Permite especificar un valor para la <attribute> cuando no se encuentra la <dictionary object> con los criterios de búsqueda especificados.
+
+* *Si se ha encontrado <dictionary object> utilizando criterios de búsqueda anteriores, establezca el valor para <attribute> por*
++
+Permite especificar un valor para la <attribute> cuando no se encuentra la <dictionary object> con los criterios de búsqueda especificados.
+
+* *Introduzca un valor para <attribute> si no <dictionary object> coincide con los criterios de búsqueda anteriores*
++
+Permite seleccionar un método para configurar el valor de la <attribute> si se encuentra la <dictionary object> con los criterios de búsqueda especificados.
+
++
+** *proporcionar un valor de incremento y un sufijo*
++
+Permite introducir un valor numérico para los incrementos y, opcionalmente, especificar un sufijo del nombre del atributo.
+
+** *proporcionar una expresión personalizada*
++
+Permite introducir una expresión personalizada para el valor del atributo. Puede utilizar la sintaxis MVFLEX Expression Language (MVEL) para especificar el valor.
+
+
+
+

@@ -1,0 +1,27 @@
+---
+permalink: windows-install/task-configure-the-timeout-value-for-windows.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, configure, timeout value 
+summary: 'Puede configurar el valor de tiempo de espera para la interfaz gráfica de usuario web de Workflow Automation (WFA), en lugar de utilizar el valor de tiempo de espera predeterminado.' 
+---
+= Configure el valor del tiempo de espera para Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede configurar el valor de tiempo de espera para la interfaz gráfica de usuario web de Workflow Automation (WFA), en lugar de utilizar el valor de tiempo de espera predeterminado.
+
+El valor de tiempo de espera predeterminado para la interfaz gráfica de usuario web de WFA es 180 minutos. Puede configurar el valor de tiempo de espera para satisfacer sus requisitos a través de la CLI. No puede configurar el valor de tiempo de espera desde la interfaz gráfica de usuario web de WFA.
+
+
+NOTE: El valor de tiempo de espera que se establece es un tiempo de espera absoluto en lugar de un tiempo de espera relacionado con la inactividad. Por ejemplo, si establece este valor en 30 minutos, se cerrará la sesión después de 30 minutos, incluso si está activo al final de este tiempo.
+
+.Pasos
+. Inicie sesión como administrador en el equipo host de WFA.
+. Establezca el valor del tiempo de espera:
++
+`installdir bin/wfa -S=timeout value in minutes`
+
+

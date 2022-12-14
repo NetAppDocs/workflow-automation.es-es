@@ -1,0 +1,67 @@
+---
+permalink: rhel-install/task-create-a-certificate-signing-request-for-workflow-automation-linux.html 
+sidebar: sidebar 
+keywords: workflow, automation, wfa, linux, create, certificate, sign, request 
+summary: 'Puede crear una solicitud de firma de certificación (CSR) en Linux para poder utilizar el certificado SSL firmado por una entidad de certificación (CA) en lugar del certificado SSL predeterminado para Workflow Automation (WFA).' 
+---
+= Cree una solicitud de firma de certificación para Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede crear una solicitud de firma de certificación (CSR) en Linux para poder utilizar el certificado SSL firmado por una entidad de certificación (CA) en lugar del certificado SSL predeterminado para Workflow Automation (WFA).
+
+* Debe tener privilegios raíz para el sistema Linux en el que haya instalado WFA.
+* Debe haber sustituido el certificado SSL predeterminado que proporciona WFA.
+
+
+La ruta de instalación predeterminada de WFA se utiliza en este procedimiento. Si ha cambiado la ruta predeterminada durante la instalación, debe utilizar la ruta de instalación personalizada de WFA.
+
+.Pasos
+. Inicie sesión como usuario raíz en el equipo host de WFA.
+. Abra un indicador de comandos de shell en el servidor de WFA y cambie los directorios a la siguiente ubicación: <OpenJDK_install_location>/bin
+. Cree un archivo CSR:
++
+`keytool -certreq -keystore WFA_install_location/wfa/jboss/standalone/configuration/keystore/wfa.keystore -alias "ssl keystore" -file /root/file_name.csr`
+
++
+File_name es el nombre del archivo CSR.
+
+. Cuando se le solicite, introduzca la contraseña (predeterminada o nueva).
++
+La contraseña predeterminada es una contraseña cifrada generada aleatoriamente.
+
++
+Para obtener y descifrar la contraseña predeterminada, siga los pasos del artículo de Knowledge base link:https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FOnCommand_Suite%2FHow_to_renew_the_self-signed_certificate_on_WFA_5.1.1.0.4%253F["Cómo renovar el certificado autofirmado en WFA 5.1.1.0.4"^]
+
++
+Para utilizar una nueva contraseña, siga los pasos del artículo de la base de conocimientos link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/OnCommand_Suite/How_to_update_a_new_password_for_the_keystore_in_WFA["Cómo actualizar una contraseña nueva para el almacén de claves en WFA."^]
+
+. Envíe el archivo file_name.csr a la CA para obtener un certificado firmado.
++
+Consulte el sitio web de CA para obtener más información.
+
+. Descargue un certificado de cadena de la CA y, a continuación, importe el certificado de cadena al almacén de claves:
++
+`keytool -import -alias "ssl keystore CA certificate" -keystore WFA_install_location/wfa/jboss/standalone/configuration/keystore/wfa.keystore" -trustcacerts -file chain_cert.cer`
+
++
+`chain_cert.cer` Es el archivo de certificado de cadena que se recibe de la CA. El archivo debe tener el formato X.509.
+
+. Importe el certificado firmado que ha recibido de la CA:
++
+`keytool -import -alias "ssl keystore" -keystore WFA_install_location/wfa/jboss/standalone/configuration/keystore/wfa.keystore" -trustcacerts -file certificate.cer`
+
++
+`certificate.cer` Es el archivo de certificado de cadena que se recibe de la CA.
+
+. Inicie los servicios de WFA:
++
+`./wfa --start=DB`
+
++
+`./wfa --start=WFA`
+
+

@@ -1,0 +1,59 @@
+---
+permalink: rhel-install/task-configure-wfa-with-vcs-using-configuration-scripts-linux.html 
+sidebar: sidebar 
+keywords: configure, workflow, automation, vcs 
+summary: 'Tras instalar Workflow Automation (WFA) en VCS, debe configurar WFA en VCS utilizando scripts de configuración para alta disponibilidad.' 
+---
+= Configuración de Workflow Automation en VCS
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Tras instalar Workflow Automation (WFA) en VCS, debe configurar WFA en VCS utilizando scripts de configuración para alta disponibilidad.
+
+* Debe haber instalado la misma versión de WFA en los dos nodos del clúster.
+* Debe tener la misma ruta de instalación para ambos nodos.
+* Debe crear un backup de WFA.
+
+
+.Pasos
+. Inicie sesión en el primer nodo del clúster.
+. Utilice Cluster Manager para comprobar que se está ejecutando el estado de alta disponibilidad de ambos nodos.
+. En el símbolo del sistema, ejecute la secuencia de comandos ha_setup.pl para mover los datos de WFA a la ubicación compartida y configurar WFA con VCS para recuperación tras fallos: `perl ha_setup.pl --first [-t type_of_cluster_vcs] [-g cluster_group_name] [-e NIC_card_name] [-i IP_address] [-m Netmask] [-n cluster_name] [-f mount_point_of_shared_LUN] [-v name_of_logical_volume] [-d disk_group_name] [-l install_directory]`
++
+Para la ubicación de instalación predeterminada, el script está disponible en /opt/netapp/wfa/bin/ha/.
+
++
+`perl ha_setup.pl --first -t vcs -g WFA -e eth0 -i 10.238.170.3 -m 255.255.255.0 -n wfa_cluster -f /mnt/wfa_mount/ -v lun_volume -d lun_dg -l /opt/netapp/wfa`
+
+. Utilice Cluster Manager para verificar que los servicios de WFA, el punto de montaje, la IP virtual, el NIC y el grupo de volúmenes se han añadido al grupo de clústeres.
+. Utilice Cluster Manager para mover los recursos de WFA al nodo secundario:
++
+.. Seleccione y haga clic con el botón derecho en el grupo de clústeres.
+.. Seleccione *Cambiar a* > *nodo secundario*.
+
+
+. Confirmar que el montaje de los datos, la IP virtual, el grupo de volúmenes y las tarjetas NIC están activos en el segundo nodo del clúster.
+. Desconecte los servicios de WFA mediante Cluster Manager:
++
+.. Seleccione *WFA* > *aplicación* > *wfa-Server*.
+.. Haga clic con el botón derecho del ratón y seleccione *sin conexión*.
+.. Seleccione *WFA* > *aplicación* > *wfa-dB*.
+.. Haga clic con el botón derecho del ratón y seleccione *sin conexión*.
+
+
+. En el símbolo del sistema, ejecute el script ha_setup.pl en el nodo secundario del clúster para configurar WFA para utilizar los datos desde la ubicación compartida: `perl ha_setup.pl --join [-t type_of_cluster_vcs] [-f mount_point_of_shared_LUN]`
++
+Para la ubicación de instalación predeterminada, el script está disponible en /opt/netapp/wfa/bin/ha/.
+
++
+`perl ha_setup.pl --join -t vcs -f /mnt/wfa_mount/`
+
+. Vaya a Administrador de clústeres y haga clic en *Grupo de clústeres* > *en línea* > *servidor*.
++
+Puede que tarde un rato en que el Administrador del clúster muestre que los recursos de la aplicación están en línea. También puede hacer clic con el botón derecho del ratón en los recursos de la aplicación y comprobar si los recursos están en línea.
+
+. Asegúrese de que es posible acceder a WFA a través de la dirección IP utilizada durante esta configuración.
+

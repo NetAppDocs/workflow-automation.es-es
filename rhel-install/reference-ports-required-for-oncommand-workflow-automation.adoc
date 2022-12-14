@@ -1,0 +1,184 @@
+---
+permalink: rhel-install/reference-ports-required-for-oncommand-workflow-automation.html 
+sidebar: sidebar 
+keywords: ports, required, workflow, automation 
+summary: 'Si utiliza un firewall, debe tener en cuenta los puertos necesarios para Workflow Automation (WFA).' 
+---
+= Puertos necesarios para Workflow Automation
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Si utiliza un firewall, debe tener en cuenta los puertos necesarios para Workflow Automation (WFA).
+
+Los números de puerto predeterminados aparecen en esta sección. Si desea utilizar un número de puerto no predeterminado, debe abrir ese puerto para la comunicación. Para obtener más detalles, consulte la documentación del firewall.
+
+En la siguiente tabla se enumeran los puertos predeterminados que deben estar abiertos en el servidor de WFA:
+
+[cols="4*"]
+|===
+| Puerto | Protocolo | Dirección | Específico 
+
+
+ a| 
+80, 443
+ a| 
+HTTP Y HTTPS
+ a| 
+Entrantes
+ a| 
+Apertura de WFA e inicio de sesión
+
+
+
+ a| 
+80, 443, 22
+ a| 
+HTTP, HTTPS, SSH
+ a| 
+Salientes
+ a| 
+Ejecución de comandos (ZAPI, PowerCLI)
+
+
+
+ a| 
+445, 139, 389, 636
+ a| 
+Microsoft-DS, NetBIOS-ssn, AD LDAP y AD LDAPS
+ a| 
+Salientes
+ a| 
+Autenticación LDAP de Microsoft Active Directory
+
+
+
+ a| 
+161
+ a| 
+SNMP
+ a| 
+Salientes
+ a| 
+Envío de mensajes SNMP sobre el estado de los flujos de trabajo
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Entrantes
+ a| 
+El almacenamiento en caché de un usuario de solo lectura
+
+
+
+ a| 
+25
+ a| 
+SMTP
+ a| 
+Salientes
+ a| 
+Notificación por correo
+
+
+
+ a| 
+80, 443, 25
+ a| 
+HTTP, HTTPS, SMTP
+ a| 
+Salientes
+ a| 
+Enviando mensajes de AutoSupport
+
+
+
+ a| 
+514
+ a| 
+Syslog
+ a| 
+Salientes
+ a| 
+Enviar registros a un servidor de syslog
+
+|===
+En la siguiente tabla, se enumeran los puertos predeterminados que se deben abrir en el servidor de Unified Manager:
+
+[cols="4*"]
+|===
+| Puerto | Protocolo | Dirección | Específico 
+
+
+ a| 
+2638
+ a| 
+Sybase
+ a| 
+Entrantes
+ a| 
+El almacenamiento de datos en caché de Active IQ Unified Manager anteriores a 6.0
+
+
+
+ a| 
+3306
+ a| 
+MySQL
+ a| 
+Entrantes
+ a| 
+Datos en almacenamiento en caché desde Active IQ Unified Manager 6.0 y versiones posteriores
+
+
+
+ a| 
+8088, 8488
+ a| 
+HTTP Y HTTPS
+ a| 
+Entrantes
+ a| 
+Almacenar datos en caché de Performance Advisor, que forma parte de Active IQ Unified Manager anterior a 6.0
+
+|===
+En la siguiente tabla, se enumera el puerto predeterminado que debe estar abierto en VMware vCenter:
+
+[cols="4*"]
+|===
+| Puerto | Protocolo | Dirección | Específico 
+
+
+ a| 
+443
+ a| 
+HTTPS
+ a| 
+Entrantes
+ a| 
+Almacenamiento de datos en caché desde VMware vCenter
+
+|===
+En la siguiente tabla se enumera el puerto predeterminado que debe estar abierto en el equipo host SNMP:
+
+[cols="4*"]
+|===
+| Puerto | Protocolo | Dirección | Específico 
+
+
+ a| 
+162
+ a| 
+SNMP
+ a| 
+Entrantes
+ a| 
+Recibir mensajes SNMP sobre el estado de los flujos de trabajo
+
+|===

@@ -1,0 +1,62 @@
+---
+permalink: help/reference-clone-category-dialog-box.html 
+sidebar: sidebar 
+keywords: clone, category, dialog box, enable, copy, workflow 
+summary: El cuadro de diálogo Clone Category permite copiar una categoría de flujo de trabajo y editar la categoría. 
+---
+= Cuadro de diálogo Categoría de clon
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+El cuadro de diálogo Clone Category permite copiar una categoría de flujo de trabajo y editar la categoría.
+
+* *Nombre*
++
+Permite editar el nombre de la categoría. El nombre de la categoría que ha seleccionado para clonar se utiliza como nombre del clon y se anexa con - copy de forma predeterminada.
+
+* *Descripción*
++
+Permite introducir una descripción para la categoría.
+
+* *Flujos de trabajo disponibles*
++
+Muestra todos los flujos de trabajo disponibles que no se han movido al cuadro flujos de trabajo seleccionados.
+
+* *Flujos de trabajo seleccionados*
++
+Muestra todos los flujos de trabajo seleccionados para la categoría.
+
+* *Categoría utilizada para la autorización de flujo de trabajo*
++
+Permite seleccionar usuarios con función de operador que puedan ejecutar la categoría. De forma predeterminada, la casilla de verificación no está seleccionada y la categoría está disponible para todos los usuarios.
+
+* *Operadores disponibles*
++
+Muestra todos los usuarios con función de operador.
+
+* *Operadores seleccionados*
++
+Muestra los usuarios que tienen permiso para ejecutar la categoría.
+
+
+
+
+
+== Botones de comando
+
+* *Botones de selección*
++
+Permite mover la entrada seleccionada de un cuadro a otro.
+
+* *Guardar*
++
+Guarda la categoría y cierra el cuadro de diálogo.
+
+* *Cancelar*
++
+No guarda la categoría y cierra el cuadro de diálogo.
+
+

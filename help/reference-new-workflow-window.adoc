@@ -1,0 +1,110 @@
+---
+permalink: help/reference-new-workflow-window.html 
+sidebar: sidebar 
+keywords: new, workflow, window, display, created, associated, command 
+summary: La ventana Nuevo flujo de trabajo muestra un flujo de trabajo recién creado y sus comandos asociados. 
+---
+= Nueva ventana de flujo de trabajo
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana *Nuevo flujo de trabajo* muestra un flujo de trabajo recién creado y sus comandos asociados.
+
+
+
+== Nuevo flujo de trabajo
+
+La ventana *Nuevo flujo de trabajo* muestra el nombre del flujo de trabajo en el encabezado de la ventana. Los comandos asociados se muestran como cuadros azules en columnas que se presentan en el orden secuencial de ejecución: Lectura de izquierda a derecha, de arriba a abajo. Las variables y los objetos de cada comando se muestran como cuadros grises en la columna del comando.
+
+* *Insertar una fila*
++
+Agrega una fila nueva por encima o debajo de la fila seleccionada en el flujo de trabajo.
+
++
+Puede hacer clic en image:../media/add_row2_wfa_icon.gif[""] para agregar una fila debajo de la última fila disponible.
+
+* *Copiar fila*
++
+Copia la fila seleccionada del flujo de trabajo y la guarda en el portapapeles. Al copiar una fila no se copian los detalles de repetición establecidos para la fila.
+
+* *Pegar fila*
++
+Coloca el último elemento guardado en el portapapeles en una nueva fila debajo de la fila seleccionada. Los nombres únicos se utilizan para las variables; sin embargo, las variables en las expresiones no cambian.
+
+* *Repetir fila*
++
+Abre el cuadro de diálogo *Detalles de repetición de fila*.
+
+* *Editar repetición de fila*
++
+Abre el cuadro de diálogo *Detalles de repetición de fila*, que permite modificar el conjunto de acciones *repetir fila* para la fila seleccionada.
+
+* *Eliminar repetición de fila*
++
+Cancela el conjunto de acciones *repetir fila* del cuadro de diálogo *Detalles de repetición de fila* de la fila seleccionada.
+
+* *Agregar condición*
++
+Abre el cuadro de diálogo Condiciones para el <row number> de fila, que permite seleccionar una condición. La condición seleccionada se aplica a todos los comandos de la fila. Todos los comandos de la fila se ejecutarán sólo si se cumple la condición seleccionada.
+
+* *Eliminar fila*
++
+Elimina la fila seleccionada del flujo de trabajo.
+
+* *Nuevo punto de aprobación*
++
+Puede hacer clic en image:../media/approval_point_disabled.gif[""] Para abrir el cuadro de diálogo *Nuevo punto de aprobación*, que permite agregar un punto de aprobación antes de la ejecución del comando.
+
+* *Editar punto de aprobación*
++
+Puede hacer clic en image:../media/approval_point_enabled.gif[""] Para abrir el cuadro de diálogo *Editar punto de aprobación*, que permite editar el comentario del punto de aprobación.
+
+* *Agregar parámetros de comando*
++
+Agrega parámetros para un comando de la fila seleccionada.
+
++
+Puede colocar el cursor debajo del comando seleccionado, en la fila correspondiente y hacer clic en image:../media/add_object_wfa_icon.gif[""] Para abrir el cuadro de diálogo parámetros para <command_name>.
+
+* *Editar parámetros de comando*
++
+Abre el cuadro de diálogo parámetros para <command_name> para permitirle modificar los parámetros seleccionados para un comando.
+
++
+Puede colocar el cursor sobre el cuadro gris que desee editar y hacer clic para abrir el cuadro de diálogo parámetros para <command_name>.
+
+* *Eliminar parámetros de comando*
++
+Quita el parámetro.
+
++
+Puede mover el cursor sobre el cuadro gris que desea eliminar y hacer clic en la "'X'" de la esquina superior derecha del cuadro gris.
+
+
+
+
+
+== Botones de comando
+
+Los botones de comando están disponibles en la parte inferior de la ventana de flujo de trabajo. También se puede acceder a los comandos desde el menú contextual de la ventana.
+
+* *Vista previa*
++
+Abre el cuadro de diálogo *flujo de trabajo de vista previa*, que permite especificar atributos de entrada de usuario.
+
+* *Guardar como*
++
+Permite guardar el flujo de trabajo con un nuevo nombre.
+
+* *Guardar*
++
+Guarda el flujo de trabajo.
+
+* *Cerrar*
++
+Cierra la ventana. En el proceso, si se ha realizado algún cambio en la configuración, se abre un cuadro de diálogo *confirmación de guardar cambios*, que le pide que guarde los cambios, cierre la ventana sin guardar los cambios o cancele la acción de cierre.
+
+

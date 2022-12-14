@@ -1,0 +1,171 @@
+---
+permalink: help/reference-monitoring-window.html 
+sidebar: sidebar 
+keywords: monitoring, window, display, details, result, planning, execution, phase, workflow, tab, read-only, content, areas, application, select, preview, option 
+summary: La ventana Supervisión muestra detalles sobre los resultados de la fase de planificación o ejecución del flujo de trabajo. Las fichas de la ventana muestran contenido de sólo lectura. Puede acceder a esta ventana desde diversas áreas de la aplicación WFA al seleccionar las opciones Detalles, Vista previa o Ejecutar. 
+---
+= Ventana Supervisión
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+La ventana Supervisión muestra detalles sobre los resultados de la fase de planificación o ejecución del flujo de trabajo. Las fichas de la ventana muestran contenido de sólo lectura. Puede acceder a esta ventana desde varias áreas de la aplicación WFA al seleccionar las opciones *Detalles*, *Vista previa* o *Ejecutar*.
+
+* Área de estado
+* Pestaña de flujo
+* Ficha Detalles
+* Plan de ejecución
+* Entradas del usuario
+* Parámetros de retorno
+* Historial
+
+
+
+
+== Área de estado
+
+El área Estado sobre las fichas muestra información detallada sobre el resultado del proceso de planificación o ejecución.
+
+* *Estado del flujo de trabajo*
++
+En la parte superior de la ventana, un encabezado con código de color muestra el resultado del proceso de planificación o ejecución:
+
++
+** El verde indica que una acción se ha realizado correctamente; por ejemplo, Planificación completada o ejecución completada.
+** El rojo indica error: Por ejemplo, error de planificación o error de ejecución.
+
+
+* * Menos/más información acción*
++
+Este vínculo de acción está disponible cuando se produce un error en la vista previa o en el proceso de ejecución. Puede alternar entre *menos info* y *más info* mediante el enlace de acción. En función de la acción, el vínculo abre o cierra el cuadro de información para mostrar más o menos información sobre el resultado fallido.
+
+* *Estado detallado*
++
+Este cuadro está disponible cuando falla el proceso de vista previa o ejecución. Muestra detalles sobre el proceso de planificación o ejecución. Cuando un proceso falla, este cuadro está abierto de forma predeterminada y proporciona detalles de la causa del fallo.
+
+
+
+
+
+== Pestaña de flujo
+
+La ficha flujo proporciona una presentación gráfica del flujo de trabajo.
+
+Los comandos y los flujos de trabajo secundarios se muestran en la fila superior con sus objetos y variables que se muestran a continuación. El estado de los detalles del comando y los flujos de trabajo secundarios durante la vista previa o la ejecución se muestra utilizando varios colores.
+
+La siguiente tabla muestra lo siguiente:
+
+* Combinación de colores utilizada para mostrar el estado del comando o la ejecución del flujo de trabajo
+* Los iconos utilizados en la ventana
+
+
+[cols="25h,~"]
+|===
+| Combinación de colores e icono | Estado 
+
+
+ a| 
+image:../media/execution_successful.gif["cuadro verde"]
+ a| 
+La ejecución se ha realizado correctamente
+
+
+
+ a| 
+image:../media/execution_failed.gif["cuadro rojo"]
+ a| 
+Error de ejecución
+
+
+
+ a| 
+image:../media/execution_in_progress.gif["cuadro azul"]
+ a| 
+Ejecución en curso
+
+
+
+ a| 
+image:../media/execution_skipped.gif["cuadro gris"]
+ a| 
+Ejecución omitida
+
+
+
+ a| 
+image:../media/waiting_for_approval.gif["cuadro azul"]
+ a| 
+Encabezado de flujo de trabajo hijo
+
+
+
+ a| 
+image:../media/info_icon_execute_wfa.gif[""]
+ a| 
+Abre los registros
+
+
+
+ a| 
+image:../media/approval_point_icon.gif["Icono de punto de aprobación"]
+ a| 
+El flujo de trabajo hijo incluye un punto de aprobación
+
+|===
+
+
+== Ficha Detalles
+
+La ficha Detalles proporciona información más detallada sobre el flujo de trabajo. La información se proporciona en formato de tabla, con los comandos de la fila de encabezado y los objetos y variables asociados que se enumeran a continuación. Esta pestaña proporciona a cada comando todos sus argumentos y parámetros.
+
+Esta ficha es útil para depurar una vista previa o ejecución fallida del flujo de trabajo.
+
+
+
+== Plan de ejecución
+
+La ficha Plan de ejecución proporciona una lista traducida de los comandos del flujo de trabajo y sus argumentos que se están ejecutando (scripts o comandos).
+
+Puede utilizar esta ficha para depurar una vista previa o ejecución fallidas del flujo de trabajo.
+
+
+
+== Ficha Entradas de usuario
+
+La ficha Entradas de usuario muestra los valores introducidos por los usuarios durante la vista previa o la ejecución del flujo de trabajo.
+
+Puede utilizar las flechas de ordenación (image:../media/wfa_sortarrow_down_icon.gif["Icono de clasificación"] o. image:../media/wfa_sortarrow_up_icon.gif["Icono para ordenar"]) en el encabezado de columna para ordenar las entradas de columna en orden ascendente o descendente.
+
+
+
+== Parámetros de retorno
+
+En la ficha parámetros de retorno se muestra el resultado del flujo de trabajo, por nombre de parámetro y valor de parámetro.
+
+Puede acceder a estos parámetros de devolución mediante servicios web.
+
+
+
+== Historial
+
+La ficha Historial muestra los cambios en los Estados del flujo de trabajo, cuando se produjo el cambio de estado, quién inició la acción y el mensaje asociado al cambio de estado.
+
+
+
+== Botones de comando
+
+* *Descargar registros*
++
+Le permite descargar una `zip` archivo de todos los archivos de registro, incluidos los registros de ejecución específicos.
+
+* *Visibilidad de columna*
++
+Permite mostrar u ocultar columnas en la ficha Detalles.
+
+* *OK*
++
+Cierra la ventana Supervisión.
+
+

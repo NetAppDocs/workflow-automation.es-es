@@ -1,0 +1,57 @@
+---
+permalink: rhel-install/task-upgrade-mysql-on-linux.html 
+sidebar: sidebar 
+keywords: oncommand, workflow, automation, upgrade, mysql, linux 
+summary: Puede realizar la actualización a una versión más reciente de MySQL en el servidor Linux en el que está instalado OnCommand Workflow Automation para obtener soluciones para vulnerabilidades de seguridad. 
+---
+= Actualice MySQL en Linux
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Puede realizar la actualización a una versión más reciente de MySQL en el servidor Linux en el que está instalado OnCommand Workflow Automation para obtener soluciones para vulnerabilidades de seguridad.
+
+Debe tener privilegios raíz para el sistema Linux en el que está instalado WFA.
+
+
+NOTE: Antes de reinstalar WFA 4.2, debe eliminar el directorio de datos MySQL si ha desinstalado MySQL.
+
+Solo puede actualizar a actualizaciones menores de MySQL 5.7; por ejemplo, de 5.7.22 a 5.7.26. Por ejemplo, la versión 5.8 de no puede actualizarse a las versiones principales de MySQL.
+
+.Pasos
+. Inicie sesión como usuario raíz en el equipo host de WFA.
+. Descargue el paquete MySQL Community Server .rpm más reciente en el sistema de destino.
+. Destar el paquete a un directorio del sistema de destino.
+. Obtendrá varios paquetes .rpm en el directorio después de anular el paquete, pero WFA sólo necesita los siguientes paquetes rpm:
++
+** mysql-community-client-5.7.x.
+** mysql-community-libs-5.7.x.
+** mysql-community-server-5.7.x.
+** mysql-community-common-5.7.x.
+** mysql-community-libs-compat-5.7.x elimine todos los demás paquetes .rpm. La instalación de todos los paquetes en un paquete de RPM no causará ningún problema.
+
+
+. En el símbolo del sistema, detenga la base de datos y los servicios del servidor de WFA:
++
+`service wfa-db stop`
+
++
+`service wfa-server stop`
+
+. Invoque la actualización de MySQL mediante el siguiente comando:
++
+`rpm -uvh *.rpm`
+
++
+`*.rpm` Hace referencia a los paquetes .rpm del directorio en el que se descargó la versión más reciente de MySQL.
+
+. Inicie los servicios de WFA:
++
+`service wfa-db start`
+
++
+`service wfa-server start`
+
+
