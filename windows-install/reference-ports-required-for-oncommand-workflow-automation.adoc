@@ -117,17 +117,6 @@ En la siguiente tabla, se enumeran los puertos predeterminados que se deben abri
 
 
  a| 
-2638
- a| 
-Sybase
- a| 
-Entrantes
- a| 
-El almacenamiento de datos en caché de Active IQ Unified Manager anteriores a 6.0
-
-
-
- a| 
 3306
  a| 
 MySQL
@@ -135,17 +124,6 @@ MySQL
 Entrantes
  a| 
 Datos en almacenamiento en caché desde Active IQ Unified Manager 6.0 y versiones posteriores
-
-
-
- a| 
-8088, 8488
- a| 
-HTTP Y HTTPS
- a| 
-Entrantes
- a| 
-Almacenar datos en caché de Performance Advisor, que forma parte de Active IQ Unified Manager anterior a 6.0
 
 |===
 En la siguiente tabla, se enumera el puerto predeterminado que debe estar abierto en VMware vCenter:

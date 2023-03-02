@@ -41,7 +41,6 @@ SQL
  a| 
 En la lista *Tipo de controlador*, seleccione uno de los siguientes controladores que sean adecuados para el origen de datos:
 
-** *Sybase jConnect3*
 ** *Conector MySQL/J*
 ** *Controlador JDBC del servidor MySQL 3.0*
 ** *Controlador Oracle JDBC 11.2.0.3*

@@ -13,7 +13,6 @@ summary: 'Debe configurar una conexión con un origen de datos en OnCommand Work
 [role="lead"]
 Debe configurar una conexión con un origen de datos en OnCommand Workflow Automation (WFA) para adquirir datos del origen de datos.
 
-* Para versiones de Active IQ Unified Manager anteriores a 6.0, debe haber ejecutado la versión más reciente de la herramienta ocsetup en el servidor de Unified Manager para habilitar y configurar el acceso remoto de solo lectura a la base de datos.
 * Para Active IQ Unified Manager 6.0 y versiones posteriores, debe haber creado una cuenta de usuario de base de datos en el servidor de Unified Manager.
 +
 Consulte la ayuda en línea de _OnCommand Unified Manager_ para obtener más detalles.
@@ -29,15 +28,6 @@ A continuación, se muestran los números de puerto TCP predeterminados:
 [cols="3*"]
 |===
 | Número de puerto TCP | La versión del servidor de Unified Manager | Descripción 
-
-
- a| 
-2638
- a| 
-5.x.
- a| 
-Servidor de bases de datos SQL Anywhere de Sybase
-
 
 
  a| 
@@ -113,23 +103,9 @@ Según el tipo de origen de datos seleccionado, los campos de puerto, nombre de 
 
 
  a| 
-Versiones de Active IQ Unified Manager anteriores a 6.0
- a| 
-Introduzca el nombre de usuario y la contraseña que utilizó para reemplazar las credenciales predeterminadas mientras ejecuta la herramienta de configuración.
-
-
-
- a| 
 Active IQ Unified Manager 6.3 y posteriores
  a| 
 Introduzca las credenciales de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager. Consulte _Ayuda en línea de Unified Manager de OnCommand_ para obtener información detallada sobre la creación de una cuenta de usuario de base de datos.
-
-
-
- a| 
-Performance Advisor para (versiones de Active IQ Unified Manager anteriores a 6.0)
- a| 
-Introduzca las credenciales de un usuario de Active IQ Unified Manager con el rol mínimo de GlobalRead.
 
 [NOTE]
 ====

@@ -812,7 +812,6 @@
   <block id="5bce7132116e8888b4b2b62a613b8940" category="list-text">Reinicie *NetApp WFA Database* y los servicios *NetApp WFA Server*.</block>
   <block id="24856dbc0a3b9e55bf33f94ba0bc7792" category="summary">Debe configurar una conexión con un origen de datos en OnCommand Workflow Automation (WFA) para adquirir datos del origen de datos.</block>
   <block id="fa9021218f4bfd84ad59e7452d519f2d" category="doc">Configurar un origen de datos</block>
-  <block id="63280af4d8cba0858ac1dff86ceeed0c" category="list-text">Para versiones de Active IQ Unified Manager anteriores a 6.0, debe haber ejecutado la versión más reciente de la herramienta ocsetup en el servidor de Unified Manager para habilitar y configurar el acceso remoto de solo lectura a la base de datos.</block>
   <block id="f03b31ab5e7ee797f31fba5695a8e7a4" category="list-text">Para Active IQ Unified Manager 6.0 y versiones posteriores, debe haber creado una cuenta de usuario de base de datos en el servidor de Unified Manager.</block>
   <block id="731d8fd16ef341f5ba2ee8e6445885f1" category="paragraph">Consulte la ayuda en línea de _OnCommand Unified Manager_ para obtener más detalles.</block>
   <block id="1aeeceb7211593642d7ca1f8a79dde77" category="list-text">El puerto TCP para conexiones entrantes en el servidor de Unified Manager debe estar abierto.</block>
@@ -820,9 +819,6 @@
   <block id="1475d72dae12d2f3edff1276e81ef17a" category="paragraph">A continuación, se muestran los números de puerto TCP predeterminados:</block>
   <block id="7d2578b5ef3fcde7596cf509d8c62bd1" category="cell">Número de puerto TCP</block>
   <block id="b95aa9b32e368a8ea35037d171bb7505" category="cell">La versión del servidor de Unified Manager</block>
-  <block id="06c284d3f757b15c02f47f3ff06dc275" category="paragraph">2638</block>
-  <block id="fbb954d1cb26c988d8f75dff9ba7ee7d" category="paragraph">5.x.</block>
-  <block id="6ef6d5474ca30598a3bfe534f33c9c81" category="paragraph">Servidor de bases de datos SQL Anywhere de Sybase</block>
   <block id="16fc18d787294ad5171100e33d05d4e2" category="paragraph">3306</block>
   <block id="4b482edf238f3e07a3e0c730e500a608" category="paragraph">6.x.</block>
   <block id="df55d916b5a005baf61e609993b7a1d3" category="paragraph">Servidor de bases de datos MySQL</block>
@@ -846,12 +842,8 @@
   <block id="178ca761d0d2a2b23f496d084da80e04" category="paragraph">Según el tipo de origen de datos seleccionado, los campos de puerto, nombre de usuario, contraseña y tiempo de espera pueden completarse automáticamente con los datos predeterminados, si están disponibles. Puede editar estas entradas según sea necesario.</block>
   <block id="4bf06b7c0419db9c339b3ad9943b84d5" category="list-text">Elija una acción adecuada:</block>
   <block id="0ba2b3e0a887666765eb2d690768c576" category="cell">Durante...</block>
-  <block id="9b81833dee31a4fba0f609d1219a5f57" category="paragraph">Versiones de Active IQ Unified Manager anteriores a 6.0</block>
-  <block id="95f0b5290415893233cc34de5758d586" category="paragraph">Introduzca el nombre de usuario y la contraseña que utilizó para reemplazar las credenciales predeterminadas mientras ejecuta la herramienta de configuración.</block>
   <block id="667785fae0085225c5366c4a23da8190" category="paragraph">Active IQ Unified Manager 6.3 y posteriores</block>
   <block id="f4e2003dab44b20be7ebbdc4d0aca893" category="paragraph">Introduzca las credenciales de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager. Consulte _Ayuda en línea de Unified Manager de OnCommand_ para obtener información detallada sobre la creación de una cuenta de usuario de base de datos.</block>
-  <block id="8e98ef93e911e1cfc94baedd532e1d80" category="paragraph">Performance Advisor para (versiones de Active IQ Unified Manager anteriores a 6.0)</block>
-  <block id="5b7c5e612c4bc4c6daf1f284fc0eaf76" category="paragraph">Introduzca las credenciales de un usuario de Active IQ Unified Manager con el rol mínimo de GlobalRead.</block>
   <block id="c4d0dc56b9499d93190e5d1eeb6a770a" category="paragraph">No debe proporcionar las credenciales de una cuenta de usuario de base de datos de Active IQ Unified Manager que se creó mediante la interfaz de línea de comandos o la herramienta ocsetup.</block>
   <block id="3e393ea987c85f12dc4d4200230d1e61" category="paragraph">VMware vCenter Server (solo para Windows)</block>
   <block id="35b1154e1618e5e619ad933951972c37" category="paragraph">(Solo para Windows) Introduzca el nombre de usuario y la contraseña del usuario que creó en VMware vCenter Server.</block>
@@ -1019,11 +1011,7 @@
   <block id="6da6e44dc9987246944fdf9de3d4e794" category="paragraph">Syslog</block>
   <block id="2975351d18f6b6cc0f00ab465dbb31ef" category="paragraph">Enviar registros a un servidor de syslog</block>
   <block id="886093243084825f398ae29b24861ceb" category="paragraph">En la siguiente tabla, se enumeran los puertos predeterminados que se deben abrir en el servidor de Unified Manager:</block>
-  <block id="4e6ac8e997ca8f5896cbc28cad3ede24" category="paragraph">Sybase</block>
-  <block id="97d22c4200c50a78603b99f64abefbd5" category="paragraph">El almacenamiento de datos en caché de Active IQ Unified Manager anteriores a 6.0</block>
   <block id="7fd34732c43ed1c77aa28c7cebea1acf" category="paragraph">Datos en almacenamiento en caché desde Active IQ Unified Manager 6.0 y versiones posteriores</block>
-  <block id="c2431245e313e6c2fb21537cf8c60e15" category="paragraph">8088, 8488</block>
-  <block id="7b19e159d97af652b6091979fc7173f5" category="paragraph">Almacenar datos en caché de Performance Advisor, que forma parte de Active IQ Unified Manager anterior a 6.0</block>
   <block id="42ad4e935313e6d8619faa0c109c4b92" category="paragraph">En la siguiente tabla, se enumera el puerto predeterminado que debe estar abierto en VMware vCenter:</block>
   <block id="13f3cf8c531952d72e5847c4183e6910" category="paragraph">443</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="paragraph">HTTPS</block>
@@ -2771,7 +2759,6 @@
   <block id="7ae089fbf80f6b18bf1973d9ae3af6c8" category="cell">Si seleccionó...</block>
   <block id="9778840a0100cb30c982876741b0b5a2" category="paragraph">SQL</block>
   <block id="88381311eb47da741a4d0f73ef520fb1" category="paragraph">En la lista *Tipo de controlador*, seleccione uno de los siguientes controladores que sean adecuados para el origen de datos:</block>
-  <block id="5e20823f83b63582726b65a7ea629ed8" category="list-text">*Sybase jConnect3*</block>
   <block id="9985bfec1629ffdbc2501ffe2c6009aa" category="list-text">*Conector MySQL/J*</block>
   <block id="21cd4f6fe21a7a1a50297203f1801051" category="list-text">*Controlador JDBC del servidor MySQL 3.0*</block>
   <block id="65b0ace1e497208f5d6fed9f4cdd1392" category="list-text">*Controlador Oracle JDBC 11.2.0.3*</block>
@@ -2988,7 +2975,6 @@
   <block id="b73a71e1c1c36bbca0bac4713db9e2af" category="paragraph">No guarda la categoría y cierra el cuadro de diálogo.</block>
   <block id="7c0452a44785f9c17bb51b522806f371" category="summary">La ventana Cache Queries (consultas en caché) le permite gestionar las consultas en caché para las entradas del diccionario WFA y sus tipos de origen de datos asociados.</block>
   <block id="fe934c5c006c32e2f5a1eddc16c8312d" category="doc">Consultas en caché</block>
-  <block id="3d6f64a6ca1bcff688912eefa7f9bbed" category="paragraph">Una consulta de caché es una consulta SQL que recupera los datos necesarios de la tabla especificada en la consulta. Una consulta de caché está asociada con una entrada de diccionario y uno o más tipos de origen de datos, por ejemplo, la consulta de caché para *volumen (almacenamiento)* está asociada con los tipos de origen de datos Active IQ Unified Manager 5.1 y 5.2. Puede definir una consulta de caché cuando desee recuperar parte de la información, como un volumen de una tabla de un origen de datos Active IQ Unified Manager 6.0, en la caché de WFA.</block>
   <block id="182669ed4820368e35e16bb8ff900501" category="list-text">Tabla consultas en caché</block>
   <block id="0f46985dd4907e3a7315a59939693c1a" category="section-title">Lista consultas en caché</block>
   <block id="dedb53beee8d0629f134068ea225f74b" category="paragraph">La tabla consultas de caché muestra las entradas del diccionario y sus tipos de origen de datos asociados. Puede personalizar la visualización de la tabla mediante las características de filtrado y ordenación disponibles para cada columna, así como reorganizar el orden de las columnas.</block>
@@ -4274,12 +4260,10 @@
   <block id="3b57547caa3754998fa617bd92514f25" category="list-text">*Nombre de usuario*</block>
   <block id="52b05e16a9a17b06bf497ba0b43f97f1" category="paragraph">Muestra el nombre de usuario asociado, si lo hay, para el tipo de origen de datos seleccionado.</block>
   <block id="fad77f4cfa7f6147e14a8144a2223548" category="paragraph">Debe especificar el nombre de usuario apropiado para este origen de datos para anular el nombre de usuario predeterminado:</block>
-  <block id="94cd2dc12c886407b83df24073c3fbaf" category="list-text">Para las versiones de Active IQ Unified Manager anteriores a 6.0, debe introducir el nombre de usuario que utilizó para anular las credenciales predeterminadas mientras ejecuta ocsetup.</block>
   <block id="6994d1382a97ce24d633fe0364fe4baa" category="list-text">Para Active IQ Unified Manager 6.0 y versiones posteriores, debe introducir el nombre de usuario de la cuenta de usuario de la base de datos que creó en el servidor Active IQ Unified Manager.</block>
   <block id="c8b27eb46c2a5c0fb13ef146da5d7275" category="list-text">Para Performance Advisor, debe introducir el nombre de usuario de un usuario de Active IQ Unified Manager con la función mínima GlobalRead.</block>
   <block id="c19285b1dc2d9b23f090a9dcd3410350" category="paragraph">Permite especificar una contraseña para el tipo de origen de datos seleccionado.</block>
   <block id="762c1006bd5346ccb3d6a361bc396180" category="paragraph">Debe especificar una contraseña para omitir la contraseña predeterminada para el nombre de usuario de este origen de datos:</block>
-  <block id="9ca1092f012d395fbc5dac7a2b872f58" category="list-text">Para las versiones de Active IQ Unified Manager anteriores a la 6.0, debe introducir la contraseña que ha utilizado para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.</block>
   <block id="1993c51f1b9689c14f75481a9d7f5f44" category="list-text">Para Active IQ Unified Manager 6.0 y versiones posteriores, debe introducir la contraseña de la cuenta de usuario de la base de datos que creó en el servidor Active IQ Unified Manager.</block>
   <block id="ff2d9c6d918b6522d94d56fa170d4144" category="list-text">Para Performance Advisor, debe introducir la contraseña de un usuario de Active IQ Unified Manager con el rol mínimo de GlobalRead.</block>
   <block id="7a8d3dc7f0e719542e9e706dbca4f3ec" category="list-text">*Base de datos*</block>
@@ -4724,9 +4708,7 @@
   <block id="3d413f9381db3958c94ca72f8c2bff5c" category="paragraph">Muestra el número de puerto asociado, si lo hay, para el tipo de origen de datos seleccionado. Puede cambiar el número de puerto predeterminado para el origen de datos.</block>
   <block id="a28717973f017f375a0f9369cddf1127" category="paragraph">Muestra el esquema asociado con el tipo de origen de datos seleccionado, por ejemplo, _cm_Storage_ para Unified Manager - 6.0 (MYSQL).</block>
   <block id="d8f291edadb7f2947fa55dd818a154e0" category="paragraph">Esta propiedad no se puede modificar.</block>
-  <block id="01824cdc73f1bb9f3a0db8ad9f278350" category="list-text">Para las versiones de Unified Manager anteriores a 6.0, debe introducir el nombre de usuario que utilizó para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.</block>
   <block id="1be837a80c4ac40aee1c47275a875d4e" category="list-text">Para Unified Manager 6.0 y versiones posteriores, debe introducir el nombre de usuario de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager.</block>
-  <block id="d4a1a1ffb5e2a4b4635dad41af54ad29" category="list-text">Para las versiones de Unified Manager anteriores a 6.0, debe introducir la contraseña que ha utilizado para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.</block>
   <block id="072827f4a25b9a1ce3d7e6ce73b02d67" category="list-text">Para Unified Manager 6.0 y versiones posteriores, debe introducir la contraseña de la cuenta de usuario de la base de datos que haya creado en el servidor.</block>
   <block id="ecfba22e42f64033dc9376f578c73ffb" category="list-text">Para Performance Advisor, debe introducir la contraseña de un usuario de Unified Manager con el rol mínimo de GlobalRead.</block>
   <block id="9bd7d6c7e9bd4cb554bc98e78a24d9e4" category="paragraph">Muestra el nombre de la base de datos asociada, si lo hay, para el tipo de origen de datos seleccionado.</block>
@@ -4907,4 +4889,6 @@
   <block id="4c14da102137cfdc0846add51f76dd18" category="sidebar">Configurar la ayuda de OnCommand Workflow Automation</block>
   <block id="492ccb4e44088a9740d152295f938bfb" category="sidebar">Configure la ayuda de SNMP</block>
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Ventana Workflow &lt;workflow name&gt;</block>
+  <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">Para Active IQ Unified Manager 6.0 y versiones posteriores, debe haber creado una cuenta de usuario de base de datos en el servidor de Unified Manager.</block>
+  <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">Una consulta de caché es una consulta SQL que recupera los datos necesarios de la tabla especificada en la consulta. Una consulta de caché está asociada con una entrada de diccionario y uno o más tipos de origen de datos. Puede definir una consulta de caché cuando desee recuperar parte de la información, como el volumen de una tabla de un origen de datos OnCommand Unified Manager 6.0 en la caché de WFA.</block>
 </blocks>

@@ -52,7 +52,6 @@ Muestra el nombre de usuario asociado, si lo hay, para el tipo de origen de dato
 Debe especificar el nombre de usuario apropiado para este origen de datos para anular el nombre de usuario predeterminado:
 
 +
-** Para las versiones de Unified Manager anteriores a 6.0, debe introducir el nombre de usuario que utilizó para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.
 ** Para Unified Manager 6.0 y versiones posteriores, debe introducir el nombre de usuario de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager.
 ** Para Performance Advisor, debe introducir el nombre de usuario de un usuario de Active IQ Unified Manager con la función mínima GlobalRead.
 
@@ -65,7 +64,6 @@ Permite especificar una contraseña para el tipo de origen de datos seleccionado
 Debe especificar una contraseña para omitir la contraseña predeterminada para el nombre de usuario de este origen de datos:
 
 +
-** Para las versiones de Unified Manager anteriores a 6.0, debe introducir la contraseña que ha utilizado para sobrescribir las credenciales predeterminadas mientras ejecuta ocsetup.
 ** Para Unified Manager 6.0 y versiones posteriores, debe introducir la contraseña de la cuenta de usuario de la base de datos que haya creado en el servidor.
 ** Para Performance Advisor, debe introducir la contraseña de un usuario de Unified Manager con el rol mínimo de GlobalRead.
 

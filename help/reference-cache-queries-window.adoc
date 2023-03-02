@@ -13,7 +13,7 @@ summary: 'La ventana Cache Queries (consultas en caché) le permite gestionar la
 [role="lead"]
 La ventana Cache Queries (consultas en caché) le permite gestionar las consultas en caché para las entradas del diccionario WFA y sus tipos de origen de datos asociados.
 
-Una consulta de caché es una consulta SQL que recupera los datos necesarios de la tabla especificada en la consulta. Una consulta de caché está asociada con una entrada de diccionario y uno o más tipos de origen de datos, por ejemplo, la consulta de caché para *volumen (almacenamiento)* está asociada con los tipos de origen de datos Active IQ Unified Manager 5.1 y 5.2. Puede definir una consulta de caché cuando desee recuperar parte de la información, como un volumen de una tabla de un origen de datos Active IQ Unified Manager 6.0, en la caché de WFA.
+Una consulta de caché es una consulta SQL que recupera los datos necesarios de la tabla especificada en la consulta. Una consulta de caché está asociada con una entrada de diccionario y uno o más tipos de origen de datos. Puede definir una consulta de caché cuando desee recuperar parte de la información, como el volumen de una tabla de un origen de datos OnCommand Unified Manager 6.0 en la caché de WFA.
 
 * Tabla consultas en caché
 * Barra de herramientas
