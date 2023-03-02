@@ -79,11 +79,17 @@
 
   <!-- Used for Product Family Page Sidebar Visibility --><!-- Used to import Promise for IE. Required for SearchKit -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script><script src='/es-es/workflow-automation/js/na-search.js'></script><script src='/es-es/workflow-automation/js/na-pagenav.js'></script><script src='/es-es/workflow-automation/js/na-utility.js'></script>
+ <!--  
+  <link rel='stylesheet' href='/es-es/workflow-automation/css/prism.css' type='text/css'>
+  <link rel='stylesheet' href='/es-es/workflow-automation/css/prism-netapp.css' type='text/css'>
+ -->
+
+  <!-- <script src='/es-es/workflow-automation/js/na-utility.js'></script> -->
   <script src='/es-es/workflow-automation/js/clouddocs.js'></script>
   <script src='/es-es/workflow-automation/js/jquery.navgoco.min.js'></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src='/es-es/workflow-automation/js/toc.js'></script>
-  <script src='/es-es/workflow-automation/js/customscripts.js'></script><script>
+  <!-- <script src='/es-es/workflow-automation/js/toc.js'></script> -->
+  <!-- <script src='/es-es/workflow-automation/js/customscripts.js'></script> --><script>
       $(document).ready(function() {
           
           var collapseOnInit = true;
@@ -148,7 +154,7 @@
   <script src='/es-es/workflow-automation/js/FileSaver.min.js'></script>
   <script src='/es-es/workflow-automation/js/jszip-utils.min.js'></script>
   <script src='/es-es/workflow-automation/js/jszip.min.js'></script>
-  <script src='/es-es/workflow-automation/js/pdf-ux.js'></script>
+  <!-- <script src='/es-es/workflow-automation/js/pdf-ux.js'></script> -->
 </head>
 
 
@@ -221,7 +227,7 @@
           <span class="n-property-bar__menu-toggle-text">Menu</span>
           <svg class="n-icon-bars n-property-bar__menu-toggle-icon" aria-labelledby="title">
             <title>bars</title>
-            <use xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#bars"></use>
+            <use xlink:href="/es-es/workflow-automation/images/sprite.svg#bars"></use>
           </svg>
         </a>
       </div>
@@ -230,11 +236,11 @@
           <div class="n-property-bar__logo">
             <svg class="n-icon-netapp-mark n-icon-netapp-mark n-property-bar__netapp-mark-icon" aria-labelledby="title">
               <title>netapp-mark</title>
-              <use xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#netapp-mark"></use>
+              <use xlink:href="/es-es/workflow-automation/images/sprite.svg#netapp-mark"></use>
             </svg>
             <svg class="n-icon-netapp-logo n-property-bar__logo-svg" aria-labelledby="title">
               <title>netapp-logo</title>
-              <use xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#netapp-logo"></use>
+              <use xlink:href="/es-es/workflow-automation/images/sprite.svg#netapp-logo"></use>
             </svg>
           </div>
         </a>
@@ -260,7 +266,7 @@
           <button class="n-property-bar__search-toggle-button" type="button">
             <svg class="n-icon-search n-property-bar__search-toggle-button-icon" aria-labelledby="title">
               <title>search</title>
-              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#search"></use>
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/workflow-automation/images/sprite.svg#search"></use>
             </svg>
           </button>
         </div>
@@ -274,7 +280,7 @@
       <span class="lang-name">Español</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
-            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#globe"></use>
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/es-es/workflow-automation/images/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
@@ -5707,7 +5713,7 @@
     <div class="ie-nmt-disclaimer-container">
       <div class="ie-nmt-disclaimer-icon">
         <svg class="luci-icon" aria-hidden="true">
-          <use xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#circle-info">
+          <use xlink:href="/es-es/workflow-automation/images/sprite.svg#circle-info">
         </svg>
       </div>
       <div class="ie-nmt-disclaimer-content">
@@ -5724,7 +5730,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-02-20 23:15:48 +0000">02/20/2023</time>
+    <time datetime="2023-03-02 17:57:03 +0000">03/02/2023</time>
     
   
 
@@ -5742,9 +5748,6 @@
 </div>
 <div class="ulist">
 <ul>
-<li>
-<p>Para versiones de Active IQ Unified Manager anteriores a 6.0, debe haber ejecutado la versión más reciente de la herramienta ocsetup en el servidor de Unified Manager para habilitar y configurar el acceso remoto de solo lectura a la base de datos.</p>
-</li>
 <li>
 <p>Para Active IQ Unified Manager 6.0 y versiones posteriores, debe haber creado una cuenta de usuario de base de datos en el servidor de Unified Manager.</p>
 <div class="paragraph">
@@ -5774,20 +5777,7 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>2638</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>5.x.</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Servidor de bases de datos SQL Anywhere de Sybase</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>3306</p>
-</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>6.x.</p>
 </div></div></td>
@@ -5900,26 +5890,10 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Versiones de Active IQ Unified Manager anteriores a 6.0</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Introduzca el nombre de usuario y la contraseña que utilizó para reemplazar las credenciales predeterminadas mientras ejecuta la herramienta de configuración.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Active IQ Unified Manager 6.3 y posteriores</p>
 </div></div></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>Introduzca las credenciales de la cuenta de usuario de la base de datos que creó en el servidor de Unified Manager. Consulte <em>Ayuda en línea de Unified Manager de OnCommand</em> para obtener información detallada sobre la creación de una cuenta de usuario de base de datos.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Performance Advisor para (versiones de Active IQ Unified Manager anteriores a 6.0)</p>
-</div></div></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
-<p>Introduzca las credenciales de un usuario de Active IQ Unified Manager con el rol mínimo de GlobalRead.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -6000,7 +5974,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-blog n-footer__social-link-icon" aria-labelledby="title">
                   <title>blog@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#blog"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#blog"></use>
                 </svg>
               </a>
             </li>
@@ -6011,7 +5985,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-community n-footer__social-link-icon" aria-labelledby="title">
                   <title>community@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#comments"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#comments"></use>
                 </svg>
               </a>
             </li>
@@ -6022,7 +5996,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-twitter n-footer__social-link-icon" aria-labelledby="title">
                   <title>twitter@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#twitter"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#twitter"></use>
                 </svg>
               </a>
             </li>
@@ -6033,7 +6007,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-facebook n-footer__social-link-icon" aria-labelledby="title">
                   <title>facebook@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#facebook"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#facebook"></use>
                 </svg>
               </a>
             </li>
@@ -6044,7 +6018,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-linkedin n-footer__social-link-icon" aria-labelledby="title">
                   <title>linkedin@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#linkedin"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#linkedin"></use>
                 </svg>
               </a>
             </li>
@@ -6055,7 +6029,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-youtube n-footer__social-link-icon" aria-labelledby="title">
                   <title>youtube@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#youtube"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#youtube"></use>
                 </svg>
               </a>
             </li>
@@ -6066,7 +6040,7 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
                 <svg class="n-icon-slideshare n-footer__social-link-icon" aria-labelledby="title">
                   <title>slideshare@</title>
                   <use xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xlink:href="/es-es/workflow-automation/common/svg/sprite.svg#slideshare"></use>
+                    xlink:href="/es-es/workflow-automation/images/sprite.svg#slideshare"></use>
                 </svg>
               </a>
             </li>
@@ -6090,7 +6064,6 @@ Al configurar un origen de datos con WFA, debe tener en cuenta que los tipos de 
       cookieLaw.euCountry = "US";
       cookieLaw.invoke = function(){return false;}
     </script>
-    <script src='/es-es/workflow-automation/js/www-ntap.js'></script>
     <script src='/es-es/workflow-automation/js/tabbed-blocks.js'></script>
     <script src='/es-es/workflow-automation/js/sidebar.js'></script>
   </body></html>
