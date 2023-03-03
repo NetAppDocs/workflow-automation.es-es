@@ -33,6 +33,7 @@ A continuación, se muestran los números de puerto TCP predeterminados:
 
 
  a| 
+3306
  a| 
 6.x.
  a| 
