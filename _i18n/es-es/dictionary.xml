@@ -4831,7 +4831,6 @@
   <block id="94304f694a6b20134929b8f484b166e8" category="paragraph">Puede proporcionar un valor que se debe utilizar junto con el valor del objeto encontrado por los criterios de búsqueda y agregar valores adicionales basados en la expresión que especifique. Por ejemplo, si desea crear un volumen con la convención de nomenclatura de<block ref="5f2595527dddae3709510da67ea05552" prefix=" " category="inline-code"></block> puede introducir la expresión<block ref="5a4212c14f527741238198a789be12fe" prefix=" " category="inline-code"></block>. Si el último nombre de volumen encontrado era _vf_023,_ el nombre del volumen creado es _vf_023_lab2._</block>
   <block id="562a6d1120aee31e227b66e7502dbdb1" category="summary">Bienvenido a la Biblioteca de información de OnCommand Workflow Automation 5.1.</block>
   <block id="7ece5ae8480b81ef1aaa2de7d1f71262" category="doc">Documentación de OnCommand Workflow Automation</block>
-  <block id="95026804993f8a9226db7022cae41c9f" category="sidebar">Documentos de OnCommand Workflow Automation 5.1</block>
   <block id="7d0ee6fed10d3d4e5c9ee496729ab519" category="sidebar">Notas de la versión</block>
   <block id="be11c74c1dd7f307bb80183a90dc2067" category="sidebar">Manos a la obra</block>
   <block id="5dd03e8d039863e563e049be198c3fd3" category="sidebar">Notas de la versión</block>
@@ -4891,4 +4890,5 @@
   <block id="9af2f59c7f6e2e7dc584af7ea83ef4d7" category="sidebar">Ventana Workflow &lt;workflow name&gt;</block>
   <block id="95b047c12d2722d91f1fa5029054c1c1" category="list-text">Para Active IQ Unified Manager 6.0 y versiones posteriores, debe haber creado una cuenta de usuario de base de datos en el servidor de Unified Manager.</block>
   <block id="2a80a7250b34ee4443310c696c4d77fa" category="paragraph">Una consulta de caché es una consulta SQL que recupera los datos necesarios de la tabla especificada en la consulta. Una consulta de caché está asociada con una entrada de diccionario y uno o más tipos de origen de datos. Puede definir una consulta de caché cuando desee recuperar parte de la información, como el volumen de una tabla de un origen de datos OnCommand Unified Manager 6.0 en la caché de WFA.</block>
+  <block id="0d47320e619045e2de820e0c0e5fbcf0" category="sidebar">Documentos de OnCommand Workflow Automation</block>
 </blocks>
