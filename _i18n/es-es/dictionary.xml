@@ -2532,8 +2532,6 @@
   <block id="344fd3d08b8a753bb79336ff586a35bf" category="paragraph"><block ref="344fd3d08b8a753bb79336ff586a35bf" category="inline-link-rx"></block></block>
   <block id="66c9c3348ac5b112ffe4b7b49623cc8d" category="paragraph">_.NET Directrices de nomenclatura del marco_</block>
   <block id="91b02b940dd07cc66de00d6a764f898d" category="paragraph"><block ref="91b02b940dd07cc66de00d6a764f898d" category="inline-link-rx"></block></block>
-  <block id="0a5e35cd941b62c63e913a9f92c3687d" category="paragraph">Estilo de código PowerShell</block>
-  <block id="5d338dfe4d3ddf51bc90dec3ee99b477" category="paragraph"><block ref="5d338dfe4d3ddf51bc90dec3ee99b477" category="inline-link-rx"></block></block>
   <block id="8afa48e351f3a31c1fa8007756fd80a3" category="paragraph">PowerShell: Intentar/capturar finalmente</block>
   <block id="8d1c69b97d5a89835f2b05eabd27ceb4" category="paragraph"><block ref="8d1c69b97d5a89835f2b05eabd27ceb4" category="inline-link-rx"></block></block>
   <block id="8a6937456d987ab411de106bbfe44717" category="paragraph">Variables automáticas de PowerShell</block>
@@ -2553,7 +2551,6 @@
   <block id="0114ad06d728f1834e36fe1a39574ef4" category="section-title">Perl</block>
   <block id="c897da42b0f175bc57bbeacb4bea82b1" category="paragraph">WFA admite comandos Perl para operaciones de flujo de trabajo. Al instalar WFA, se instalan los módulos Perl y Perl necesarios en el servidor WFA.</block>
   <block id="b61229c78dccf475da69f2cac6d600c0" category="inline-link">Guía del usuario de ActivePerl</block>
-  <block id="2b145b62478784ba1e7fd97785e8a3e8" category="paragraph"><block ref="2b145b62478784ba1e7fd97785e8a3e8" category="inline-link-rx"></block></block>
   <block id="efb2bc95007f6681acbc99549e71a915" category="paragraph">También puede acceder a la _ActivePerl User Guide_ desde la siguiente ubicación:<block ref="b2f072ae5ac331bfc81e54a571e3b262" prefix=" " category="inline-code"></block></block>
   <block id="a840cd16314687a519be4b506df20df5" category="paragraph"><block ref="dad45893e852e8dac5ac00e8a6bc97a2" prefix="" category="inline-code"></block> Es el directorio de instalación de WFA, y.<block ref="7dcdd7b62fbc5921c5b2bb52fe0d0571" prefix=" " category="inline-code"></block>"WFA utiliza scripts Perl para operaciones de flujo de trabajo. La siguiente tabla incluye referencias al material de aprendizaje para Perl:</block>
   <block id="6c6471c226957740be8fc6faa4c49add" category="paragraph">Perl moderno: 2014</block>
@@ -4652,10 +4649,6 @@
   <block id="c073fd8e436293c351c6ef464b3df8fd" category="paragraph">Muestra el tipo del parámetro, como cadena, enumeración, matriz o contraseña.</block>
   <block id="e46ea85be2caa049e5a153546c9ee4d0" category="paragraph">Permite especificar el atributo requerido. Puede seleccionar el atributo (si está disponible) o introducir el atributo.</block>
   <block id="86f59ca78029ebbcfb6c98a9927f4aad" category="paragraph">Permite introducir una consulta SQL para reservar los recursos que requiere el comando. Esto ayuda a garantizar que los recursos estén disponibles durante una ejecución programada del flujo de trabajo.</block>
-  <block id="7f708cbf579cfb33720a3dee4b01d12a" category="summary">El almacén de automatización del almacenamiento contiene paquetes de flujos de trabajo de almacenamiento automatizados y certificados de NetApp, desarrollados para su uso con OnCommand Workflow Automation (WFA). Puede descargar los paquetes e importarlos a WFA para ejecutarlos.</block>
-  <block id="8d4a01616f98e4ae340eaff4fe4e8ee5" category="doc">Ventana Storage Automation Store</block>
-  <block id="0479c8cefca250b39d519545313f1b42" category="inline-link">Almacén de automatización del almacenamiento</block>
-  <block id="0a972f757d015f7e2a7d235f796edff5" category="paragraph">Los flujos de trabajo automatizados están disponibles en<block ref="f6a0eb706f83f492c2c35b6ee06cdf08" category="inline-link-rx"></block></block>
   <block id="1c942fc629b95acdd65eff4b36331fe5" category="summary">La ventana Finders muestra los finders disponibles en orden alfabético. Puede acceder a esta ventana seleccionando Diseño de flujo de trabajo &gt; Finders.</block>
   <block id="fa6c43fb588483c458b9d9f1804bbe1c" category="doc">Ventana de finders</block>
   <block id="be77a1c85f96cf8d5a12c4a021819a9a" category="paragraph">La ventana Finders muestra los finders disponibles en orden alfabético. Puede acceder a esta ventana seleccionando *Diseño de flujo de trabajo* &gt; *Finders*.</block>
@@ -4895,4 +4888,7 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="c0227cef6f07a8cd2ac72f2945b031aa" category="section-title">Código abierto</block>
+  <block id="941fd7ae4cd08576b1633f32f28cc5a7" category="paragraph">Aprender PowerShell</block>
+  <block id="6e53aee4223f5f2fcc8de117d4eb8ee1" category="paragraph"><block ref="6e53aee4223f5f2fcc8de117d4eb8ee1" category="inline-link-rx"></block></block>
+  <block id="02d4497b4f8a4d93145ea6baefd3c796" category="paragraph"><block ref="02d4497b4f8a4d93145ea6baefd3c796" category="inline-link-rx"></block></block>
 </blocks>
